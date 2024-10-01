@@ -73,9 +73,6 @@ namespace Osussist.src.cheat
 
                 logger.Info("Spoofer", "Main HWIDs spoofed successfully.");
 
-                if (File.Exists("spoofdrv.sys"))
-                    File.Delete("spoofdrv.sys");
-
                 if (!isAdmin)
                 {
                     logger.Error("Spoofer", "Failed to spoof MAC address: Not running as administrator.");

@@ -27,7 +27,7 @@ namespace Osussist
         [STAThread]
         static void Main(string[] args)
         {
-            Logger logger = new Logger(true, "osussist.log", (int)LogLevels.DEBUG);
+            Logger logger = new Logger(true, "osussist.log", (int)LogLevels.INFO);
 
             AppDomain currentDomain = default(AppDomain);
             currentDomain = AppDomain.CurrentDomain;
