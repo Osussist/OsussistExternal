@@ -9,6 +9,7 @@ using System.Numerics;
 using System.Windows.Forms;
 using Osussist.src.config.objects;
 using OsuParsers.Beatmaps.Objects;
+using System.Drawing.Imaging;
 
 namespace Osussist.src.cheat.aimbot
 {
@@ -28,11 +29,19 @@ namespace Osussist.src.cheat.aimbot
 
         public void Loop()
         {
-            RgbColor lastTargetColor = null;
-            while (SDK.isGameFocused && !SDK.isPaused && Logic.isAimbotEnabled)
+            try
             {
-                Bitmap frame = CaptureScreen();
-                ColorRanges = new Dictionary<string, Tuple<RgbColor, RgbColor>>
+                RgbColor lastTargetColor = null;
+                while (SDK.isGameFocused && !SDK.isPaused && Logic.isAimbotEnabled)
+                {
+                    Bitmap frame = CaptureScreen();
+                    if (frame == null)
+                    {
+                        logger.Error("Aimbot.Lazer", "Failed to capture screen, retrying in 100ms.");
+                        Thread.Sleep(100);
+                        continue;
+                    }
+                    ColorRanges = new Dictionary<string, Tuple<RgbColor, RgbColor>>
                 {
                     { "target", Tuple.Create(
                         Config.config.aimbotsettings.targetcolor - Config.config.aimbotsettings.similarity,
@@ -44,32 +53,37 @@ namespace Osussist.src.cheat.aimbot
                     }
                 };
 
-                List<Tuple<Vector2, RgbColor>> hitObjects = GetHitObjects(frame);
-                Tuple<Vector2, RgbColor> cursorObject = GetCursorPosition(frame);
+                    List<Tuple<Vector2, RgbColor>> hitObjects = GetHitObjects(frame);
+                    Tuple<Vector2, RgbColor> cursorObject = GetCursorPosition(frame);
 
-                if (hitObjects.Count() > 0)
-                {
-                    hitObjects = hitObjects.OrderBy(h => h.Item1.LengthRelativeTo(cursorObject.Item1) <= Config.config.aimbotsettings.fovsize).ToList();
-
-                    if (lastTargetColor != null && lastTargetColor != hitObjects.First().Item2)
+                    if (hitObjects.Count() > 0)
                     {
-                        if (!Logic.isHoldingKeys && hitObjects.First().Item1.LengthRelativeTo(cursorObject.Item1) <= Config.config.aimbotsettings.fovsize)
+                        hitObjects = hitObjects.OrderBy(h => h.Item1.LengthRelativeTo(cursorObject.Item1) <= Config.config.aimbotsettings.fovsize).ToList();
+
+                        if (lastTargetColor != null && lastTargetColor != hitObjects.First().Item2)
                         {
-                            lastTargetColor = hitObjects.First().Item2;
-                            PerformMove(hitObjects.First().Item1);
+                            if (!Logic.isHoldingKeys && hitObjects.First().Item1.LengthRelativeTo(cursorObject.Item1) <= Config.config.aimbotsettings.fovsize)
+                            {
+                                lastTargetColor = hitObjects.First().Item2;
+                                PerformMove(hitObjects.First().Item1);
+                            }
                         }
-                    }
-                    else
-                    {
-                        if (!Logic.isHoldingKeys && hitObjects.First().Item1.LengthRelativeTo(cursorObject.Item1) <= Config.config.aimbotsettings.fovsize)
+                        else
                         {
-                            lastTargetColor = hitObjects.First().Item2;
-                            PerformMove(hitObjects.First().Item1);
+                            if (!Logic.isHoldingKeys && hitObjects.First().Item1.LengthRelativeTo(cursorObject.Item1) <= Config.config.aimbotsettings.fovsize)
+                            {
+                                lastTargetColor = hitObjects.First().Item2;
+                                PerformMove(hitObjects.First().Item1);
+                            }
                         }
                     }
                 }
+                Thread.Sleep(1);
             }
-            Thread.Sleep(1);
+            catch (Exception e)
+            {
+                logger.Error("Aimbot.Lazer", $"Unexpected error ocurred: {e.Message}");
+            }
         }
 
         private void PerformMove(Vector2 hitObject)
@@ -91,14 +105,26 @@ namespace Osussist.src.cheat.aimbot
 
         private static Bitmap CaptureScreen()
         {
-            Rectangle bounds = Screen.PrimaryScreen.Bounds;
-            using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
+            try
             {
+                Rectangle bounds = Screen.PrimaryScreen.Bounds;
+
+                if (bounds.Width <= 0 || bounds.Height <= 0)
+                {
+                    throw new ArgumentException($"Invalid screen dimensions: Width={bounds.Width}, Height={bounds.Height}");
+                }
+
+                Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height, PixelFormat.Format32bppArgb);
                 using (Graphics g = Graphics.FromImage(bitmap))
                 {
                     g.CopyFromScreen(System.Drawing.Point.Empty, System.Drawing.Point.Empty, bounds.Size);
                 }
-                return new Bitmap(bitmap);
+                return bitmap;
+            }
+            catch (Exception ex)
+            {
+                Logger.LoggingInstance.Error("Aimbot.Lazer", $"Failed to capture screen: {ex.Message}");
+                return null;
             }
         }
 
