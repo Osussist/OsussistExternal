@@ -313,11 +313,11 @@ namespace Osussist.src.cheat
 
         private ValueTuple<int, int> RandomizeHitObjectTimings(int index)
         {
-            float timingAdjustmentFactor = random.NextFloat(1.0f, 2.0f);
+            float timingAdjustmentFactor = random.NextFloat(1.1f, 1.8f);
             int timingOffset;
             if (Logic.isHitKeyPressed)
             {
-                timingOffset = random.Next(-HitWin100 / 3, HitWin100 / 3 + 1);
+                timingOffset = random.Next(-HitWin100 / 2, HitWin100 / 3 + 1);
             }
             else
             {
