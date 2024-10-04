@@ -27,7 +27,13 @@ namespace Osussist.src.utils
 			LoggingInstance = this;
 		}
 
-		public void Error (string traceback, string message)
+        public Logger UpdateLogLevel(int logLevel)
+        {
+            LogLevel = logLevel;
+            return this;
+        }
+
+        public void Error (string traceback, string message)
 		{
             try
             {

@@ -38,12 +38,22 @@ namespace Osussist
             {
                 var consoleHandle = GetConsoleWindow();
 
-                if (args.Length > 0 && (args[0] == "--showconsole" || args[0] == "-sc"))
-                    ShowWindow(consoleHandle, SW_SHOW);
+                if (args.Length > 0)
+                {
+                    if (args.Contains("--showconsole") || args.Contains("-sc"))
+                        ShowWindow(consoleHandle, SW_SHOW);
+                    else
+                        ShowWindow(consoleHandle, SW_HIDE);
+
+                    if (args.Contains("--debug") || args.Contains("-dbg"))
+                        logger.UpdateLogLevel((int)LogLevels.DEBUG);
+
+                    logger.Info("Main", "Starting Osussist...");
+                }
                 else
+                {
                     ShowWindow(consoleHandle, SW_HIDE);
-            
-                logger.Info("Main", "Starting Osussist...");
+                }
 
                 Config config = new Config();
                 if (!config.Load("config.json"))

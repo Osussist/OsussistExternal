@@ -1,0 +1,19 @@
+<project outputDir="C:\Users\maxar\OneDrive\Escritorio\Trabajo\Takkeshi_Code\CProjects\Osussist\bin\x86\Release\net48\Confused" baseDir="C:\Users\maxar\OneDrive\Escritorio\Trabajo\Takkeshi_Code\CProjects\Osussist\bin\x86\Release\net48" xmlns="http://confuser.codeplex.com">
+  <rule pattern="true" preset="maximum" inherit="false" />
+  <packer id="compressor" />
+  <module path="OpenCvSharp.dll" />
+  <module path="OpenCvSharp.Extensions.dll" />
+  <module path="OsuParsers.dll" />
+  <module path="System.Buffers.dll" />
+  <module path="System.Drawing.Common.dll" />
+  <module path="System.Memory.dll" />
+  <module path="System.Numerics.Vectors.dll" />
+  <module path="System.Runtime.CompilerServices.Unsafe.dll" />
+  <module path="System.ValueTuple.dll" />
+  <module path="WindowsInput.dll" />
+  <module path="Osussist.exe">
+    <rule pattern="true" inherit="false">
+      <protection id="rename" action="remove" />
+    </rule>
+  </module>
+</project>
