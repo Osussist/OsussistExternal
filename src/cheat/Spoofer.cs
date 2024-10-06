@@ -92,7 +92,7 @@ namespace Osussist.src.cheat
 									o.InvokeMethod("Disable", null);
 									o.InvokeMethod("Enable", null);
 								}
-								logger.Info("Spoofer", $"{nicId} MAC address spoofed to {uniqueMAC} successfully.");
+								logger.Debug("Spoofer", $"{nicId} MAC address spoofed to {uniqueMAC} successfully.");
 							}
 							else
 							{
