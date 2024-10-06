@@ -53,7 +53,7 @@ namespace Osussist.src.cheat
 				WebClient client = new WebClient();
 				bool isAdmin = new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator);
 
-				// Readd the mapper and driver download later
+				// TODO: add download and shit from api
 
 				ProcessStartInfo mapper = new ProcessStartInfo
 				{
