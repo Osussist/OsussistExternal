@@ -17,6 +17,7 @@ namespace Osussist.src.osu.helpers
         public Process GameProcess { get; private set; }
         public ClientTypes ClientType { get; private set; }
         public string GameFolder { get; private set; }
+        public string SongsFolder { get; private set; }
 
         public OsuProcess(string ProcessName)
         {
@@ -35,6 +36,7 @@ namespace Osussist.src.osu.helpers
             logger.Info("SDK.OsuProcess", $"Client type is {ClientType.ToString()}");
             GameFolder = GetGameFolder();
             logger.Info("SDK.OsuProcess", $"Game folder is {GameFolder}");
+            SongsFolder = GameFolder + "Songs\\";
         }
 
         public ClientTypes DetermineClientType()

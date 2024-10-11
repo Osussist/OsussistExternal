@@ -7,6 +7,7 @@ using Osussist.src.config;
 using Osussist.src.osu.helpers;
 using Osussist.src.utils;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using static Osussist.src.osu.helpers.OsuProcess;
 
@@ -29,8 +30,10 @@ namespace Osussist.src.osu
 
         private Logger logger = Logger.LoggingInstance;
         public OsuManager OsuManager { get; private set; }
-
+        private FileSystemWatcher watcher { get; set; }
         public static OsuSDK Instance { get; private set; }
+
+        private List<(string MD5, string PathToBeatmap)> NewBeatmaps = new List<(string, string)>();
 
         public OsuSDK(string gameName, bool preferIPC)
         {
@@ -40,6 +43,7 @@ namespace Osussist.src.osu
             {
                 OsuManager.MemoryManager.BuildMemorySDK(this);
             }
+            SetupWatcher();
         }
 
         // Properties
@@ -148,12 +152,55 @@ namespace Osussist.src.osu
                 }
                 else
                 {
-                    return null;
+                    ValueTuple<string, string> beatmapTuple = NewBeatmaps.Find((x) => x.MD5 == MapHash);
+                    logger.Debug("SDK.OsuSDK", $"Beatmap found in new beatmaps: {beatmapTuple.Item2}");
+                    return BeatmapDecoder.Decode(beatmapTuple.Item2);
                 }
             }
         }
 
         //Functions
+        public void SetupWatcher()
+        {
+            watcher = new FileSystemWatcher(OsuManager.ProcessManager.SongsFolder);
+            watcher.Created += delegate (object sender, FileSystemEventArgs e)
+            {
+                OnBeatmapImport(e.FullPath);
+            };
+            watcher.Changed += delegate (object sender, FileSystemEventArgs e)
+            {
+                OnBeatmapImport(e.FullPath);
+            };
+            watcher.EnableRaisingEvents = true;
+            watcher.IncludeSubdirectories = true;
+        }
+
+        public void OnBeatmapImport(string path)
+        {
+            if (path.EndsWith(".osu"))
+            {
+                try
+                {
+                    ValueTuple<string, string> beatmap = new ValueTuple<string, string>(OsuCrypto.GetMD5String(File.ReadAllBytes(path)), path);
+                    if (NewBeatmaps.Exists((x) => x.MD5 == beatmap.Item1))
+                    {
+                        NewBeatmaps.RemoveAll(beatmap => beatmap.MD5 == beatmap.Item1);
+                    }
+                    this.NewBeatmaps.Add(beatmap);
+                }
+                catch (IOException)
+                {
+                    logger.Error("SDK.OsuSDK", "Failed to read the beatmap file, attempting again in 500ms");
+                    Thread.Sleep(500);
+                    OnBeatmapImport(path);
+                }
+            }
+            else
+            {
+                logger.Warning("SDK.OsuSDK", "File is not an osu! beatmap file");
+            }
+        }
+
         public Vector2 GetRealHitObjectPos(HitObject hitObject)
         {
             Vector2 hitObjectCoords = new Vector2(hitObject.Position.X, hitObject.Position.Y);

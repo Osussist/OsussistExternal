@@ -91,7 +91,12 @@ namespace Osussist.src.cheat
                 if (SDK.isPlaying)
                 {
                     CurrentBeatmap = SDK.CurrentBeatmap;
-                    if (LastBeatmapId != CurrentBeatmap.MetadataSection.BeatmapID)
+                    if (CurrentBeatmap == null)
+                    {
+                        logger.Error("Relax", $"CurrentBeatmap returned null, resetting database and relax");
+                        continue;
+                    }
+                    else if (LastBeatmapId != CurrentBeatmap.MetadataSection.BeatmapID)
                     {
                         LastBeatmapId = CurrentBeatmap.MetadataSection.BeatmapID;
                         logger.Info("Relax", $"Loaded beatmap: {CurrentBeatmap.MetadataSection.Artist} - {CurrentBeatmap.MetadataSection.Title} [{CurrentBeatmap.MetadataSection.Version}]");
