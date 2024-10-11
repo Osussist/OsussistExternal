@@ -247,6 +247,11 @@ namespace Osussist.src.gui
             0,
             0,
             0});
+            this.MovementToNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.MovementToNumeric.Name = "MovementToNumeric";
             this.MovementToNumeric.Size = new System.Drawing.Size(73, 21);
             this.MovementToNumeric.TabIndex = 28;
@@ -284,6 +289,11 @@ namespace Osussist.src.gui
             this.MovementFromNumeric.Location = new System.Drawing.Point(8, 36);
             this.MovementFromNumeric.Maximum = new decimal(new int[] {
             1000,
+            0,
+            0,
+            0});
+            this.MovementFromNumeric.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -638,9 +648,9 @@ namespace Osussist.src.gui
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(350, 480);
             this.Controls.Add(this.Header);
-            this.Controls.Add(this.RelaxPanel);
             this.Controls.Add(this.AimbotPanel);
             this.Controls.Add(this.OtherPanel);
+            this.Controls.Add(this.RelaxPanel);
             this.Controls.Add(this.OtherButton);
             this.Controls.Add(this.AimbotButton);
             this.Controls.Add(this.RelaxButton);
@@ -755,12 +765,12 @@ namespace Osussist.src.gui
 
         private void MovementFromNumeric_ValueChanged(object sender, EventArgs e)
         {
-            Config.config.aimbotsettings.movementdelay = new VarianceInt((int)MovementFromNumeric.Value, (int)MovementToNumeric.Value);
+            Config.config.aimbotsettings.movementdelay = new VarianceInt((int)MovementFromNumeric.Value, Config.config.aimbotsettings.movementdelay.to);
         }
 
         private void MovementToNumeric_ValueChanged(object sender, EventArgs e)
         {
-            Config.config.aimbotsettings.movementdelay = new VarianceInt((int)MovementFromNumeric.Value, (int)MovementToNumeric.Value);
+            Config.config.aimbotsettings.movementdelay = new VarianceInt(Config.config.aimbotsettings.movementdelay.from, (int)MovementToNumeric.Value);
         }
 
         private void HitcircleRadiusSlider_ValueChanged(object sender, EventArgs e)

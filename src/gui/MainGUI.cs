@@ -155,7 +155,6 @@ namespace Osussist.src.gui
 
         private void InitializeComponent()
         {
-            this.LastConfigIndex = 0;
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainGUI));
             this.Border = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -178,7 +177,25 @@ namespace Osussist.src.gui
             this.DragZone1 = new Guna.UI2.WinForms.Guna2Panel();
             this.MainContent = new Guna.UI2.WinForms.Guna2Panel();
             this.Content = new Guna.UI2.WinForms.Guna2Panel();
+            this.ConfigPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.AdvancedButton = new Guna.UI2.WinForms.Guna2Button();
+            this.CreateConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.CreateConfigText = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DeleteConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ResetConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.LoadConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.SaveConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ConfigTableHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.CloudConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.LocalConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ConfigTable = new Guna.UI2.WinForms.Guna2Panel();
+            this.ConfigComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ConfigPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.ConfigPanelHeaderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.DetectionPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.AudioOffsetNumericUpDownAA = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.AudioOffsetSliderAA = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.AudioOffsetLabelAA = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.MouseAlgorithmCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.MouseMovementAlgoLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SimilarityNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -192,22 +209,10 @@ namespace Osussist.src.gui
             this.TargetColorButton = new Guna.UI2.WinForms.Guna2Button();
             this.DetectionPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.DetectionPanelTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TimingPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.HardrockLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.HardrockEnabled = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.MaxDistanceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.MaxDistanceNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.MaxDistanceSlider = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.AudioOffsetSliderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TimingPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.TimingPanelLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.AudioOffsetSliderNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.MaxBPMSlider = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.AudioOffsetSlider = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.MaxBPMNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.MaxBPMLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AimbotTabPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.HardrockEnabledLabelAA = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PullawayNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.HardrockEnabledAA = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.AimbotKeybindLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PullawaySlider = new Guna.UI2.WinForms.Guna2TrackBar();
             this.PullawayLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -236,6 +241,20 @@ namespace Osussist.src.gui
             this.RelaxPanelSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.RelaxPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.RelaxPanelLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TimingPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.HardrockLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.HardrockEnabled = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.MaxDistanceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.MaxDistanceNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.MaxDistanceSlider = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.AudioOffsetSliderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TimingPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.TimingPanelLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AudioOffsetSliderNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.MaxBPMSlider = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.AudioOffsetSlider = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.MaxBPMNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.MaxBPMLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SpooferPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.CheckSerialsButton = new Guna.UI2.WinForms.Guna2Button();
             this.SpoofSerialsButton = new Guna.UI2.WinForms.Guna2Button();
@@ -251,21 +270,6 @@ namespace Osussist.src.gui
             this.CpuLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SpooferHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.SpooferHeaderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.ConfigPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.AdvancedButton = new Guna.UI2.WinForms.Guna2Button();
-            this.CreateConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.CreateConfigText = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DeleteConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ResetConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.LoadConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.SaveConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ConfigTableHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.CloudConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.LocalConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ConfigTable = new Guna.UI2.WinForms.Guna2Panel();
-            this.ConfigComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.ConfigPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.ConfigPanelHeaderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.DragZone2 = new Guna.UI2.WinForms.Guna2Panel();
             this.SidepanelButtonsBorder = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.MiniCreditsBorder = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -278,25 +282,19 @@ namespace Osussist.src.gui
             this.ConfigPanelBorder = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ConfigTableBorder = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ConfigTableHeaderBorder = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.AudioOffsetNumericUpDownAA = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.AudioOffsetSliderAA = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.AudioOffsetLabelAA = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.HardrockEnabledLabelAA = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.HardrockEnabledAA = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.Sidepanel.SuspendLayout();
             this.MiniCredits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CreditsImage)).BeginInit();
             this.SidepanelButtons.SuspendLayout();
             this.MainContent.SuspendLayout();
             this.Content.SuspendLayout();
+            this.ConfigPanel.SuspendLayout();
+            this.ConfigTableHeader.SuspendLayout();
+            this.ConfigPanelHeader.SuspendLayout();
             this.DetectionPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetNumericUpDownAA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SimilarityNumeric)).BeginInit();
             this.DetectionPanelHeader.SuspendLayout();
-            this.TimingPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxDistanceNumeric)).BeginInit();
-            this.TimingPanelHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetSliderNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxBPMNumeric)).BeginInit();
             this.AimbotTabPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PullawayNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AimbotStrengthNumericUpDown)).BeginInit();
@@ -305,13 +303,14 @@ namespace Osussist.src.gui
             this.AimbotTabPanelHeader.SuspendLayout();
             this.RelaxPanel.SuspendLayout();
             this.RelaxPanelHeader.SuspendLayout();
+            this.TimingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxDistanceNumeric)).BeginInit();
+            this.TimingPanelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetSliderNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxBPMNumeric)).BeginInit();
             this.SpooferPanel.SuspendLayout();
             this.SerialsPanel.SuspendLayout();
             this.SpooferHeader.SuspendLayout();
-            this.ConfigPanel.SuspendLayout();
-            this.ConfigTableHeader.SuspendLayout();
-            this.ConfigPanelHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetNumericUpDownAA)).BeginInit();
             this.SuspendLayout();
             // 
             // Border
@@ -640,17 +639,277 @@ namespace Osussist.src.gui
             // 
             // Content
             // 
-            this.Content.Controls.Add(this.ConfigPanel);
             this.Content.Controls.Add(this.DetectionPanel);
             this.Content.Controls.Add(this.AimbotTabPanel);
             this.Content.Controls.Add(this.RelaxPanel);
             this.Content.Controls.Add(this.TimingPanel);
             this.Content.Controls.Add(this.SpooferPanel);
+            this.Content.Controls.Add(this.ConfigPanel);
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Content.Location = new System.Drawing.Point(0, 32);
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(578, 502);
             this.Content.TabIndex = 1;
+            // 
+            // ConfigPanel
+            // 
+            this.ConfigPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
+            this.ConfigPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ConfigPanel.Controls.Add(this.AdvancedButton);
+            this.ConfigPanel.Controls.Add(this.CreateConfigButton);
+            this.ConfigPanel.Controls.Add(this.CreateConfigText);
+            this.ConfigPanel.Controls.Add(this.DeleteConfigButton);
+            this.ConfigPanel.Controls.Add(this.ResetConfigButton);
+            this.ConfigPanel.Controls.Add(this.LoadConfigButton);
+            this.ConfigPanel.Controls.Add(this.SaveConfigButton);
+            this.ConfigPanel.Controls.Add(this.ConfigTableHeader);
+            this.ConfigPanel.Controls.Add(this.ConfigTable);
+            this.ConfigPanel.Controls.Add(this.ConfigComboBox);
+            this.ConfigPanel.Controls.Add(this.ConfigPanelHeader);
+            this.ConfigPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.ConfigPanel.Location = new System.Drawing.Point(35, 3);
+            this.ConfigPanel.Name = "ConfigPanel";
+            this.ConfigPanel.Size = new System.Drawing.Size(507, 465);
+            this.ConfigPanel.TabIndex = 22;
+            // 
+            // AdvancedButton
+            // 
+            this.AdvancedButton.BorderRadius = 15;
+            this.AdvancedButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AdvancedButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AdvancedButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AdvancedButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AdvancedButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AdvancedButton.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.AdvancedButton.ForeColor = System.Drawing.Color.White;
+            this.AdvancedButton.Location = new System.Drawing.Point(284, 220);
+            this.AdvancedButton.Name = "AdvancedButton";
+            this.AdvancedButton.Size = new System.Drawing.Size(207, 34);
+            this.AdvancedButton.TabIndex = 31;
+            this.AdvancedButton.Text = "Advanced";
+            this.AdvancedButton.Click += new System.EventHandler(this.AdvancedButton_Click);
+            // 
+            // CreateConfigButton
+            // 
+            this.CreateConfigButton.BorderRadius = 15;
+            this.CreateConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CreateConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CreateConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CreateConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CreateConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.CreateConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.CreateConfigButton.ForeColor = System.Drawing.Color.White;
+            this.CreateConfigButton.Location = new System.Drawing.Point(284, 415);
+            this.CreateConfigButton.Name = "CreateConfigButton";
+            this.CreateConfigButton.Size = new System.Drawing.Size(207, 34);
+            this.CreateConfigButton.TabIndex = 30;
+            this.CreateConfigButton.Text = "Create";
+            this.CreateConfigButton.Click += new System.EventHandler(this.CreateConfigButton_Click);
+            // 
+            // CreateConfigText
+            // 
+            this.CreateConfigText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.CreateConfigText.BorderRadius = 10;
+            this.CreateConfigText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CreateConfigText.DefaultText = "";
+            this.CreateConfigText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.CreateConfigText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.CreateConfigText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.CreateConfigText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.CreateConfigText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.CreateConfigText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.CreateConfigText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateConfigText.ForeColor = System.Drawing.Color.White;
+            this.CreateConfigText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.CreateConfigText.Location = new System.Drawing.Point(284, 375);
+            this.CreateConfigText.MaxLength = 300;
+            this.CreateConfigText.Name = "CreateConfigText";
+            this.CreateConfigText.PasswordChar = '\0';
+            this.CreateConfigText.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
+            this.CreateConfigText.PlaceholderText = "config.json";
+            this.CreateConfigText.SelectedText = "";
+            this.CreateConfigText.Size = new System.Drawing.Size(207, 34);
+            this.CreateConfigText.TabIndex = 29;
+            this.CreateConfigText.WordWrap = false;
+            // 
+            // DeleteConfigButton
+            // 
+            this.DeleteConfigButton.BorderRadius = 15;
+            this.DeleteConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.DeleteConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.DeleteConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.DeleteConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.DeleteConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.DeleteConfigButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteConfigButton.Location = new System.Drawing.Point(284, 180);
+            this.DeleteConfigButton.Name = "DeleteConfigButton";
+            this.DeleteConfigButton.Size = new System.Drawing.Size(207, 34);
+            this.DeleteConfigButton.TabIndex = 28;
+            this.DeleteConfigButton.Text = "Delete";
+            this.DeleteConfigButton.Click += new System.EventHandler(this.DeleteConfigButton_Click);
+            // 
+            // ResetConfigButton
+            // 
+            this.ResetConfigButton.BorderRadius = 15;
+            this.ResetConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ResetConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ResetConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ResetConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ResetConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ResetConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.ResetConfigButton.ForeColor = System.Drawing.Color.White;
+            this.ResetConfigButton.Location = new System.Drawing.Point(284, 140);
+            this.ResetConfigButton.Name = "ResetConfigButton";
+            this.ResetConfigButton.Size = new System.Drawing.Size(207, 34);
+            this.ResetConfigButton.TabIndex = 27;
+            this.ResetConfigButton.Text = "Reset";
+            this.ResetConfigButton.Click += new System.EventHandler(this.ResetConfigButton_Click);
+            // 
+            // LoadConfigButton
+            // 
+            this.LoadConfigButton.BorderRadius = 15;
+            this.LoadConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LoadConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LoadConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LoadConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LoadConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.LoadConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.LoadConfigButton.ForeColor = System.Drawing.Color.White;
+            this.LoadConfigButton.Location = new System.Drawing.Point(284, 100);
+            this.LoadConfigButton.Name = "LoadConfigButton";
+            this.LoadConfigButton.Size = new System.Drawing.Size(207, 34);
+            this.LoadConfigButton.TabIndex = 26;
+            this.LoadConfigButton.Text = "Load";
+            this.LoadConfigButton.Click += new System.EventHandler(this.LoadConfigButton_Click);
+            // 
+            // SaveConfigButton
+            // 
+            this.SaveConfigButton.BorderRadius = 15;
+            this.SaveConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SaveConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SaveConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SaveConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SaveConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.SaveConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.SaveConfigButton.ForeColor = System.Drawing.Color.White;
+            this.SaveConfigButton.Location = new System.Drawing.Point(284, 60);
+            this.SaveConfigButton.Name = "SaveConfigButton";
+            this.SaveConfigButton.Size = new System.Drawing.Size(207, 34);
+            this.SaveConfigButton.TabIndex = 25;
+            this.SaveConfigButton.Text = "Save";
+            this.SaveConfigButton.Click += new System.EventHandler(this.SaveConfigButton_Click);
+            // 
+            // ConfigTableHeader
+            // 
+            this.ConfigTableHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.ConfigTableHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ConfigTableHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ConfigTableHeader.Controls.Add(this.CloudConfigButton);
+            this.ConfigTableHeader.Controls.Add(this.LocalConfigButton);
+            this.ConfigTableHeader.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.ConfigTableHeader.Location = new System.Drawing.Point(13, 57);
+            this.ConfigTableHeader.Name = "ConfigTableHeader";
+            this.ConfigTableHeader.Size = new System.Drawing.Size(245, 36);
+            this.ConfigTableHeader.TabIndex = 24;
+            // 
+            // CloudConfigButton
+            // 
+            this.CloudConfigButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CloudConfigButton.BackColor = System.Drawing.Color.Transparent;
+            this.CloudConfigButton.BorderRadius = 5;
+            this.CloudConfigButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.CloudConfigButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloudConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CloudConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CloudConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CloudConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CloudConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.CloudConfigButton.Font = new System.Drawing.Font("Comfortaa", 8.999999F);
+            this.CloudConfigButton.ForeColor = System.Drawing.Color.White;
+            this.CloudConfigButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.CloudConfigButton.Location = new System.Drawing.Point(124, 4);
+            this.CloudConfigButton.Name = "CloudConfigButton";
+            this.CloudConfigButton.Size = new System.Drawing.Size(116, 27);
+            this.CloudConfigButton.TabIndex = 26;
+            this.CloudConfigButton.Text = "Cloud";
+            // 
+            // LocalConfigButton
+            // 
+            this.LocalConfigButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LocalConfigButton.BackColor = System.Drawing.Color.Transparent;
+            this.LocalConfigButton.BorderRadius = 5;
+            this.LocalConfigButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.LocalConfigButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LocalConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LocalConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LocalConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LocalConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LocalConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.LocalConfigButton.Font = new System.Drawing.Font("Comfortaa", 8.999999F);
+            this.LocalConfigButton.ForeColor = System.Drawing.Color.White;
+            this.LocalConfigButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.LocalConfigButton.Location = new System.Drawing.Point(5, 4);
+            this.LocalConfigButton.Name = "LocalConfigButton";
+            this.LocalConfigButton.Size = new System.Drawing.Size(116, 27);
+            this.LocalConfigButton.TabIndex = 25;
+            this.LocalConfigButton.Text = "Local";
+            // 
+            // ConfigTable
+            // 
+            this.ConfigTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.ConfigTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ConfigTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ConfigTable.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.ConfigTable.Location = new System.Drawing.Point(14, 96);
+            this.ConfigTable.Name = "ConfigTable";
+            this.ConfigTable.Size = new System.Drawing.Size(245, 313);
+            this.ConfigTable.TabIndex = 23;
+            // 
+            // ConfigComboBox
+            // 
+            this.ConfigComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.ConfigComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ConfigComboBox.BorderRadius = 15;
+            this.ConfigComboBox.BorderThickness = 0;
+            this.ConfigComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ConfigComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ConfigComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ConfigComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.ConfigComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.ConfigComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.ConfigComboBox.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfigComboBox.ForeColor = System.Drawing.Color.White;
+            this.ConfigComboBox.ItemHeight = 30;
+            this.ConfigComboBox.Location = new System.Drawing.Point(14, 415);
+            this.ConfigComboBox.Name = "ConfigComboBox";
+            this.ConfigComboBox.Size = new System.Drawing.Size(245, 36);
+            this.ConfigComboBox.TabIndex = 10;
+            this.ConfigComboBox.SelectedIndexChanged += new System.EventHandler(this.ConfigComboBox_SelectedIndexChanged);
+            // 
+            // ConfigPanelHeader
+            // 
+            this.ConfigPanelHeader.Controls.Add(this.ConfigPanelHeaderLabel);
+            this.ConfigPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ConfigPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.ConfigPanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.ConfigPanelHeader.Name = "ConfigPanelHeader";
+            this.ConfigPanelHeader.Size = new System.Drawing.Size(507, 47);
+            this.ConfigPanelHeader.TabIndex = 0;
+            // 
+            // ConfigPanelHeaderLabel
+            // 
+            this.ConfigPanelHeaderLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ConfigPanelHeaderLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ConfigPanelHeaderLabel.Enabled = false;
+            this.ConfigPanelHeaderLabel.Font = new System.Drawing.Font("Comfortaa", 12F);
+            this.ConfigPanelHeaderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
+            this.ConfigPanelHeaderLabel.Location = new System.Drawing.Point(224, 7);
+            this.ConfigPanelHeaderLabel.Name = "ConfigPanelHeaderLabel";
+            this.ConfigPanelHeaderLabel.Size = new System.Drawing.Size(59, 28);
+            this.ConfigPanelHeaderLabel.TabIndex = 5;
+            this.ConfigPanelHeaderLabel.Text = "Config";
+            this.ConfigPanelHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // DetectionPanel
             // 
@@ -676,6 +935,64 @@ namespace Osussist.src.gui
             this.DetectionPanel.Name = "DetectionPanel";
             this.DetectionPanel.Size = new System.Drawing.Size(507, 228);
             this.DetectionPanel.TabIndex = 1;
+            // 
+            // AudioOffsetNumericUpDownAA
+            // 
+            this.AudioOffsetNumericUpDownAA.BackColor = System.Drawing.Color.Transparent;
+            this.AudioOffsetNumericUpDownAA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetNumericUpDownAA.BorderRadius = 5;
+            this.AudioOffsetNumericUpDownAA.BorderThickness = 0;
+            this.AudioOffsetNumericUpDownAA.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AudioOffsetNumericUpDownAA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AudioOffsetNumericUpDownAA.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AudioOffsetNumericUpDownAA.ForeColor = System.Drawing.Color.White;
+            this.AudioOffsetNumericUpDownAA.Location = new System.Drawing.Point(210, 96);
+            this.AudioOffsetNumericUpDownAA.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.AudioOffsetNumericUpDownAA.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
+            this.AudioOffsetNumericUpDownAA.Name = "AudioOffsetNumericUpDownAA";
+            this.AudioOffsetNumericUpDownAA.Size = new System.Drawing.Size(73, 21);
+            this.AudioOffsetNumericUpDownAA.TabIndex = 27;
+            this.AudioOffsetNumericUpDownAA.TextOffset = new System.Drawing.Point(0, -3);
+            this.AudioOffsetNumericUpDownAA.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetNumericUpDownAA.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AudioOffsetNumericUpDownAA.ValueChanged += new System.EventHandler(this.AudioOffsetNumericUpDownAA_ValueChanged);
+            // 
+            // AudioOffsetSliderAA
+            // 
+            this.AudioOffsetSliderAA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AudioOffsetSliderAA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.AudioOffsetSliderAA.Location = new System.Drawing.Point(12, 95);
+            this.AudioOffsetSliderAA.Maximum = 300;
+            this.AudioOffsetSliderAA.Minimum = -300;
+            this.AudioOffsetSliderAA.Name = "AudioOffsetSliderAA";
+            this.AudioOffsetSliderAA.Size = new System.Drawing.Size(192, 23);
+            this.AudioOffsetSliderAA.TabIndex = 26;
+            this.AudioOffsetSliderAA.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetSliderAA.ValueChanged += new System.EventHandler(this.AudioOffsetSliderAA_ValueChanged);
+            // 
+            // AudioOffsetLabelAA
+            // 
+            this.AudioOffsetLabelAA.BackColor = System.Drawing.Color.Transparent;
+            this.AudioOffsetLabelAA.Enabled = false;
+            this.AudioOffsetLabelAA.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.AudioOffsetLabelAA.ForeColor = System.Drawing.SystemColors.Control;
+            this.AudioOffsetLabelAA.Location = new System.Drawing.Point(289, 95);
+            this.AudioOffsetLabelAA.Name = "AudioOffsetLabelAA";
+            this.AudioOffsetLabelAA.Size = new System.Drawing.Size(89, 23);
+            this.AudioOffsetLabelAA.TabIndex = 25;
+            this.AudioOffsetLabelAA.Text = "Audio Offset";
             // 
             // MouseAlgorithmCombo
             // 
@@ -873,244 +1190,6 @@ namespace Osussist.src.gui
             this.DetectionPanelTitle.Text = "Detection";
             this.DetectionPanelTitle.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // TimingPanel
-            // 
-            this.TimingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
-            this.TimingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.TimingPanel.Controls.Add(this.HardrockLabel);
-            this.TimingPanel.Controls.Add(this.HardrockEnabled);
-            this.TimingPanel.Controls.Add(this.MaxDistanceLabel);
-            this.TimingPanel.Controls.Add(this.MaxDistanceNumeric);
-            this.TimingPanel.Controls.Add(this.MaxDistanceSlider);
-            this.TimingPanel.Controls.Add(this.AudioOffsetSliderLabel);
-            this.TimingPanel.Controls.Add(this.TimingPanelHeader);
-            this.TimingPanel.Controls.Add(this.AudioOffsetSliderNumeric);
-            this.TimingPanel.Controls.Add(this.MaxBPMSlider);
-            this.TimingPanel.Controls.Add(this.AudioOffsetSlider);
-            this.TimingPanel.Controls.Add(this.MaxBPMNumeric);
-            this.TimingPanel.Controls.Add(this.MaxBPMLabel);
-            this.TimingPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.TimingPanel.Location = new System.Drawing.Point(35, 240);
-            this.TimingPanel.Name = "TimingPanel";
-            this.TimingPanel.Size = new System.Drawing.Size(507, 228);
-            this.TimingPanel.TabIndex = 16;
-            // 
-            // HardrockLabel
-            // 
-            this.HardrockLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HardrockLabel.Enabled = false;
-            this.HardrockLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.HardrockLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.HardrockLabel.Location = new System.Drawing.Point(55, 52);
-            this.HardrockLabel.Name = "HardrockLabel";
-            this.HardrockLabel.Size = new System.Drawing.Size(84, 23);
-            this.HardrockLabel.TabIndex = 22;
-            this.HardrockLabel.Text = "HR Tapping";
-            // 
-            // HardrockEnabled
-            // 
-            this.HardrockEnabled.Animated = true;
-            this.HardrockEnabled.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabled.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HardrockEnabled.Location = new System.Drawing.Point(14, 55);
-            this.HardrockEnabled.Name = "HardrockEnabled";
-            this.HardrockEnabled.Size = new System.Drawing.Size(35, 20);
-            this.HardrockEnabled.TabIndex = 21;
-            this.HardrockEnabled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabled.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.CheckedChanged += new System.EventHandler(this.HardrockEnabled_CheckedChanged);
-            // 
-            // MaxDistanceLabel
-            // 
-            this.MaxDistanceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MaxDistanceLabel.Enabled = false;
-            this.MaxDistanceLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.MaxDistanceLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.MaxDistanceLabel.Location = new System.Drawing.Point(289, 139);
-            this.MaxDistanceLabel.Name = "MaxDistanceLabel";
-            this.MaxDistanceLabel.Size = new System.Drawing.Size(96, 23);
-            this.MaxDistanceLabel.TabIndex = 18;
-            this.MaxDistanceLabel.Text = "Max Distance";
-            // 
-            // MaxDistanceNumeric
-            // 
-            this.MaxDistanceNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.MaxDistanceNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxDistanceNumeric.BorderRadius = 5;
-            this.MaxDistanceNumeric.BorderThickness = 0;
-            this.MaxDistanceNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.MaxDistanceNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.MaxDistanceNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxDistanceNumeric.ForeColor = System.Drawing.Color.White;
-            this.MaxDistanceNumeric.Location = new System.Drawing.Point(210, 140);
-            this.MaxDistanceNumeric.Name = "MaxDistanceNumeric";
-            this.MaxDistanceNumeric.Size = new System.Drawing.Size(73, 21);
-            this.MaxDistanceNumeric.TabIndex = 17;
-            this.MaxDistanceNumeric.TextOffset = new System.Drawing.Point(0, -3);
-            this.MaxDistanceNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxDistanceNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MaxDistanceNumeric.ValueChanged += new System.EventHandler(this.MaxDistanceNumeric_ValueChanged);
-            // 
-            // MaxDistanceSlider
-            // 
-            this.MaxDistanceSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MaxDistanceSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.MaxDistanceSlider.Location = new System.Drawing.Point(12, 139);
-            this.MaxDistanceSlider.Name = "MaxDistanceSlider";
-            this.MaxDistanceSlider.Size = new System.Drawing.Size(192, 23);
-            this.MaxDistanceSlider.TabIndex = 16;
-            this.MaxDistanceSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxDistanceSlider.ValueChanged += new System.EventHandler(this.MaxDistanceSlider_ValueChanged);
-            // 
-            // AudioOffsetSliderLabel
-            // 
-            this.AudioOffsetSliderLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AudioOffsetSliderLabel.Enabled = false;
-            this.AudioOffsetSliderLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.AudioOffsetSliderLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.AudioOffsetSliderLabel.Location = new System.Drawing.Point(289, 110);
-            this.AudioOffsetSliderLabel.Name = "AudioOffsetSliderLabel";
-            this.AudioOffsetSliderLabel.Size = new System.Drawing.Size(89, 23);
-            this.AudioOffsetSliderLabel.TabIndex = 15;
-            this.AudioOffsetSliderLabel.Text = "Audio Offset";
-            // 
-            // TimingPanelHeader
-            // 
-            this.TimingPanelHeader.Controls.Add(this.TimingPanelLabel);
-            this.TimingPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TimingPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.TimingPanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.TimingPanelHeader.Name = "TimingPanelHeader";
-            this.TimingPanelHeader.Size = new System.Drawing.Size(507, 47);
-            this.TimingPanelHeader.TabIndex = 0;
-            // 
-            // TimingPanelLabel
-            // 
-            this.TimingPanelLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TimingPanelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TimingPanelLabel.Enabled = false;
-            this.TimingPanelLabel.Font = new System.Drawing.Font("Comfortaa", 12F);
-            this.TimingPanelLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
-            this.TimingPanelLabel.Location = new System.Drawing.Point(179, 7);
-            this.TimingPanelLabel.Name = "TimingPanelLabel";
-            this.TimingPanelLabel.Size = new System.Drawing.Size(148, 28);
-            this.TimingPanelLabel.TabIndex = 5;
-            this.TimingPanelLabel.Text = "Timing & Hitscan";
-            this.TimingPanelLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // AudioOffsetSliderNumeric
-            // 
-            this.AudioOffsetSliderNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.AudioOffsetSliderNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetSliderNumeric.BorderRadius = 5;
-            this.AudioOffsetSliderNumeric.BorderThickness = 0;
-            this.AudioOffsetSliderNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AudioOffsetSliderNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AudioOffsetSliderNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AudioOffsetSliderNumeric.ForeColor = System.Drawing.Color.White;
-            this.AudioOffsetSliderNumeric.Location = new System.Drawing.Point(210, 111);
-            this.AudioOffsetSliderNumeric.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.AudioOffsetSliderNumeric.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
-            this.AudioOffsetSliderNumeric.Name = "AudioOffsetSliderNumeric";
-            this.AudioOffsetSliderNumeric.Size = new System.Drawing.Size(73, 21);
-            this.AudioOffsetSliderNumeric.TabIndex = 14;
-            this.AudioOffsetSliderNumeric.TextOffset = new System.Drawing.Point(0, -3);
-            this.AudioOffsetSliderNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetSliderNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.AudioOffsetSliderNumeric.ValueChanged += new System.EventHandler(this.AudioOffsetNumeric_ValueChange);
-            // 
-            // MaxBPMSlider
-            // 
-            this.MaxBPMSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MaxBPMSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.MaxBPMSlider.Location = new System.Drawing.Point(12, 81);
-            this.MaxBPMSlider.Maximum = 500;
-            this.MaxBPMSlider.Minimum = 1;
-            this.MaxBPMSlider.Name = "MaxBPMSlider";
-            this.MaxBPMSlider.Size = new System.Drawing.Size(192, 23);
-            this.MaxBPMSlider.TabIndex = 10;
-            this.MaxBPMSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxBPMSlider.ValueChanged += new System.EventHandler(this.MaxBPMSlider_ValueChange);
-            // 
-            // AudioOffsetSlider
-            // 
-            this.AudioOffsetSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AudioOffsetSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.AudioOffsetSlider.Location = new System.Drawing.Point(12, 110);
-            this.AudioOffsetSlider.Maximum = 300;
-            this.AudioOffsetSlider.Minimum = -300;
-            this.AudioOffsetSlider.Name = "AudioOffsetSlider";
-            this.AudioOffsetSlider.Size = new System.Drawing.Size(192, 23);
-            this.AudioOffsetSlider.TabIndex = 13;
-            this.AudioOffsetSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetSlider.ValueChanged += new System.EventHandler(this.AudioOffsetSlider_ValueChanged);
-            // 
-            // MaxBPMNumeric
-            // 
-            this.MaxBPMNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.MaxBPMNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxBPMNumeric.BorderRadius = 5;
-            this.MaxBPMNumeric.BorderThickness = 0;
-            this.MaxBPMNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.MaxBPMNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.MaxBPMNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxBPMNumeric.ForeColor = System.Drawing.Color.White;
-            this.MaxBPMNumeric.Location = new System.Drawing.Point(210, 82);
-            this.MaxBPMNumeric.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.MaxBPMNumeric.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MaxBPMNumeric.Name = "MaxBPMNumeric";
-            this.MaxBPMNumeric.Size = new System.Drawing.Size(73, 21);
-            this.MaxBPMNumeric.TabIndex = 11;
-            this.MaxBPMNumeric.TextOffset = new System.Drawing.Point(0, -3);
-            this.MaxBPMNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxBPMNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MaxBPMNumeric.ValueChanged += new System.EventHandler(this.MaxBPMNumeric_ValueChange);
-            // 
-            // MaxBPMLabel
-            // 
-            this.MaxBPMLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MaxBPMLabel.Enabled = false;
-            this.MaxBPMLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.MaxBPMLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.MaxBPMLabel.Location = new System.Drawing.Point(289, 81);
-            this.MaxBPMLabel.Name = "MaxBPMLabel";
-            this.MaxBPMLabel.Size = new System.Drawing.Size(66, 23);
-            this.MaxBPMLabel.TabIndex = 12;
-            this.MaxBPMLabel.Text = "Max BPM";
-            // 
             // AimbotTabPanel
             // 
             this.AimbotTabPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
@@ -1140,6 +1219,18 @@ namespace Osussist.src.gui
             this.AimbotTabPanel.Size = new System.Drawing.Size(507, 228);
             this.AimbotTabPanel.TabIndex = 0;
             // 
+            // HardrockEnabledLabelAA
+            // 
+            this.HardrockEnabledLabelAA.BackColor = System.Drawing.Color.Transparent;
+            this.HardrockEnabledLabelAA.Enabled = false;
+            this.HardrockEnabledLabelAA.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.HardrockEnabledLabelAA.ForeColor = System.Drawing.SystemColors.Control;
+            this.HardrockEnabledLabelAA.Location = new System.Drawing.Point(289, 77);
+            this.HardrockEnabledLabelAA.Name = "HardrockEnabledLabelAA";
+            this.HardrockEnabledLabelAA.Size = new System.Drawing.Size(73, 23);
+            this.HardrockEnabledLabelAA.TabIndex = 24;
+            this.HardrockEnabledLabelAA.Text = "HR Aiming";
+            // 
             // PullawayNumeric
             // 
             this.PullawayNumeric.BackColor = System.Drawing.Color.Transparent;
@@ -1167,6 +1258,24 @@ namespace Osussist.src.gui
             0,
             0});
             this.PullawayNumeric.ValueChanged += new System.EventHandler(this.PullawayNumeric_ValueChanged);
+            // 
+            // HardrockEnabledAA
+            // 
+            this.HardrockEnabledAA.Animated = true;
+            this.HardrockEnabledAA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabledAA.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HardrockEnabledAA.Location = new System.Drawing.Point(248, 80);
+            this.HardrockEnabledAA.Name = "HardrockEnabledAA";
+            this.HardrockEnabledAA.Size = new System.Drawing.Size(35, 20);
+            this.HardrockEnabledAA.TabIndex = 23;
+            this.HardrockEnabledAA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabledAA.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabledAA.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.CheckedChanged += new System.EventHandler(this.HardrockEnabledAA_CheckedChanged);
             // 
             // AimbotKeybindLabel
             // 
@@ -1621,6 +1730,244 @@ namespace Osussist.src.gui
             this.RelaxPanelLabel.Text = "Relax";
             this.RelaxPanelLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // TimingPanel
+            // 
+            this.TimingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
+            this.TimingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TimingPanel.Controls.Add(this.HardrockLabel);
+            this.TimingPanel.Controls.Add(this.HardrockEnabled);
+            this.TimingPanel.Controls.Add(this.MaxDistanceLabel);
+            this.TimingPanel.Controls.Add(this.MaxDistanceNumeric);
+            this.TimingPanel.Controls.Add(this.MaxDistanceSlider);
+            this.TimingPanel.Controls.Add(this.AudioOffsetSliderLabel);
+            this.TimingPanel.Controls.Add(this.TimingPanelHeader);
+            this.TimingPanel.Controls.Add(this.AudioOffsetSliderNumeric);
+            this.TimingPanel.Controls.Add(this.MaxBPMSlider);
+            this.TimingPanel.Controls.Add(this.AudioOffsetSlider);
+            this.TimingPanel.Controls.Add(this.MaxBPMNumeric);
+            this.TimingPanel.Controls.Add(this.MaxBPMLabel);
+            this.TimingPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.TimingPanel.Location = new System.Drawing.Point(35, 240);
+            this.TimingPanel.Name = "TimingPanel";
+            this.TimingPanel.Size = new System.Drawing.Size(507, 228);
+            this.TimingPanel.TabIndex = 16;
+            // 
+            // HardrockLabel
+            // 
+            this.HardrockLabel.BackColor = System.Drawing.Color.Transparent;
+            this.HardrockLabel.Enabled = false;
+            this.HardrockLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.HardrockLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.HardrockLabel.Location = new System.Drawing.Point(55, 52);
+            this.HardrockLabel.Name = "HardrockLabel";
+            this.HardrockLabel.Size = new System.Drawing.Size(84, 23);
+            this.HardrockLabel.TabIndex = 22;
+            this.HardrockLabel.Text = "HR Tapping";
+            // 
+            // HardrockEnabled
+            // 
+            this.HardrockEnabled.Animated = true;
+            this.HardrockEnabled.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabled.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HardrockEnabled.Location = new System.Drawing.Point(14, 55);
+            this.HardrockEnabled.Name = "HardrockEnabled";
+            this.HardrockEnabled.Size = new System.Drawing.Size(35, 20);
+            this.HardrockEnabled.TabIndex = 21;
+            this.HardrockEnabled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabled.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.CheckedChanged += new System.EventHandler(this.HardrockEnabled_CheckedChanged);
+            // 
+            // MaxDistanceLabel
+            // 
+            this.MaxDistanceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MaxDistanceLabel.Enabled = false;
+            this.MaxDistanceLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.MaxDistanceLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.MaxDistanceLabel.Location = new System.Drawing.Point(289, 139);
+            this.MaxDistanceLabel.Name = "MaxDistanceLabel";
+            this.MaxDistanceLabel.Size = new System.Drawing.Size(96, 23);
+            this.MaxDistanceLabel.TabIndex = 18;
+            this.MaxDistanceLabel.Text = "Max Distance";
+            // 
+            // MaxDistanceNumeric
+            // 
+            this.MaxDistanceNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.MaxDistanceNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxDistanceNumeric.BorderRadius = 5;
+            this.MaxDistanceNumeric.BorderThickness = 0;
+            this.MaxDistanceNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.MaxDistanceNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.MaxDistanceNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxDistanceNumeric.ForeColor = System.Drawing.Color.White;
+            this.MaxDistanceNumeric.Location = new System.Drawing.Point(210, 140);
+            this.MaxDistanceNumeric.Name = "MaxDistanceNumeric";
+            this.MaxDistanceNumeric.Size = new System.Drawing.Size(73, 21);
+            this.MaxDistanceNumeric.TabIndex = 17;
+            this.MaxDistanceNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.MaxDistanceNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxDistanceNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MaxDistanceNumeric.ValueChanged += new System.EventHandler(this.MaxDistanceNumeric_ValueChanged);
+            // 
+            // MaxDistanceSlider
+            // 
+            this.MaxDistanceSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MaxDistanceSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.MaxDistanceSlider.Location = new System.Drawing.Point(12, 139);
+            this.MaxDistanceSlider.Name = "MaxDistanceSlider";
+            this.MaxDistanceSlider.Size = new System.Drawing.Size(192, 23);
+            this.MaxDistanceSlider.TabIndex = 16;
+            this.MaxDistanceSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxDistanceSlider.ValueChanged += new System.EventHandler(this.MaxDistanceSlider_ValueChanged);
+            // 
+            // AudioOffsetSliderLabel
+            // 
+            this.AudioOffsetSliderLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AudioOffsetSliderLabel.Enabled = false;
+            this.AudioOffsetSliderLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.AudioOffsetSliderLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.AudioOffsetSliderLabel.Location = new System.Drawing.Point(289, 110);
+            this.AudioOffsetSliderLabel.Name = "AudioOffsetSliderLabel";
+            this.AudioOffsetSliderLabel.Size = new System.Drawing.Size(89, 23);
+            this.AudioOffsetSliderLabel.TabIndex = 15;
+            this.AudioOffsetSliderLabel.Text = "Audio Offset";
+            // 
+            // TimingPanelHeader
+            // 
+            this.TimingPanelHeader.Controls.Add(this.TimingPanelLabel);
+            this.TimingPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TimingPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.TimingPanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.TimingPanelHeader.Name = "TimingPanelHeader";
+            this.TimingPanelHeader.Size = new System.Drawing.Size(507, 47);
+            this.TimingPanelHeader.TabIndex = 0;
+            // 
+            // TimingPanelLabel
+            // 
+            this.TimingPanelLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TimingPanelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TimingPanelLabel.Enabled = false;
+            this.TimingPanelLabel.Font = new System.Drawing.Font("Comfortaa", 12F);
+            this.TimingPanelLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
+            this.TimingPanelLabel.Location = new System.Drawing.Point(179, 7);
+            this.TimingPanelLabel.Name = "TimingPanelLabel";
+            this.TimingPanelLabel.Size = new System.Drawing.Size(148, 28);
+            this.TimingPanelLabel.TabIndex = 5;
+            this.TimingPanelLabel.Text = "Timing & Hitscan";
+            this.TimingPanelLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // AudioOffsetSliderNumeric
+            // 
+            this.AudioOffsetSliderNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.AudioOffsetSliderNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetSliderNumeric.BorderRadius = 5;
+            this.AudioOffsetSliderNumeric.BorderThickness = 0;
+            this.AudioOffsetSliderNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AudioOffsetSliderNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AudioOffsetSliderNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AudioOffsetSliderNumeric.ForeColor = System.Drawing.Color.White;
+            this.AudioOffsetSliderNumeric.Location = new System.Drawing.Point(210, 111);
+            this.AudioOffsetSliderNumeric.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.AudioOffsetSliderNumeric.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
+            this.AudioOffsetSliderNumeric.Name = "AudioOffsetSliderNumeric";
+            this.AudioOffsetSliderNumeric.Size = new System.Drawing.Size(73, 21);
+            this.AudioOffsetSliderNumeric.TabIndex = 14;
+            this.AudioOffsetSliderNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.AudioOffsetSliderNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetSliderNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AudioOffsetSliderNumeric.ValueChanged += new System.EventHandler(this.AudioOffsetNumeric_ValueChange);
+            // 
+            // MaxBPMSlider
+            // 
+            this.MaxBPMSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MaxBPMSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.MaxBPMSlider.Location = new System.Drawing.Point(12, 81);
+            this.MaxBPMSlider.Maximum = 500;
+            this.MaxBPMSlider.Minimum = 1;
+            this.MaxBPMSlider.Name = "MaxBPMSlider";
+            this.MaxBPMSlider.Size = new System.Drawing.Size(192, 23);
+            this.MaxBPMSlider.TabIndex = 10;
+            this.MaxBPMSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxBPMSlider.ValueChanged += new System.EventHandler(this.MaxBPMSlider_ValueChange);
+            // 
+            // AudioOffsetSlider
+            // 
+            this.AudioOffsetSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AudioOffsetSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.AudioOffsetSlider.Location = new System.Drawing.Point(12, 110);
+            this.AudioOffsetSlider.Maximum = 300;
+            this.AudioOffsetSlider.Minimum = -300;
+            this.AudioOffsetSlider.Name = "AudioOffsetSlider";
+            this.AudioOffsetSlider.Size = new System.Drawing.Size(192, 23);
+            this.AudioOffsetSlider.TabIndex = 13;
+            this.AudioOffsetSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetSlider.ValueChanged += new System.EventHandler(this.AudioOffsetSlider_ValueChanged);
+            // 
+            // MaxBPMNumeric
+            // 
+            this.MaxBPMNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.MaxBPMNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxBPMNumeric.BorderRadius = 5;
+            this.MaxBPMNumeric.BorderThickness = 0;
+            this.MaxBPMNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.MaxBPMNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.MaxBPMNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxBPMNumeric.ForeColor = System.Drawing.Color.White;
+            this.MaxBPMNumeric.Location = new System.Drawing.Point(210, 82);
+            this.MaxBPMNumeric.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.MaxBPMNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MaxBPMNumeric.Name = "MaxBPMNumeric";
+            this.MaxBPMNumeric.Size = new System.Drawing.Size(73, 21);
+            this.MaxBPMNumeric.TabIndex = 11;
+            this.MaxBPMNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.MaxBPMNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxBPMNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MaxBPMNumeric.ValueChanged += new System.EventHandler(this.MaxBPMNumeric_ValueChange);
+            // 
+            // MaxBPMLabel
+            // 
+            this.MaxBPMLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MaxBPMLabel.Enabled = false;
+            this.MaxBPMLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.MaxBPMLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.MaxBPMLabel.Location = new System.Drawing.Point(289, 81);
+            this.MaxBPMLabel.Name = "MaxBPMLabel";
+            this.MaxBPMLabel.Size = new System.Drawing.Size(66, 23);
+            this.MaxBPMLabel.TabIndex = 12;
+            this.MaxBPMLabel.Text = "Max BPM";
+            // 
             // SpooferPanel
             // 
             this.SpooferPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
@@ -1874,266 +2221,6 @@ namespace Osussist.src.gui
             this.SpooferHeaderLabel.Text = "Spoofer";
             this.SpooferHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ConfigPanel
-            // 
-            this.ConfigPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
-            this.ConfigPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ConfigPanel.Controls.Add(this.AdvancedButton);
-            this.ConfigPanel.Controls.Add(this.CreateConfigButton);
-            this.ConfigPanel.Controls.Add(this.CreateConfigText);
-            this.ConfigPanel.Controls.Add(this.DeleteConfigButton);
-            this.ConfigPanel.Controls.Add(this.ResetConfigButton);
-            this.ConfigPanel.Controls.Add(this.LoadConfigButton);
-            this.ConfigPanel.Controls.Add(this.SaveConfigButton);
-            this.ConfigPanel.Controls.Add(this.ConfigTableHeader);
-            this.ConfigPanel.Controls.Add(this.ConfigTable);
-            this.ConfigPanel.Controls.Add(this.ConfigComboBox);
-            this.ConfigPanel.Controls.Add(this.ConfigPanelHeader);
-            this.ConfigPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.ConfigPanel.Location = new System.Drawing.Point(35, 3);
-            this.ConfigPanel.Name = "ConfigPanel";
-            this.ConfigPanel.Size = new System.Drawing.Size(507, 465);
-            this.ConfigPanel.TabIndex = 22;
-            // 
-            // AdvancedButton
-            // 
-            this.AdvancedButton.BorderRadius = 15;
-            this.AdvancedButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AdvancedButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AdvancedButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AdvancedButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AdvancedButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AdvancedButton.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.AdvancedButton.ForeColor = System.Drawing.Color.White;
-            this.AdvancedButton.Location = new System.Drawing.Point(284, 220);
-            this.AdvancedButton.Name = "AdvancedButton";
-            this.AdvancedButton.Size = new System.Drawing.Size(207, 34);
-            this.AdvancedButton.TabIndex = 31;
-            this.AdvancedButton.Text = "Advanced";
-            this.AdvancedButton.Click += new System.EventHandler(this.AdvancedButton_Click);
-            // 
-            // CreateConfigButton
-            // 
-            this.CreateConfigButton.BorderRadius = 15;
-            this.CreateConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CreateConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CreateConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CreateConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CreateConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.CreateConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.CreateConfigButton.ForeColor = System.Drawing.Color.White;
-            this.CreateConfigButton.Location = new System.Drawing.Point(284, 415);
-            this.CreateConfigButton.Name = "CreateConfigButton";
-            this.CreateConfigButton.Size = new System.Drawing.Size(207, 34);
-            this.CreateConfigButton.TabIndex = 30;
-            this.CreateConfigButton.Text = "Create";
-            this.CreateConfigButton.Click += new System.EventHandler(this.CreateConfigButton_Click);
-            // 
-            // CreateConfigText
-            // 
-            this.CreateConfigText.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.CreateConfigText.BorderRadius = 10;
-            this.CreateConfigText.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CreateConfigText.DefaultText = "";
-            this.CreateConfigText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.CreateConfigText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.CreateConfigText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.CreateConfigText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.CreateConfigText.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.CreateConfigText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.CreateConfigText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateConfigText.ForeColor = System.Drawing.Color.White;
-            this.CreateConfigText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.CreateConfigText.Location = new System.Drawing.Point(284, 375);
-            this.CreateConfigText.MaxLength = 300;
-            this.CreateConfigText.Name = "CreateConfigText";
-            this.CreateConfigText.PasswordChar = '\0';
-            this.CreateConfigText.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
-            this.CreateConfigText.PlaceholderText = "config.json";
-            this.CreateConfigText.SelectedText = "";
-            this.CreateConfigText.Size = new System.Drawing.Size(207, 34);
-            this.CreateConfigText.TabIndex = 29;
-            this.CreateConfigText.WordWrap = false;
-            // 
-            // DeleteConfigButton
-            // 
-            this.DeleteConfigButton.BorderRadius = 15;
-            this.DeleteConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.DeleteConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.DeleteConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DeleteConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.DeleteConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.DeleteConfigButton.ForeColor = System.Drawing.Color.White;
-            this.DeleteConfigButton.Location = new System.Drawing.Point(284, 180);
-            this.DeleteConfigButton.Name = "DeleteConfigButton";
-            this.DeleteConfigButton.Size = new System.Drawing.Size(207, 34);
-            this.DeleteConfigButton.TabIndex = 28;
-            this.DeleteConfigButton.Text = "Delete";
-            this.DeleteConfigButton.Click += new System.EventHandler(this.DeleteConfigButton_Click);
-            // 
-            // ResetConfigButton
-            // 
-            this.ResetConfigButton.BorderRadius = 15;
-            this.ResetConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ResetConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ResetConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ResetConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ResetConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ResetConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.ResetConfigButton.ForeColor = System.Drawing.Color.White;
-            this.ResetConfigButton.Location = new System.Drawing.Point(284, 140);
-            this.ResetConfigButton.Name = "ResetConfigButton";
-            this.ResetConfigButton.Size = new System.Drawing.Size(207, 34);
-            this.ResetConfigButton.TabIndex = 27;
-            this.ResetConfigButton.Text = "Reset";
-            this.ResetConfigButton.Click += new System.EventHandler(this.ResetConfigButton_Click);
-            // 
-            // LoadConfigButton
-            // 
-            this.LoadConfigButton.BorderRadius = 15;
-            this.LoadConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.LoadConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.LoadConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LoadConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LoadConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.LoadConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.LoadConfigButton.ForeColor = System.Drawing.Color.White;
-            this.LoadConfigButton.Location = new System.Drawing.Point(284, 100);
-            this.LoadConfigButton.Name = "LoadConfigButton";
-            this.LoadConfigButton.Size = new System.Drawing.Size(207, 34);
-            this.LoadConfigButton.TabIndex = 26;
-            this.LoadConfigButton.Text = "Load";
-            this.LoadConfigButton.Click += new System.EventHandler(this.LoadConfigButton_Click);
-            // 
-            // SaveConfigButton
-            // 
-            this.SaveConfigButton.BorderRadius = 15;
-            this.SaveConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SaveConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SaveConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SaveConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SaveConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.SaveConfigButton.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.SaveConfigButton.ForeColor = System.Drawing.Color.White;
-            this.SaveConfigButton.Location = new System.Drawing.Point(284, 60);
-            this.SaveConfigButton.Name = "SaveConfigButton";
-            this.SaveConfigButton.Size = new System.Drawing.Size(207, 34);
-            this.SaveConfigButton.TabIndex = 25;
-            this.SaveConfigButton.Text = "Save";
-            this.SaveConfigButton.Click += new System.EventHandler(this.SaveConfigButton_Click);
-            // 
-            // ConfigTableHeader
-            // 
-            this.ConfigTableHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.ConfigTableHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ConfigTableHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ConfigTableHeader.Controls.Add(this.CloudConfigButton);
-            this.ConfigTableHeader.Controls.Add(this.LocalConfigButton);
-            this.ConfigTableHeader.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.ConfigTableHeader.Location = new System.Drawing.Point(13, 57);
-            this.ConfigTableHeader.Name = "ConfigTableHeader";
-            this.ConfigTableHeader.Size = new System.Drawing.Size(245, 36);
-            this.ConfigTableHeader.TabIndex = 24;
-            // 
-            // CloudConfigButton
-            // 
-            this.CloudConfigButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CloudConfigButton.BackColor = System.Drawing.Color.Transparent;
-            this.CloudConfigButton.BorderRadius = 5;
-            this.CloudConfigButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.CloudConfigButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloudConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CloudConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CloudConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CloudConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CloudConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.CloudConfigButton.Font = new System.Drawing.Font("Comfortaa", 8.999999F);
-            this.CloudConfigButton.ForeColor = System.Drawing.Color.White;
-            this.CloudConfigButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.CloudConfigButton.Location = new System.Drawing.Point(124, 4);
-            this.CloudConfigButton.Name = "CloudConfigButton";
-            this.CloudConfigButton.Size = new System.Drawing.Size(116, 27);
-            this.CloudConfigButton.TabIndex = 26;
-            this.CloudConfigButton.Text = "Cloud";
-            // 
-            // LocalConfigButton
-            // 
-            this.LocalConfigButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LocalConfigButton.BackColor = System.Drawing.Color.Transparent;
-            this.LocalConfigButton.BorderRadius = 5;
-            this.LocalConfigButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.LocalConfigButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LocalConfigButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.LocalConfigButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.LocalConfigButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LocalConfigButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LocalConfigButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.LocalConfigButton.Font = new System.Drawing.Font("Comfortaa", 8.999999F);
-            this.LocalConfigButton.ForeColor = System.Drawing.Color.White;
-            this.LocalConfigButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.LocalConfigButton.Location = new System.Drawing.Point(5, 4);
-            this.LocalConfigButton.Name = "LocalConfigButton";
-            this.LocalConfigButton.Size = new System.Drawing.Size(116, 27);
-            this.LocalConfigButton.TabIndex = 25;
-            this.LocalConfigButton.Text = "Local";
-            // 
-            // ConfigTable
-            // 
-            this.ConfigTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.ConfigTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ConfigTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ConfigTable.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.ConfigTable.Location = new System.Drawing.Point(14, 96);
-            this.ConfigTable.Name = "ConfigTable";
-            this.ConfigTable.Size = new System.Drawing.Size(245, 313);
-            this.ConfigTable.TabIndex = 23;
-            // 
-            // ConfigComboBox
-            // 
-            this.ConfigComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.ConfigComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ConfigComboBox.BorderRadius = 15;
-            this.ConfigComboBox.BorderThickness = 0;
-            this.ConfigComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ConfigComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ConfigComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ConfigComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.ConfigComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ConfigComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.ConfigComboBox.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfigComboBox.ForeColor = System.Drawing.Color.White;
-            this.ConfigComboBox.ItemHeight = 30;
-            this.ConfigComboBox.Location = new System.Drawing.Point(14, 415);
-            this.ConfigComboBox.Name = "ConfigComboBox";
-            this.ConfigComboBox.Size = new System.Drawing.Size(245, 36);
-            this.ConfigComboBox.TabIndex = 10;
-            this.ConfigComboBox.SelectedIndexChanged += new System.EventHandler(this.ConfigComboBox_SelectedIndexChanged);
-            // 
-            // ConfigPanelHeader
-            // 
-            this.ConfigPanelHeader.Controls.Add(this.ConfigPanelHeaderLabel);
-            this.ConfigPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ConfigPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.ConfigPanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.ConfigPanelHeader.Name = "ConfigPanelHeader";
-            this.ConfigPanelHeader.Size = new System.Drawing.Size(507, 47);
-            this.ConfigPanelHeader.TabIndex = 0;
-            // 
-            // ConfigPanelHeaderLabel
-            // 
-            this.ConfigPanelHeaderLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ConfigPanelHeaderLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ConfigPanelHeaderLabel.Enabled = false;
-            this.ConfigPanelHeaderLabel.Font = new System.Drawing.Font("Comfortaa", 12F);
-            this.ConfigPanelHeaderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
-            this.ConfigPanelHeaderLabel.Location = new System.Drawing.Point(224, 7);
-            this.ConfigPanelHeaderLabel.Name = "ConfigPanelHeaderLabel";
-            this.ConfigPanelHeaderLabel.Size = new System.Drawing.Size(59, 28);
-            this.ConfigPanelHeaderLabel.TabIndex = 5;
-            this.ConfigPanelHeaderLabel.Text = "Config";
-            this.ConfigPanelHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // DragZone2
             // 
             this.DragZone2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -2200,94 +2287,6 @@ namespace Osussist.src.gui
             this.ConfigTableHeaderBorder.BorderRadius = 15;
             this.ConfigTableHeaderBorder.TargetControl = this.ConfigTableHeader;
             // 
-            // AudioOffsetNumericUpDownAA
-            // 
-            this.AudioOffsetNumericUpDownAA.BackColor = System.Drawing.Color.Transparent;
-            this.AudioOffsetNumericUpDownAA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetNumericUpDownAA.BorderRadius = 5;
-            this.AudioOffsetNumericUpDownAA.BorderThickness = 0;
-            this.AudioOffsetNumericUpDownAA.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AudioOffsetNumericUpDownAA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AudioOffsetNumericUpDownAA.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AudioOffsetNumericUpDownAA.ForeColor = System.Drawing.Color.White;
-            this.AudioOffsetNumericUpDownAA.Location = new System.Drawing.Point(210, 96);
-            this.AudioOffsetNumericUpDownAA.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.AudioOffsetNumericUpDownAA.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
-            this.AudioOffsetNumericUpDownAA.Name = "AudioOffsetNumericUpDownAA";
-            this.AudioOffsetNumericUpDownAA.Size = new System.Drawing.Size(73, 21);
-            this.AudioOffsetNumericUpDownAA.TabIndex = 27;
-            this.AudioOffsetNumericUpDownAA.TextOffset = new System.Drawing.Point(0, -3);
-            this.AudioOffsetNumericUpDownAA.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetNumericUpDownAA.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.AudioOffsetNumericUpDownAA.ValueChanged += new System.EventHandler(this.AudioOffsetNumericUpDownAA_ValueChanged);
-            // 
-            // AudioOffsetSliderAA
-            // 
-            this.AudioOffsetSliderAA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AudioOffsetSliderAA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.AudioOffsetSliderAA.Location = new System.Drawing.Point(12, 95);
-            this.AudioOffsetSliderAA.Maximum = 300;
-            this.AudioOffsetSliderAA.Minimum = -300;
-            this.AudioOffsetSliderAA.Name = "AudioOffsetSliderAA";
-            this.AudioOffsetSliderAA.Size = new System.Drawing.Size(192, 23);
-            this.AudioOffsetSliderAA.TabIndex = 26;
-            this.AudioOffsetSliderAA.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetSliderAA.ValueChanged += new System.EventHandler(this.AudioOffsetSliderAA_ValueChanged);
-            // 
-            // AudioOffsetLabelAA
-            // 
-            this.AudioOffsetLabelAA.BackColor = System.Drawing.Color.Transparent;
-            this.AudioOffsetLabelAA.Enabled = false;
-            this.AudioOffsetLabelAA.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.AudioOffsetLabelAA.ForeColor = System.Drawing.SystemColors.Control;
-            this.AudioOffsetLabelAA.Location = new System.Drawing.Point(289, 95);
-            this.AudioOffsetLabelAA.Name = "AudioOffsetLabelAA";
-            this.AudioOffsetLabelAA.Size = new System.Drawing.Size(89, 23);
-            this.AudioOffsetLabelAA.TabIndex = 25;
-            this.AudioOffsetLabelAA.Text = "Audio Offset";
-            // 
-            // HardrockEnabledLabelAA
-            // 
-            this.HardrockEnabledLabelAA.BackColor = System.Drawing.Color.Transparent;
-            this.HardrockEnabledLabelAA.Enabled = false;
-            this.HardrockEnabledLabelAA.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.HardrockEnabledLabelAA.ForeColor = System.Drawing.SystemColors.Control;
-            this.HardrockEnabledLabelAA.Location = new System.Drawing.Point(289, 77);
-            this.HardrockEnabledLabelAA.Name = "HardrockEnabledLabelAA";
-            this.HardrockEnabledLabelAA.Size = new System.Drawing.Size(73, 23);
-            this.HardrockEnabledLabelAA.TabIndex = 24;
-            this.HardrockEnabledLabelAA.Text = "HR Aiming";
-            // 
-            // HardrockEnabledAA
-            // 
-            this.HardrockEnabledAA.Animated = true;
-            this.HardrockEnabledAA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabledAA.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HardrockEnabledAA.Location = new System.Drawing.Point(248, 80);
-            this.HardrockEnabledAA.Name = "HardrockEnabledAA";
-            this.HardrockEnabledAA.Size = new System.Drawing.Size(35, 20);
-            this.HardrockEnabledAA.TabIndex = 23;
-            this.HardrockEnabledAA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabledAA.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabledAA.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.CheckedChanged += new System.EventHandler(this.HardrockEnabledAA_CheckedChanged);
-            // 
             // MainGUI
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -2310,18 +2309,16 @@ namespace Osussist.src.gui
             this.SidepanelButtons.ResumeLayout(false);
             this.MainContent.ResumeLayout(false);
             this.Content.ResumeLayout(false);
+            this.ConfigPanel.ResumeLayout(false);
+            this.ConfigTableHeader.ResumeLayout(false);
+            this.ConfigPanelHeader.ResumeLayout(false);
+            this.ConfigPanelHeader.PerformLayout();
             this.DetectionPanel.ResumeLayout(false);
             this.DetectionPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetNumericUpDownAA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SimilarityNumeric)).EndInit();
             this.DetectionPanelHeader.ResumeLayout(false);
             this.DetectionPanelHeader.PerformLayout();
-            this.TimingPanel.ResumeLayout(false);
-            this.TimingPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxDistanceNumeric)).EndInit();
-            this.TimingPanelHeader.ResumeLayout(false);
-            this.TimingPanelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetSliderNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxBPMNumeric)).EndInit();
             this.AimbotTabPanel.ResumeLayout(false);
             this.AimbotTabPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PullawayNumeric)).EndInit();
@@ -2334,16 +2331,18 @@ namespace Osussist.src.gui
             this.RelaxPanel.PerformLayout();
             this.RelaxPanelHeader.ResumeLayout(false);
             this.RelaxPanelHeader.PerformLayout();
+            this.TimingPanel.ResumeLayout(false);
+            this.TimingPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxDistanceNumeric)).EndInit();
+            this.TimingPanelHeader.ResumeLayout(false);
+            this.TimingPanelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetSliderNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxBPMNumeric)).EndInit();
             this.SpooferPanel.ResumeLayout(false);
             this.SerialsPanel.ResumeLayout(false);
             this.SerialsPanel.PerformLayout();
             this.SpooferHeader.ResumeLayout(false);
             this.SpooferHeader.PerformLayout();
-            this.ConfigPanel.ResumeLayout(false);
-            this.ConfigTableHeader.ResumeLayout(false);
-            this.ConfigPanelHeader.ResumeLayout(false);
-            this.ConfigPanelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetNumericUpDownAA)).EndInit();
             this.ResumeLayout(false);
 
         }
