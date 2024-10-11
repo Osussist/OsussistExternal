@@ -3,6 +3,7 @@ using Osussist.src.cheat.aimbot;
 using Osussist.src.config;
 using Osussist.src.gui;
 using Osussist.src.osu;
+using Osussist.src.osu.helpers;
 using Osussist.src.utils;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
@@ -70,6 +71,14 @@ namespace Osussist
                 Relax relax = new Relax(SDK);
                 Aimbot aimbot = new Aimbot(SDK);
                 logger.Info("Main", "Cheats have been initialized successfully");
+
+                OsuMonitor monitor = new OsuMonitor();
+                monitor.StartMonitoring();
+                AppDomain.CurrentDomain.ProcessExit += (s, e) =>
+                {
+                    monitor.StopMonitoring();
+                };
+                logger.Info("Main", "Monitoring has been initialized successfully");
 
                 MainLoop(SDK, aimbot, relax);
             }
