@@ -114,7 +114,6 @@ namespace Osussist.src.cheat.aimbot
                                             logger.Debug("Aimbot.Stable", $"Hitobject found at {hitObject.X}, {hitObject.Y}");
                                             if (!Logic.isHoldingKeys && Logic.isAimbotEnabled && SDK.GetRealMousePosition().LengthRelativeTo(hitObject) <= Config.config.aimbotsettings.fovsize)
                                             {
-                                                Console.WriteLine(SDK.GetRealMousePosition().LengthRelativeTo(hitObject));
                                                 LastOnNotePos = hitObject;
                                                 PerformMove(hitObject);
                                             }
