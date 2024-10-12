@@ -1,8 +1,4 @@
-﻿using Osussist.src.osu;
-using Osussist.src.utils;
-using System.Drawing;
-using System.Numerics;
-using System.Runtime.InteropServices;
+﻿using Osussist.src.utils;
 using static Osussist.src.osu.helpers.OsuProcess;
 
 namespace Osussist.src.osu.helpers

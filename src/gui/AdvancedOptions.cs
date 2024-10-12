@@ -1,13 +1,8 @@
 ﻿using Osussist.src.config;
 using Osussist.src.config.objects;
 using Osussist.src.osu;
-using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using Osussist.src.config.objects;
 
 namespace Osussist.src.gui
 {
@@ -704,7 +699,7 @@ namespace Osussist.src.gui
         }
 
         private void AimbotButton_Click(object sender, EventArgs e)
-        {   
+        {
             HidePanels();
             ResetButtons();
             AimbotButton.Checked = true;

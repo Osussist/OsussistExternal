@@ -2,8 +2,6 @@
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Text;
-using Osussist.src.sdk.memory;
-using Osussist.src.osu;
 
 namespace Osussist.src.osu.helpers
 {
@@ -42,7 +40,7 @@ namespace Osussist.src.osu.helpers
 
         public void BuildMemorySDK(OsuSDK currentSDK)
         {
-            
+
         }
 
         public int ReadInt32(UIntPtr address) => BitConverter.ToInt32(ReadMemory(address, sizeof(int)), 0);

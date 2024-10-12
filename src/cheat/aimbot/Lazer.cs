@@ -1,15 +1,14 @@
 ﻿using OpenCvSharp;
 using OpenCvSharp.Extensions;
 using Osussist.src.config;
+using Osussist.src.config.objects;
 using Osussist.src.osu;
 using Osussist.src.osu.helpers;
 using Osussist.src.utils;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Numerics;
 using System.Windows.Forms;
-using Osussist.src.config.objects;
-using OsuParsers.Beatmaps.Objects;
-using System.Drawing.Imaging;
 
 namespace Osussist.src.cheat.aimbot
 {

@@ -1,64 +1,56 @@
 ﻿using OsuParsers.Beatmaps;
-using Osussist.src.config.objects;
-using Osussist.src.config;
-using Osussist.src.osu;
-using Osussist.src.utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using OsuParsers.Beatmaps.Objects;
-using WindowsInput.Native;
-using System.ComponentModel;
+using Osussist.src.config;
+using Osussist.src.config.objects;
+using Osussist.src.osu;
 using Osussist.src.osu.helpers;
-using Osussist.src.osu.enums;
+using Osussist.src.utils;
+using System.Numerics;
 
 namespace Osussist.src.cheat.aimbot
 {
-	public class Stable
-	{
-		private Logger logger { get; set; }
-		private OsuSDK SDK { get; set; }
-		private Mouse Mouse { get; set; }
+    public class Stable
+    {
+        private Logger logger { get; set; }
+        private OsuSDK SDK { get; set; }
+        private Mouse Mouse { get; set; }
 
         private int HitWin50;
         private int HitWin300;
         private int SongIndex;
-		private int LastHitTime;
-		private Beatmap CurrentBeatmap;
+        private int LastHitTime;
+        private Beatmap CurrentBeatmap;
         private int LastBeatmapId = -99;
-		private HitObject CurrentHitObject;
-		private Vector2 LastOnNotePos = Vector2.Zero;
+        private HitObject CurrentHitObject;
+        private Vector2 LastOnNotePos = Vector2.Zero;
 
         public Stable(OsuSDK givenSDK)
-		{
-			SDK = givenSDK;
-			Mouse = new Mouse(SDK);
-			logger = Logger.LoggingInstance;
-		}
+        {
+            SDK = givenSDK;
+            Mouse = new Mouse(SDK);
+            logger = Logger.LoggingInstance;
+        }
 
-		private int ClosestHitObjectIndex
-		{
-			get
-			{
-				int currentTime = SDK.CurrentTime;
-				for (int i = 0; i < CurrentBeatmap.HitObjects.Count; i++)
-				{
-					if (CurrentBeatmap.HitObjects[i].StartTime >= currentTime)
-					{
-						return i;
-					}
-				}
-				return CurrentBeatmap.HitObjects.Count;
-			}
-		}
+        private int ClosestHitObjectIndex
+        {
+            get
+            {
+                int currentTime = SDK.CurrentTime;
+                for (int i = 0; i < CurrentBeatmap.HitObjects.Count; i++)
+                {
+                    if (CurrentBeatmap.HitObjects[i].StartTime >= currentTime)
+                    {
+                        return i;
+                    }
+                }
+                return CurrentBeatmap.HitObjects.Count;
+            }
+        }
 
-		public void Loop()
-		{
-			while (SDK.isGameFocused && !SDK.isPaused)
-			{
+        public void Loop()
+        {
+            while (SDK.isGameFocused && !SDK.isPaused)
+            {
                 if (SDK.isPlaying)
                 {
                     CurrentBeatmap = Relax.CurrentBeatmap;
@@ -139,21 +131,21 @@ namespace Osussist.src.cheat.aimbot
                     }
                 }
             }
-		}
+        }
 
-		private void ResetLoop()
-		{
-			try
-			{
-				SongIndex = ClosestHitObjectIndex;
-				CurrentHitObject = CurrentBeatmap.HitObjects[SongIndex];
-				LastHitTime = -CurrentBeatmap.GeneralSection.AudioLeadIn;
-			}
-			catch (Exception e)
-			{
-				logger.Error("Aimbot.Stable", $"Failed to reset loop: {e.Message}");
-			}
-		}
+        private void ResetLoop()
+        {
+            try
+            {
+                SongIndex = ClosestHitObjectIndex;
+                CurrentHitObject = CurrentBeatmap.HitObjects[SongIndex];
+                LastHitTime = -CurrentBeatmap.GeneralSection.AudioLeadIn;
+            }
+            catch (Exception e)
+            {
+                logger.Error("Aimbot.Stable", $"Failed to reset loop: {e.Message}");
+            }
+        }
 
         private void NextObject()
         {
@@ -166,20 +158,20 @@ namespace Osussist.src.cheat.aimbot
         }
 
         private void PerformMove(Vector2 hitObject)
-		{
-			if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Steps)
-				Mouse.MoveAlgorithmSteps(hitObject);
-			else if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Bezier)
-				Mouse.MoveAlgorithmBezier(hitObject);
-			else if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Linear)
-				Mouse.MoveAlgorithmLinear(hitObject);
-			else if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Flick)
-				Mouse.MoveAlgorithmFlick(hitObject);
-			else
-			{
-				logger.Warning("Aimbot.Stable", "Invalid mouse algorithm, defaulting to steps.");
-				Mouse.MoveAlgorithmSteps(hitObject);
-			}
-		}
-	}
+        {
+            if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Steps)
+                Mouse.MoveAlgorithmSteps(hitObject);
+            else if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Bezier)
+                Mouse.MoveAlgorithmBezier(hitObject);
+            else if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Linear)
+                Mouse.MoveAlgorithmLinear(hitObject);
+            else if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Flick)
+                Mouse.MoveAlgorithmFlick(hitObject);
+            else
+            {
+                logger.Warning("Aimbot.Stable", "Invalid mouse algorithm, defaulting to steps.");
+                Mouse.MoveAlgorithmSteps(hitObject);
+            }
+        }
+    }
 }

@@ -2,13 +2,8 @@
 using Osussist.src.osu;
 using Osussist.src.osu.helpers;
 using Osussist.src.utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Osussist.src.cheat.aimbot
 {
@@ -194,7 +189,7 @@ namespace Osussist.src.cheat.aimbot
 
             movementDiff = new Vector2(
                 (currentPosition.X - destinationCoords.X) * Config.config.aimbotsettings.strength,
-                (currentPosition.Y - destinationCoords.Y)* Config.config.aimbotsettings.strength
+                (currentPosition.Y - destinationCoords.Y) * Config.config.aimbotsettings.strength
             );
 
             logger.Debug("Aimbot.Mouse", $"Moving mouse to {movementDiff.X}, {movementDiff.Y}.");
@@ -227,7 +222,7 @@ namespace Osussist.src.cheat.aimbot
             }
 
             Vector2 movementDiff = new Vector2(
-                (destinationCoords.X - currentPosition.X) * Config.config.aimbotsettings.strength, 
+                (destinationCoords.X - currentPosition.X) * Config.config.aimbotsettings.strength,
                 (destinationCoords.Y - currentPosition.Y) * Config.config.aimbotsettings.strength
             );
             logger.Debug("Aimbot.Mouse", $"Moving mouse to {movementDiff.X}, {movementDiff.Y}.");

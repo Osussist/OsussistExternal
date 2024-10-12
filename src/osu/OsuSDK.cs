@@ -7,7 +7,6 @@ using Osussist.src.config;
 using Osussist.src.osu.helpers;
 using Osussist.src.utils;
 using System.Numerics;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using static Osussist.src.osu.helpers.OsuProcess;
 
@@ -211,7 +210,7 @@ namespace Osussist.src.osu
         public Vector2 GetHRHitObjectPos(HitObject hitObject)
         {
             Vector2 scale = new Vector2(
-                OsuManager.WindowManager.PlayfieldSize.X / 512f, 
+                OsuManager.WindowManager.PlayfieldSize.X / 512f,
                 OsuManager.WindowManager.PlayfieldSize.Y / 384f
             );
 
