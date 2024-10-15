@@ -252,13 +252,32 @@ namespace Osussist.src.cheat
         {
             HitObject hitObject = (SongIndex > 0) ? CurrentBeatmap.HitObjects[SongIndex - 1] : null;
             HitObject hitObject2 = (SongIndex + 1 < CurrentBeatmap.HitObjects.Count) ? CurrentBeatmap.HitObjects[SongIndex + 1] : null;
-            ShouldStartAlternate = (hitObject != null && (float)(6000 / (CurrentHitObject.StartTime - hitObject.EndTime)) >= MaxBPM);
-            ShouldAlternate = (hitObject != null && (float)(60000 / (CurrentHitObject.StartTime - hitObject.EndTime)) >= MaxBPM);
+            if (hitObject != null)
+            {
+                float timeDifference = CurrentHitObject.StartTime - hitObject.EndTime;
+                if (timeDifference != 0)
+                {
+                    ShouldStartAlternate = (float)(6000 / timeDifference) >= MaxBPM;
+                    ShouldAlternate = (float)(60000 / timeDifference) >= MaxBPM;
+                }
+                else
+                {
+                    ShouldStartAlternate = false;
+                    ShouldAlternate = false;
+                }
+            }
+            else
+            {
+                ShouldStartAlternate = false;
+                ShouldAlternate = false;
+            }
+
             if (ShouldAlternate || PlayStyle == PlayStyles.Alternate)
             {
-                CurrentKey = ((CurrentKey == PrimaryKey) ? SecondaryKey : PrimaryKey);
+                CurrentKey = (CurrentKey == PrimaryKey) ? SecondaryKey : PrimaryKey;
                 return;
             }
+
             CurrentKey = PrimaryKey;
         }
 
