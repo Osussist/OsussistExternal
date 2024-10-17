@@ -141,11 +141,11 @@ namespace Osussist.src.gui
         private Guna2ComboBox MouseAlgorithmCombo;
         private Guna2HtmlLabel MouseMovementAlgoLabel;
         private Guna2Button AdvancedButton;
-        private Guna2NumericUpDown AudioOffsetNumericUpDownAA;
-        private Guna2TrackBar AudioOffsetSliderAA;
-        private Guna2HtmlLabel AudioOffsetLabelAA;
         private Guna2HtmlLabel HardrockEnabledLabelAA;
         private Guna2ToggleSwitch HardrockEnabledAA;
+        private Guna2HtmlLabel SensitivityLabel;
+        private Guna2NumericUpDown SensitivityNumeric;
+        private Guna2TrackBar SensitivitySlider;
         private Point dragFormPoint;
 
         public MainGUI()
@@ -177,25 +177,10 @@ namespace Osussist.src.gui
             this.DragZone1 = new Guna.UI2.WinForms.Guna2Panel();
             this.MainContent = new Guna.UI2.WinForms.Guna2Panel();
             this.Content = new Guna.UI2.WinForms.Guna2Panel();
-            this.ConfigPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.AdvancedButton = new Guna.UI2.WinForms.Guna2Button();
-            this.CreateConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.CreateConfigText = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DeleteConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ResetConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.LoadConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.SaveConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ConfigTableHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.CloudConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.LocalConfigButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ConfigTable = new Guna.UI2.WinForms.Guna2Panel();
-            this.ConfigComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.ConfigPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.ConfigPanelHeaderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.DetectionPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.AudioOffsetNumericUpDownAA = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.AudioOffsetSliderAA = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.AudioOffsetLabelAA = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.SensitivityLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.SensitivityNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.SensitivitySlider = new Guna.UI2.WinForms.Guna2TrackBar();
             this.MouseAlgorithmCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.MouseMovementAlgoLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SimilarityNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -209,6 +194,20 @@ namespace Osussist.src.gui
             this.TargetColorButton = new Guna.UI2.WinForms.Guna2Button();
             this.DetectionPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.DetectionPanelTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TimingPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.HardrockLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.HardrockEnabled = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.MaxDistanceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.MaxDistanceNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.MaxDistanceSlider = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.AudioOffsetSliderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TimingPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.TimingPanelLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.AudioOffsetSliderNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.MaxBPMSlider = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.AudioOffsetSlider = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.MaxBPMNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.MaxBPMLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AimbotTabPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.HardrockEnabledLabelAA = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PullawayNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -241,20 +240,21 @@ namespace Osussist.src.gui
             this.RelaxPanelSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.RelaxPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.RelaxPanelLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TimingPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.HardrockLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.HardrockEnabled = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.MaxDistanceLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.MaxDistanceNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.MaxDistanceSlider = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.AudioOffsetSliderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TimingPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.TimingPanelLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.AudioOffsetSliderNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.MaxBPMSlider = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.AudioOffsetSlider = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.MaxBPMNumeric = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.MaxBPMLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ConfigPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.AdvancedButton = new Guna.UI2.WinForms.Guna2Button();
+            this.CreateConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.CreateConfigText = new Guna.UI2.WinForms.Guna2TextBox();
+            this.DeleteConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ResetConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.LoadConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.SaveConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ConfigTableHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.CloudConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.LocalConfigButton = new Guna.UI2.WinForms.Guna2Button();
+            this.ConfigTable = new Guna.UI2.WinForms.Guna2Panel();
+            this.ConfigComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ConfigPanelHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.ConfigPanelHeaderLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SpooferPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.CheckSerialsButton = new Guna.UI2.WinForms.Guna2Button();
             this.SpoofSerialsButton = new Guna.UI2.WinForms.Guna2Button();
@@ -288,13 +288,15 @@ namespace Osussist.src.gui
             this.SidepanelButtons.SuspendLayout();
             this.MainContent.SuspendLayout();
             this.Content.SuspendLayout();
-            this.ConfigPanel.SuspendLayout();
-            this.ConfigTableHeader.SuspendLayout();
-            this.ConfigPanelHeader.SuspendLayout();
             this.DetectionPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetNumericUpDownAA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SensitivityNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SimilarityNumeric)).BeginInit();
             this.DetectionPanelHeader.SuspendLayout();
+            this.TimingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxDistanceNumeric)).BeginInit();
+            this.TimingPanelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetSliderNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxBPMNumeric)).BeginInit();
             this.AimbotTabPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PullawayNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AimbotStrengthNumericUpDown)).BeginInit();
@@ -303,11 +305,9 @@ namespace Osussist.src.gui
             this.AimbotTabPanelHeader.SuspendLayout();
             this.RelaxPanel.SuspendLayout();
             this.RelaxPanelHeader.SuspendLayout();
-            this.TimingPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxDistanceNumeric)).BeginInit();
-            this.TimingPanelHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetSliderNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxBPMNumeric)).BeginInit();
+            this.ConfigPanel.SuspendLayout();
+            this.ConfigTableHeader.SuspendLayout();
+            this.ConfigPanelHeader.SuspendLayout();
             this.SpooferPanel.SuspendLayout();
             this.SerialsPanel.SuspendLayout();
             this.SpooferHeader.SuspendLayout();
@@ -421,7 +421,7 @@ namespace Osussist.src.gui
             this.CreditsTitle.ForeColor = System.Drawing.SystemColors.Control;
             this.CreditsTitle.Location = new System.Drawing.Point(81, 8);
             this.CreditsTitle.Name = "CreditsTitle";
-            this.CreditsTitle.Size = new System.Drawing.Size(115, 21);
+            this.CreditsTitle.Size = new System.Drawing.Size(135, 25);
             this.CreditsTitle.TabIndex = 0;
             this.CreditsTitle.Text = "Made by Takkeshi";
             // 
@@ -597,7 +597,7 @@ namespace Osussist.src.gui
             this.SubtitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(148)))), ((int)(((byte)(148)))));
             this.SubtitleLabel.Location = new System.Drawing.Point(7, 28);
             this.SubtitleLabel.Name = "SubtitleLabel";
-            this.SubtitleLabel.Size = new System.Drawing.Size(224, 20);
+            this.SubtitleLabel.Size = new System.Drawing.Size(250, 21);
             this.SubtitleLabel.TabIndex = 1;
             this.SubtitleLabel.Text = "We did not have relations with that RAM";
             this.SubtitleLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -610,7 +610,7 @@ namespace Osussist.src.gui
             this.TitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
             this.TitleLabel.Location = new System.Drawing.Point(60, 0);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(118, 32);
+            this.TitleLabel.Size = new System.Drawing.Size(129, 36);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "氧 Osussist";
             this.TitleLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -640,16 +640,1088 @@ namespace Osussist.src.gui
             // Content
             // 
             this.Content.Controls.Add(this.DetectionPanel);
+            this.Content.Controls.Add(this.TimingPanel);
             this.Content.Controls.Add(this.AimbotTabPanel);
             this.Content.Controls.Add(this.RelaxPanel);
-            this.Content.Controls.Add(this.TimingPanel);
-            this.Content.Controls.Add(this.SpooferPanel);
             this.Content.Controls.Add(this.ConfigPanel);
+            this.Content.Controls.Add(this.SpooferPanel);
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Content.Location = new System.Drawing.Point(0, 32);
             this.Content.Name = "Content";
             this.Content.Size = new System.Drawing.Size(578, 502);
             this.Content.TabIndex = 1;
+            // 
+            // DetectionPanel
+            // 
+            this.DetectionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
+            this.DetectionPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DetectionPanel.Controls.Add(this.SensitivityLabel);
+            this.DetectionPanel.Controls.Add(this.SensitivityNumeric);
+            this.DetectionPanel.Controls.Add(this.SensitivitySlider);
+            this.DetectionPanel.Controls.Add(this.MouseAlgorithmCombo);
+            this.DetectionPanel.Controls.Add(this.MouseMovementAlgoLabel);
+            this.DetectionPanel.Controls.Add(this.SimilarityNumeric);
+            this.DetectionPanel.Controls.Add(this.CursorColorPreview);
+            this.DetectionPanel.Controls.Add(this.SimilaritySlider);
+            this.DetectionPanel.Controls.Add(this.CursorColorLabel);
+            this.DetectionPanel.Controls.Add(this.SimilarityLabel);
+            this.DetectionPanel.Controls.Add(this.CursorColorButton);
+            this.DetectionPanel.Controls.Add(this.TargetColorPreview);
+            this.DetectionPanel.Controls.Add(this.TargetColorLabel);
+            this.DetectionPanel.Controls.Add(this.TargetColorButton);
+            this.DetectionPanel.Controls.Add(this.DetectionPanelHeader);
+            this.DetectionPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.DetectionPanel.Location = new System.Drawing.Point(35, 240);
+            this.DetectionPanel.Name = "DetectionPanel";
+            this.DetectionPanel.Size = new System.Drawing.Size(507, 228);
+            this.DetectionPanel.TabIndex = 1;
+            // 
+            // SensitivityLabel
+            // 
+            this.SensitivityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SensitivityLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.SensitivityLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.SensitivityLabel.Location = new System.Drawing.Point(289, 95);
+            this.SensitivityLabel.Name = "SensitivityLabel";
+            this.SensitivityLabel.Size = new System.Drawing.Size(80, 26);
+            this.SensitivityLabel.TabIndex = 27;
+            this.SensitivityLabel.Text = "Sensitivity";
+            // 
+            // SensitivityNumeric
+            // 
+            this.SensitivityNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.SensitivityNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.SensitivityNumeric.BorderRadius = 5;
+            this.SensitivityNumeric.BorderThickness = 0;
+            this.SensitivityNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SensitivityNumeric.DecimalPlaces = 1;
+            this.SensitivityNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.SensitivityNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SensitivityNumeric.ForeColor = System.Drawing.Color.White;
+            this.SensitivityNumeric.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.SensitivityNumeric.Location = new System.Drawing.Point(210, 96);
+            this.SensitivityNumeric.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SensitivityNumeric.Maximum = new decimal(new int[] {
+            60,
+            0,
+            0,
+            65536});
+            this.SensitivityNumeric.Minimum = new decimal(new int[] {
+            4,
+            0,
+            0,
+            65536});
+            this.SensitivityNumeric.Name = "SensitivityNumeric";
+            this.SensitivityNumeric.Size = new System.Drawing.Size(73, 21);
+            this.SensitivityNumeric.TabIndex = 26;
+            this.SensitivityNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.SensitivityNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.SensitivityNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.SensitivityNumeric.ValueChanged += new System.EventHandler(this.SensitivityNumeric_ValueChanged);
+            // 
+            // SensitivitySlider
+            // 
+            this.SensitivitySlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SensitivitySlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.SensitivitySlider.Location = new System.Drawing.Point(12, 95);
+            this.SensitivitySlider.Maximum = 60;
+            this.SensitivitySlider.Minimum = 4;
+            this.SensitivitySlider.Name = "SensitivitySlider";
+            this.SensitivitySlider.Size = new System.Drawing.Size(192, 23);
+            this.SensitivitySlider.TabIndex = 25;
+            this.SensitivitySlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.SensitivitySlider.Value = 10;
+            this.SensitivitySlider.ValueChanged += new System.EventHandler(this.SensitivitySlider_ValueChanged);
+            // 
+            // MouseAlgorithmCombo
+            // 
+            this.MouseAlgorithmCombo.BackColor = System.Drawing.Color.Transparent;
+            this.MouseAlgorithmCombo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MouseAlgorithmCombo.BorderRadius = 15;
+            this.MouseAlgorithmCombo.BorderThickness = 0;
+            this.MouseAlgorithmCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MouseAlgorithmCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MouseAlgorithmCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MouseAlgorithmCombo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.MouseAlgorithmCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MouseAlgorithmCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MouseAlgorithmCombo.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MouseAlgorithmCombo.ForeColor = System.Drawing.Color.White;
+            this.MouseAlgorithmCombo.ItemHeight = 30;
+            this.MouseAlgorithmCombo.Items.AddRange(new object[] {
+            "Steps",
+            "Bezier",
+            "Linear",
+            "Flick"});
+            this.MouseAlgorithmCombo.Location = new System.Drawing.Point(12, 53);
+            this.MouseAlgorithmCombo.Name = "MouseAlgorithmCombo";
+            this.MouseAlgorithmCombo.Size = new System.Drawing.Size(140, 36);
+            this.MouseAlgorithmCombo.TabIndex = 24;
+            this.MouseAlgorithmCombo.SelectedIndexChanged += new System.EventHandler(this.MouseAlgorithmCombo_SelectedIndexChanged);
+            // 
+            // MouseMovementAlgoLabel
+            // 
+            this.MouseMovementAlgoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MouseMovementAlgoLabel.Enabled = false;
+            this.MouseMovementAlgoLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.MouseMovementAlgoLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.MouseMovementAlgoLabel.Location = new System.Drawing.Point(158, 60);
+            this.MouseMovementAlgoLabel.Name = "MouseMovementAlgoLabel";
+            this.MouseMovementAlgoLabel.Size = new System.Drawing.Size(135, 26);
+            this.MouseMovementAlgoLabel.TabIndex = 23;
+            this.MouseMovementAlgoLabel.Text = "Mouse Algorithm";
+            // 
+            // SimilarityNumeric
+            // 
+            this.SimilarityNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.SimilarityNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.SimilarityNumeric.BorderRadius = 5;
+            this.SimilarityNumeric.BorderThickness = 0;
+            this.SimilarityNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SimilarityNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.SimilarityNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SimilarityNumeric.ForeColor = System.Drawing.Color.White;
+            this.SimilarityNumeric.Location = new System.Drawing.Point(210, 125);
+            this.SimilarityNumeric.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SimilarityNumeric.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.SimilarityNumeric.Name = "SimilarityNumeric";
+            this.SimilarityNumeric.Size = new System.Drawing.Size(73, 21);
+            this.SimilarityNumeric.TabIndex = 20;
+            this.SimilarityNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.SimilarityNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.SimilarityNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.SimilarityNumeric.ValueChanged += new System.EventHandler(this.SimilarityNumeric_ValueChanged);
+            // 
+            // CursorColorPreview
+            // 
+            this.CursorColorPreview.BackColor = System.Drawing.Color.White;
+            this.CursorColorPreview.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CursorColorPreview.BorderThickness = 2;
+            this.CursorColorPreview.Location = new System.Drawing.Point(464, 146);
+            this.CursorColorPreview.Name = "CursorColorPreview";
+            this.CursorColorPreview.Size = new System.Drawing.Size(29, 23);
+            this.CursorColorPreview.TabIndex = 22;
+            // 
+            // SimilaritySlider
+            // 
+            this.SimilaritySlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SimilaritySlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.SimilaritySlider.Location = new System.Drawing.Point(12, 124);
+            this.SimilaritySlider.Maximum = 255;
+            this.SimilaritySlider.Name = "SimilaritySlider";
+            this.SimilaritySlider.Size = new System.Drawing.Size(192, 23);
+            this.SimilaritySlider.TabIndex = 19;
+            this.SimilaritySlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.SimilaritySlider.ValueChanged += new System.EventHandler(this.SimilaritySlider_ValueChanged);
+            // 
+            // CursorColorLabel
+            // 
+            this.CursorColorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CursorColorLabel.Enabled = false;
+            this.CursorColorLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.CursorColorLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.CursorColorLabel.Location = new System.Drawing.Point(261, 156);
+            this.CursorColorLabel.Name = "CursorColorLabel";
+            this.CursorColorLabel.Size = new System.Drawing.Size(104, 26);
+            this.CursorColorLabel.TabIndex = 21;
+            this.CursorColorLabel.Text = "Cursor Color";
+            // 
+            // SimilarityLabel
+            // 
+            this.SimilarityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SimilarityLabel.Enabled = false;
+            this.SimilarityLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.SimilarityLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.SimilarityLabel.Location = new System.Drawing.Point(289, 124);
+            this.SimilarityLabel.Name = "SimilarityLabel";
+            this.SimilarityLabel.Size = new System.Drawing.Size(121, 26);
+            this.SimilarityLabel.TabIndex = 18;
+            this.SimilarityLabel.Text = "Color Similarity";
+            // 
+            // CursorColorButton
+            // 
+            this.CursorColorButton.BorderRadius = 13;
+            this.CursorColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CursorColorButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CursorColorButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CursorColorButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CursorColorButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CursorColorButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.CursorColorButton.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CursorColorButton.ForeColor = System.Drawing.Color.White;
+            this.CursorColorButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.CursorColorButton.Location = new System.Drawing.Point(261, 185);
+            this.CursorColorButton.Name = "CursorColorButton";
+            this.CursorColorButton.Size = new System.Drawing.Size(232, 29);
+            this.CursorColorButton.TabIndex = 20;
+            this.CursorColorButton.Text = "Change Color";
+            this.CursorColorButton.Click += new System.EventHandler(this.ChangeColorButton_Click);
+            // 
+            // TargetColorPreview
+            // 
+            this.TargetColorPreview.BackColor = System.Drawing.Color.White;
+            this.TargetColorPreview.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.TargetColorPreview.BorderThickness = 2;
+            this.TargetColorPreview.Location = new System.Drawing.Point(216, 156);
+            this.TargetColorPreview.Name = "TargetColorPreview";
+            this.TargetColorPreview.Size = new System.Drawing.Size(29, 23);
+            this.TargetColorPreview.TabIndex = 19;
+            // 
+            // TargetColorLabel
+            // 
+            this.TargetColorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TargetColorLabel.Enabled = false;
+            this.TargetColorLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.TargetColorLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.TargetColorLabel.Location = new System.Drawing.Point(13, 156);
+            this.TargetColorLabel.Name = "TargetColorLabel";
+            this.TargetColorLabel.Size = new System.Drawing.Size(102, 26);
+            this.TargetColorLabel.TabIndex = 18;
+            this.TargetColorLabel.Text = "Target Color";
+            // 
+            // TargetColorButton
+            // 
+            this.TargetColorButton.BorderRadius = 13;
+            this.TargetColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TargetColorButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.TargetColorButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.TargetColorButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.TargetColorButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.TargetColorButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.TargetColorButton.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TargetColorButton.ForeColor = System.Drawing.Color.White;
+            this.TargetColorButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.TargetColorButton.Location = new System.Drawing.Point(13, 185);
+            this.TargetColorButton.Name = "TargetColorButton";
+            this.TargetColorButton.Size = new System.Drawing.Size(232, 29);
+            this.TargetColorButton.TabIndex = 1;
+            this.TargetColorButton.Text = "Change Color";
+            this.TargetColorButton.Click += new System.EventHandler(this.ChangeColorButton_Click);
+            // 
+            // DetectionPanelHeader
+            // 
+            this.DetectionPanelHeader.Controls.Add(this.DetectionPanelTitle);
+            this.DetectionPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DetectionPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.DetectionPanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.DetectionPanelHeader.Name = "DetectionPanelHeader";
+            this.DetectionPanelHeader.Size = new System.Drawing.Size(507, 47);
+            this.DetectionPanelHeader.TabIndex = 0;
+            // 
+            // DetectionPanelTitle
+            // 
+            this.DetectionPanelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.DetectionPanelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.DetectionPanelTitle.Enabled = false;
+            this.DetectionPanelTitle.Font = new System.Drawing.Font("Comfortaa", 12F);
+            this.DetectionPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
+            this.DetectionPanelTitle.Location = new System.Drawing.Point(211, 7);
+            this.DetectionPanelTitle.Name = "DetectionPanelTitle";
+            this.DetectionPanelTitle.Size = new System.Drawing.Size(93, 31);
+            this.DetectionPanelTitle.TabIndex = 5;
+            this.DetectionPanelTitle.Text = "Detection";
+            this.DetectionPanelTitle.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // TimingPanel
+            // 
+            this.TimingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
+            this.TimingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.TimingPanel.Controls.Add(this.HardrockLabel);
+            this.TimingPanel.Controls.Add(this.HardrockEnabled);
+            this.TimingPanel.Controls.Add(this.MaxDistanceLabel);
+            this.TimingPanel.Controls.Add(this.MaxDistanceNumeric);
+            this.TimingPanel.Controls.Add(this.MaxDistanceSlider);
+            this.TimingPanel.Controls.Add(this.AudioOffsetSliderLabel);
+            this.TimingPanel.Controls.Add(this.TimingPanelHeader);
+            this.TimingPanel.Controls.Add(this.AudioOffsetSliderNumeric);
+            this.TimingPanel.Controls.Add(this.MaxBPMSlider);
+            this.TimingPanel.Controls.Add(this.AudioOffsetSlider);
+            this.TimingPanel.Controls.Add(this.MaxBPMNumeric);
+            this.TimingPanel.Controls.Add(this.MaxBPMLabel);
+            this.TimingPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.TimingPanel.Location = new System.Drawing.Point(35, 240);
+            this.TimingPanel.Name = "TimingPanel";
+            this.TimingPanel.Size = new System.Drawing.Size(507, 228);
+            this.TimingPanel.TabIndex = 16;
+            // 
+            // HardrockLabel
+            // 
+            this.HardrockLabel.BackColor = System.Drawing.Color.Transparent;
+            this.HardrockLabel.Enabled = false;
+            this.HardrockLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.HardrockLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.HardrockLabel.Location = new System.Drawing.Point(55, 52);
+            this.HardrockLabel.Name = "HardrockLabel";
+            this.HardrockLabel.Size = new System.Drawing.Size(95, 26);
+            this.HardrockLabel.TabIndex = 22;
+            this.HardrockLabel.Text = "HR Tapping";
+            // 
+            // HardrockEnabled
+            // 
+            this.HardrockEnabled.Animated = true;
+            this.HardrockEnabled.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabled.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HardrockEnabled.Location = new System.Drawing.Point(14, 55);
+            this.HardrockEnabled.Name = "HardrockEnabled";
+            this.HardrockEnabled.Size = new System.Drawing.Size(35, 20);
+            this.HardrockEnabled.TabIndex = 21;
+            this.HardrockEnabled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabled.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabled.CheckedChanged += new System.EventHandler(this.HardrockEnabled_CheckedChanged);
+            // 
+            // MaxDistanceLabel
+            // 
+            this.MaxDistanceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MaxDistanceLabel.Enabled = false;
+            this.MaxDistanceLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.MaxDistanceLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.MaxDistanceLabel.Location = new System.Drawing.Point(289, 139);
+            this.MaxDistanceLabel.Name = "MaxDistanceLabel";
+            this.MaxDistanceLabel.Size = new System.Drawing.Size(108, 26);
+            this.MaxDistanceLabel.TabIndex = 18;
+            this.MaxDistanceLabel.Text = "Max Distance";
+            // 
+            // MaxDistanceNumeric
+            // 
+            this.MaxDistanceNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.MaxDistanceNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxDistanceNumeric.BorderRadius = 5;
+            this.MaxDistanceNumeric.BorderThickness = 0;
+            this.MaxDistanceNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.MaxDistanceNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.MaxDistanceNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxDistanceNumeric.ForeColor = System.Drawing.Color.White;
+            this.MaxDistanceNumeric.Location = new System.Drawing.Point(210, 140);
+            this.MaxDistanceNumeric.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaxDistanceNumeric.Name = "MaxDistanceNumeric";
+            this.MaxDistanceNumeric.Size = new System.Drawing.Size(73, 21);
+            this.MaxDistanceNumeric.TabIndex = 17;
+            this.MaxDistanceNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.MaxDistanceNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxDistanceNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MaxDistanceNumeric.ValueChanged += new System.EventHandler(this.MaxDistanceNumeric_ValueChanged);
+            // 
+            // MaxDistanceSlider
+            // 
+            this.MaxDistanceSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MaxDistanceSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.MaxDistanceSlider.Location = new System.Drawing.Point(12, 139);
+            this.MaxDistanceSlider.Name = "MaxDistanceSlider";
+            this.MaxDistanceSlider.Size = new System.Drawing.Size(192, 23);
+            this.MaxDistanceSlider.TabIndex = 16;
+            this.MaxDistanceSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxDistanceSlider.ValueChanged += new System.EventHandler(this.MaxDistanceSlider_ValueChanged);
+            // 
+            // AudioOffsetSliderLabel
+            // 
+            this.AudioOffsetSliderLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AudioOffsetSliderLabel.Enabled = false;
+            this.AudioOffsetSliderLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.AudioOffsetSliderLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.AudioOffsetSliderLabel.Location = new System.Drawing.Point(289, 110);
+            this.AudioOffsetSliderLabel.Name = "AudioOffsetSliderLabel";
+            this.AudioOffsetSliderLabel.Size = new System.Drawing.Size(100, 26);
+            this.AudioOffsetSliderLabel.TabIndex = 15;
+            this.AudioOffsetSliderLabel.Text = "Audio Offset";
+            // 
+            // TimingPanelHeader
+            // 
+            this.TimingPanelHeader.Controls.Add(this.TimingPanelLabel);
+            this.TimingPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TimingPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.TimingPanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.TimingPanelHeader.Name = "TimingPanelHeader";
+            this.TimingPanelHeader.Size = new System.Drawing.Size(507, 47);
+            this.TimingPanelHeader.TabIndex = 0;
+            // 
+            // TimingPanelLabel
+            // 
+            this.TimingPanelLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TimingPanelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TimingPanelLabel.Enabled = false;
+            this.TimingPanelLabel.Font = new System.Drawing.Font("Comfortaa", 12F);
+            this.TimingPanelLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
+            this.TimingPanelLabel.Location = new System.Drawing.Point(179, 7);
+            this.TimingPanelLabel.Name = "TimingPanelLabel";
+            this.TimingPanelLabel.Size = new System.Drawing.Size(161, 31);
+            this.TimingPanelLabel.TabIndex = 5;
+            this.TimingPanelLabel.Text = "Timing & Hitscan";
+            this.TimingPanelLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // AudioOffsetSliderNumeric
+            // 
+            this.AudioOffsetSliderNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.AudioOffsetSliderNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetSliderNumeric.BorderRadius = 5;
+            this.AudioOffsetSliderNumeric.BorderThickness = 0;
+            this.AudioOffsetSliderNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AudioOffsetSliderNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AudioOffsetSliderNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AudioOffsetSliderNumeric.ForeColor = System.Drawing.Color.White;
+            this.AudioOffsetSliderNumeric.Location = new System.Drawing.Point(210, 111);
+            this.AudioOffsetSliderNumeric.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AudioOffsetSliderNumeric.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.AudioOffsetSliderNumeric.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
+            this.AudioOffsetSliderNumeric.Name = "AudioOffsetSliderNumeric";
+            this.AudioOffsetSliderNumeric.Size = new System.Drawing.Size(73, 21);
+            this.AudioOffsetSliderNumeric.TabIndex = 14;
+            this.AudioOffsetSliderNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.AudioOffsetSliderNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetSliderNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AudioOffsetSliderNumeric.ValueChanged += new System.EventHandler(this.AudioOffsetNumeric_ValueChange);
+            // 
+            // MaxBPMSlider
+            // 
+            this.MaxBPMSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MaxBPMSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.MaxBPMSlider.Location = new System.Drawing.Point(12, 81);
+            this.MaxBPMSlider.Maximum = 500;
+            this.MaxBPMSlider.Minimum = 1;
+            this.MaxBPMSlider.Name = "MaxBPMSlider";
+            this.MaxBPMSlider.Size = new System.Drawing.Size(192, 23);
+            this.MaxBPMSlider.TabIndex = 10;
+            this.MaxBPMSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxBPMSlider.ValueChanged += new System.EventHandler(this.MaxBPMSlider_ValueChange);
+            // 
+            // AudioOffsetSlider
+            // 
+            this.AudioOffsetSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AudioOffsetSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.AudioOffsetSlider.Location = new System.Drawing.Point(12, 110);
+            this.AudioOffsetSlider.Maximum = 300;
+            this.AudioOffsetSlider.Minimum = -300;
+            this.AudioOffsetSlider.Name = "AudioOffsetSlider";
+            this.AudioOffsetSlider.Size = new System.Drawing.Size(192, 23);
+            this.AudioOffsetSlider.TabIndex = 13;
+            this.AudioOffsetSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AudioOffsetSlider.ValueChanged += new System.EventHandler(this.AudioOffsetSlider_ValueChanged);
+            // 
+            // MaxBPMNumeric
+            // 
+            this.MaxBPMNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.MaxBPMNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxBPMNumeric.BorderRadius = 5;
+            this.MaxBPMNumeric.BorderThickness = 0;
+            this.MaxBPMNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.MaxBPMNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.MaxBPMNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxBPMNumeric.ForeColor = System.Drawing.Color.White;
+            this.MaxBPMNumeric.Location = new System.Drawing.Point(210, 82);
+            this.MaxBPMNumeric.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaxBPMNumeric.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.MaxBPMNumeric.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MaxBPMNumeric.Name = "MaxBPMNumeric";
+            this.MaxBPMNumeric.Size = new System.Drawing.Size(73, 21);
+            this.MaxBPMNumeric.TabIndex = 11;
+            this.MaxBPMNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.MaxBPMNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.MaxBPMNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.MaxBPMNumeric.ValueChanged += new System.EventHandler(this.MaxBPMNumeric_ValueChange);
+            // 
+            // MaxBPMLabel
+            // 
+            this.MaxBPMLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MaxBPMLabel.Enabled = false;
+            this.MaxBPMLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.MaxBPMLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.MaxBPMLabel.Location = new System.Drawing.Point(289, 81);
+            this.MaxBPMLabel.Name = "MaxBPMLabel";
+            this.MaxBPMLabel.Size = new System.Drawing.Size(74, 26);
+            this.MaxBPMLabel.TabIndex = 12;
+            this.MaxBPMLabel.Text = "Max BPM";
+            // 
+            // AimbotTabPanel
+            // 
+            this.AimbotTabPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
+            this.AimbotTabPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.AimbotTabPanel.Controls.Add(this.HardrockEnabledLabelAA);
+            this.AimbotTabPanel.Controls.Add(this.PullawayNumeric);
+            this.AimbotTabPanel.Controls.Add(this.HardrockEnabledAA);
+            this.AimbotTabPanel.Controls.Add(this.AimbotKeybindLabel);
+            this.AimbotTabPanel.Controls.Add(this.PullawaySlider);
+            this.AimbotTabPanel.Controls.Add(this.PullawayLabel);
+            this.AimbotTabPanel.Controls.Add(this.AimbotKeybindSet);
+            this.AimbotTabPanel.Controls.Add(this.StrengthLabel);
+            this.AimbotTabPanel.Controls.Add(this.AimbotStrengthNumericUpDown);
+            this.AimbotTabPanel.Controls.Add(this.AimbotStrengthSlider);
+            this.AimbotTabPanel.Controls.Add(this.SmoothingLabel);
+            this.AimbotTabPanel.Controls.Add(this.AimbotSmoothingSliderNumericUpDown);
+            this.AimbotTabPanel.Controls.Add(this.AimbotSmoothingSlider);
+            this.AimbotTabPanel.Controls.Add(this.FovLabel);
+            this.AimbotTabPanel.Controls.Add(this.AimbotFovSliderNumericUpDown);
+            this.AimbotTabPanel.Controls.Add(this.AimbotFovSlider);
+            this.AimbotTabPanel.Controls.Add(this.AimbotTabPanelSwitchLabel);
+            this.AimbotTabPanel.Controls.Add(this.AimbotTabPanelSwitch);
+            this.AimbotTabPanel.Controls.Add(this.AimbotTabPanelHeader);
+            this.AimbotTabPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.AimbotTabPanel.Location = new System.Drawing.Point(35, 3);
+            this.AimbotTabPanel.Name = "AimbotTabPanel";
+            this.AimbotTabPanel.Size = new System.Drawing.Size(507, 228);
+            this.AimbotTabPanel.TabIndex = 0;
+            // 
+            // HardrockEnabledLabelAA
+            // 
+            this.HardrockEnabledLabelAA.BackColor = System.Drawing.Color.Transparent;
+            this.HardrockEnabledLabelAA.Enabled = false;
+            this.HardrockEnabledLabelAA.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.HardrockEnabledLabelAA.ForeColor = System.Drawing.SystemColors.Control;
+            this.HardrockEnabledLabelAA.Location = new System.Drawing.Point(289, 78);
+            this.HardrockEnabledLabelAA.Name = "HardrockEnabledLabelAA";
+            this.HardrockEnabledLabelAA.Size = new System.Drawing.Size(82, 26);
+            this.HardrockEnabledLabelAA.TabIndex = 24;
+            this.HardrockEnabledLabelAA.Text = "HR Aiming";
+            // 
+            // PullawayNumeric
+            // 
+            this.PullawayNumeric.BackColor = System.Drawing.Color.Transparent;
+            this.PullawayNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.PullawayNumeric.BorderRadius = 5;
+            this.PullawayNumeric.BorderThickness = 0;
+            this.PullawayNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.PullawayNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.PullawayNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PullawayNumeric.ForeColor = System.Drawing.Color.White;
+            this.PullawayNumeric.Location = new System.Drawing.Point(210, 194);
+            this.PullawayNumeric.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PullawayNumeric.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.PullawayNumeric.Name = "PullawayNumeric";
+            this.PullawayNumeric.Size = new System.Drawing.Size(73, 21);
+            this.PullawayNumeric.TabIndex = 25;
+            this.PullawayNumeric.TextOffset = new System.Drawing.Point(0, -3);
+            this.PullawayNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.PullawayNumeric.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.PullawayNumeric.ValueChanged += new System.EventHandler(this.PullawayNumeric_ValueChanged);
+            // 
+            // HardrockEnabledAA
+            // 
+            this.HardrockEnabledAA.Animated = true;
+            this.HardrockEnabledAA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabledAA.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HardrockEnabledAA.Location = new System.Drawing.Point(248, 81);
+            this.HardrockEnabledAA.Name = "HardrockEnabledAA";
+            this.HardrockEnabledAA.Size = new System.Drawing.Size(35, 20);
+            this.HardrockEnabledAA.TabIndex = 23;
+            this.HardrockEnabledAA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabledAA.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.HardrockEnabledAA.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.HardrockEnabledAA.CheckedChanged += new System.EventHandler(this.HardrockEnabledAA_CheckedChanged);
+            // 
+            // AimbotKeybindLabel
+            // 
+            this.AimbotKeybindLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AimbotKeybindLabel.Enabled = false;
+            this.AimbotKeybindLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.AimbotKeybindLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.AimbotKeybindLabel.Location = new System.Drawing.Point(112, 78);
+            this.AimbotKeybindLabel.Name = "AimbotKeybindLabel";
+            this.AimbotKeybindLabel.Size = new System.Drawing.Size(131, 26);
+            this.AimbotKeybindLabel.TabIndex = 18;
+            this.AimbotKeybindLabel.Text = "Change Keybind";
+            // 
+            // PullawaySlider
+            // 
+            this.PullawaySlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PullawaySlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.PullawaySlider.Location = new System.Drawing.Point(12, 193);
+            this.PullawaySlider.Maximum = 1000;
+            this.PullawaySlider.Name = "PullawaySlider";
+            this.PullawaySlider.Size = new System.Drawing.Size(192, 23);
+            this.PullawaySlider.TabIndex = 24;
+            this.PullawaySlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.PullawaySlider.ValueChanged += new System.EventHandler(this.PullawaySlider_ValueChanged);
+            // 
+            // PullawayLabel
+            // 
+            this.PullawayLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PullawayLabel.Enabled = false;
+            this.PullawayLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.PullawayLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.PullawayLabel.Location = new System.Drawing.Point(289, 193);
+            this.PullawayLabel.Name = "PullawayLabel";
+            this.PullawayLabel.Size = new System.Drawing.Size(141, 26);
+            this.PullawayLabel.TabIndex = 23;
+            this.PullawayLabel.Text = "Pullaway Distance";
+            // 
+            // AimbotKeybindSet
+            // 
+            this.AimbotKeybindSet.BorderRadius = 7;
+            this.AimbotKeybindSet.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.AimbotKeybindSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AimbotKeybindSet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AimbotKeybindSet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AimbotKeybindSet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+            this.AimbotKeybindSet.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.AimbotKeybindSet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotKeybindSet.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotKeybindSet.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AimbotKeybindSet.ForeColor = System.Drawing.Color.White;
+            this.AimbotKeybindSet.Location = new System.Drawing.Point(12, 78);
+            this.AimbotKeybindSet.Name = "AimbotKeybindSet";
+            this.AimbotKeybindSet.Size = new System.Drawing.Size(94, 26);
+            this.AimbotKeybindSet.TabIndex = 2;
+            this.AimbotKeybindSet.Text = "Ctrl";
+            this.AimbotKeybindSet.TextOffset = new System.Drawing.Point(0, -2);
+            this.AimbotKeybindSet.Click += new System.EventHandler(this.AimbotKeybindSet_Click);
+            // 
+            // StrengthLabel
+            // 
+            this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.StrengthLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.StrengthLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.StrengthLabel.Location = new System.Drawing.Point(289, 164);
+            this.StrengthLabel.Name = "StrengthLabel";
+            this.StrengthLabel.Size = new System.Drawing.Size(71, 26);
+            this.StrengthLabel.TabIndex = 12;
+            this.StrengthLabel.Text = "Strength";
+            // 
+            // AimbotStrengthNumericUpDown
+            // 
+            this.AimbotStrengthNumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.AimbotStrengthNumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotStrengthNumericUpDown.BorderRadius = 5;
+            this.AimbotStrengthNumericUpDown.BorderThickness = 0;
+            this.AimbotStrengthNumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AimbotStrengthNumericUpDown.DecimalPlaces = 4;
+            this.AimbotStrengthNumericUpDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotStrengthNumericUpDown.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AimbotStrengthNumericUpDown.ForeColor = System.Drawing.Color.White;
+            this.AimbotStrengthNumericUpDown.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            262144});
+            this.AimbotStrengthNumericUpDown.Location = new System.Drawing.Point(210, 165);
+            this.AimbotStrengthNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AimbotStrengthNumericUpDown.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            65536});
+            this.AimbotStrengthNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            262144});
+            this.AimbotStrengthNumericUpDown.Name = "AimbotStrengthNumericUpDown";
+            this.AimbotStrengthNumericUpDown.Size = new System.Drawing.Size(73, 21);
+            this.AimbotStrengthNumericUpDown.TabIndex = 11;
+            this.AimbotStrengthNumericUpDown.TextOffset = new System.Drawing.Point(0, -3);
+            this.AimbotStrengthNumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotStrengthNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AimbotStrengthNumericUpDown.ValueChanged += new System.EventHandler(this.AimbotStrengthNumericUpDown_ValueChanged);
+            // 
+            // AimbotStrengthSlider
+            // 
+            this.AimbotStrengthSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AimbotStrengthSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.AimbotStrengthSlider.Location = new System.Drawing.Point(12, 164);
+            this.AimbotStrengthSlider.Maximum = 10000;
+            this.AimbotStrengthSlider.Minimum = 1;
+            this.AimbotStrengthSlider.Name = "AimbotStrengthSlider";
+            this.AimbotStrengthSlider.Size = new System.Drawing.Size(192, 23);
+            this.AimbotStrengthSlider.TabIndex = 10;
+            this.AimbotStrengthSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotStrengthSlider.ValueChanged += new System.EventHandler(this.AimbotStrengthSlider_ValueChanged);
+            // 
+            // SmoothingLabel
+            // 
+            this.SmoothingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.SmoothingLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.SmoothingLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.SmoothingLabel.Location = new System.Drawing.Point(289, 135);
+            this.SmoothingLabel.Name = "SmoothingLabel";
+            this.SmoothingLabel.Size = new System.Drawing.Size(87, 26);
+            this.SmoothingLabel.TabIndex = 9;
+            this.SmoothingLabel.Text = "Smoothing";
+            // 
+            // AimbotSmoothingSliderNumericUpDown
+            // 
+            this.AimbotSmoothingSliderNumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.AimbotSmoothingSliderNumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotSmoothingSliderNumericUpDown.BorderRadius = 5;
+            this.AimbotSmoothingSliderNumericUpDown.BorderThickness = 0;
+            this.AimbotSmoothingSliderNumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AimbotSmoothingSliderNumericUpDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotSmoothingSliderNumericUpDown.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AimbotSmoothingSliderNumericUpDown.ForeColor = System.Drawing.Color.White;
+            this.AimbotSmoothingSliderNumericUpDown.Location = new System.Drawing.Point(210, 136);
+            this.AimbotSmoothingSliderNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AimbotSmoothingSliderNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AimbotSmoothingSliderNumericUpDown.Name = "AimbotSmoothingSliderNumericUpDown";
+            this.AimbotSmoothingSliderNumericUpDown.Size = new System.Drawing.Size(73, 21);
+            this.AimbotSmoothingSliderNumericUpDown.TabIndex = 8;
+            this.AimbotSmoothingSliderNumericUpDown.TextOffset = new System.Drawing.Point(0, -3);
+            this.AimbotSmoothingSliderNumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotSmoothingSliderNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AimbotSmoothingSliderNumericUpDown.ValueChanged += new System.EventHandler(this.AimbotSmoothingSliderNumericUpDown_ValueChanged);
+            // 
+            // AimbotSmoothingSlider
+            // 
+            this.AimbotSmoothingSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AimbotSmoothingSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.AimbotSmoothingSlider.Location = new System.Drawing.Point(12, 135);
+            this.AimbotSmoothingSlider.Minimum = 1;
+            this.AimbotSmoothingSlider.Name = "AimbotSmoothingSlider";
+            this.AimbotSmoothingSlider.Size = new System.Drawing.Size(192, 23);
+            this.AimbotSmoothingSlider.TabIndex = 7;
+            this.AimbotSmoothingSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotSmoothingSlider.ValueChanged += new System.EventHandler(this.AimbotSmoothingSlider_ValueChanged);
+            // 
+            // FovLabel
+            // 
+            this.FovLabel.BackColor = System.Drawing.Color.Transparent;
+            this.FovLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.FovLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.FovLabel.Location = new System.Drawing.Point(289, 106);
+            this.FovLabel.Name = "FovLabel";
+            this.FovLabel.Size = new System.Drawing.Size(65, 26);
+            this.FovLabel.TabIndex = 6;
+            this.FovLabel.Text = "Fov SIze";
+            // 
+            // AimbotFovSliderNumericUpDown
+            // 
+            this.AimbotFovSliderNumericUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.AimbotFovSliderNumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotFovSliderNumericUpDown.BorderRadius = 5;
+            this.AimbotFovSliderNumericUpDown.BorderThickness = 0;
+            this.AimbotFovSliderNumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AimbotFovSliderNumericUpDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotFovSliderNumericUpDown.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AimbotFovSliderNumericUpDown.ForeColor = System.Drawing.Color.White;
+            this.AimbotFovSliderNumericUpDown.Location = new System.Drawing.Point(210, 107);
+            this.AimbotFovSliderNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AimbotFovSliderNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.AimbotFovSliderNumericUpDown.Name = "AimbotFovSliderNumericUpDown";
+            this.AimbotFovSliderNumericUpDown.Size = new System.Drawing.Size(73, 21);
+            this.AimbotFovSliderNumericUpDown.TabIndex = 5;
+            this.AimbotFovSliderNumericUpDown.TextOffset = new System.Drawing.Point(0, -3);
+            this.AimbotFovSliderNumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotFovSliderNumericUpDown.ValueChanged += new System.EventHandler(this.AimbotFovSliderNumericUpDown_ValueChanged);
+            // 
+            // AimbotFovSlider
+            // 
+            this.AimbotFovSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AimbotFovSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
+            this.AimbotFovSlider.Location = new System.Drawing.Point(12, 106);
+            this.AimbotFovSlider.Maximum = 1000;
+            this.AimbotFovSlider.Name = "AimbotFovSlider";
+            this.AimbotFovSlider.Size = new System.Drawing.Size(192, 23);
+            this.AimbotFovSlider.TabIndex = 3;
+            this.AimbotFovSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotFovSlider.ValueChanged += new System.EventHandler(this.AimbotFovSlider_ValueChanged);
+            // 
+            // AimbotTabPanelSwitchLabel
+            // 
+            this.AimbotTabPanelSwitchLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AimbotTabPanelSwitchLabel.Enabled = false;
+            this.AimbotTabPanelSwitchLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.AimbotTabPanelSwitchLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.AimbotTabPanelSwitchLabel.Location = new System.Drawing.Point(53, 51);
+            this.AimbotTabPanelSwitchLabel.Name = "AimbotTabPanelSwitchLabel";
+            this.AimbotTabPanelSwitchLabel.Size = new System.Drawing.Size(68, 26);
+            this.AimbotTabPanelSwitchLabel.TabIndex = 2;
+            this.AimbotTabPanelSwitchLabel.Text = "Enabled";
+            // 
+            // AimbotTabPanelSwitch
+            // 
+            this.AimbotTabPanelSwitch.Animated = true;
+            this.AimbotTabPanelSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotTabPanelSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotTabPanelSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotTabPanelSwitch.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotTabPanelSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AimbotTabPanelSwitch.Location = new System.Drawing.Point(12, 54);
+            this.AimbotTabPanelSwitch.Name = "AimbotTabPanelSwitch";
+            this.AimbotTabPanelSwitch.Size = new System.Drawing.Size(35, 20);
+            this.AimbotTabPanelSwitch.TabIndex = 1;
+            this.AimbotTabPanelSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotTabPanelSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.AimbotTabPanelSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotTabPanelSwitch.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.AimbotTabPanelSwitch.CheckedChanged += new System.EventHandler(this.AimbotTabPanelSwitch_CheckedChanged);
+            // 
+            // AimbotTabPanelHeader
+            // 
+            this.AimbotTabPanelHeader.Controls.Add(this.AimbotTabPanelTitle);
+            this.AimbotTabPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AimbotTabPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.AimbotTabPanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.AimbotTabPanelHeader.Name = "AimbotTabPanelHeader";
+            this.AimbotTabPanelHeader.Size = new System.Drawing.Size(507, 47);
+            this.AimbotTabPanelHeader.TabIndex = 0;
+            // 
+            // AimbotTabPanelTitle
+            // 
+            this.AimbotTabPanelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AimbotTabPanelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.AimbotTabPanelTitle.Enabled = false;
+            this.AimbotTabPanelTitle.Font = new System.Drawing.Font("Comfortaa", 12F);
+            this.AimbotTabPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
+            this.AimbotTabPanelTitle.Location = new System.Drawing.Point(209, 7);
+            this.AimbotTabPanelTitle.Name = "AimbotTabPanelTitle";
+            this.AimbotTabPanelTitle.Size = new System.Drawing.Size(98, 31);
+            this.AimbotTabPanelTitle.TabIndex = 5;
+            this.AimbotTabPanelTitle.Text = "Aim Assist";
+            this.AimbotTabPanelTitle.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // RelaxPanel
+            // 
+            this.RelaxPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
+            this.RelaxPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RelaxPanel.Controls.Add(this.RelaxKeybindLabel);
+            this.RelaxPanel.Controls.Add(this.RelaxKeybindSet);
+            this.RelaxPanel.Controls.Add(this.CurrentModsComboBox);
+            this.RelaxPanel.Controls.Add(this.CurrentModsLabel);
+            this.RelaxPanel.Controls.Add(this.PlaystyleComboBox);
+            this.RelaxPanel.Controls.Add(this.PlaystyleComboBoxLabel);
+            this.RelaxPanel.Controls.Add(this.RelaxPanelSwitchLabel);
+            this.RelaxPanel.Controls.Add(this.RelaxPanelSwitch);
+            this.RelaxPanel.Controls.Add(this.RelaxPanelHeader);
+            this.RelaxPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.RelaxPanel.Location = new System.Drawing.Point(35, 3);
+            this.RelaxPanel.Name = "RelaxPanel";
+            this.RelaxPanel.Size = new System.Drawing.Size(507, 228);
+            this.RelaxPanel.TabIndex = 2;
+            // 
+            // RelaxKeybindLabel
+            // 
+            this.RelaxKeybindLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RelaxKeybindLabel.Enabled = false;
+            this.RelaxKeybindLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.RelaxKeybindLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.RelaxKeybindLabel.Location = new System.Drawing.Point(112, 77);
+            this.RelaxKeybindLabel.Name = "RelaxKeybindLabel";
+            this.RelaxKeybindLabel.Size = new System.Drawing.Size(131, 26);
+            this.RelaxKeybindLabel.TabIndex = 20;
+            this.RelaxKeybindLabel.Text = "Change Keybind";
+            // 
+            // RelaxKeybindSet
+            // 
+            this.RelaxKeybindSet.BorderRadius = 7;
+            this.RelaxKeybindSet.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.RelaxKeybindSet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RelaxKeybindSet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RelaxKeybindSet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RelaxKeybindSet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+            this.RelaxKeybindSet.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.RelaxKeybindSet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.RelaxKeybindSet.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.RelaxKeybindSet.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RelaxKeybindSet.ForeColor = System.Drawing.Color.White;
+            this.RelaxKeybindSet.Location = new System.Drawing.Point(12, 77);
+            this.RelaxKeybindSet.Name = "RelaxKeybindSet";
+            this.RelaxKeybindSet.Size = new System.Drawing.Size(94, 26);
+            this.RelaxKeybindSet.TabIndex = 19;
+            this.RelaxKeybindSet.Text = "Ctrl";
+            this.RelaxKeybindSet.TextOffset = new System.Drawing.Point(0, -2);
+            this.RelaxKeybindSet.Click += new System.EventHandler(this.RelaxKeybindSet_Click);
+            // 
+            // CurrentModsComboBox
+            // 
+            this.CurrentModsComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.CurrentModsComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.CurrentModsComboBox.BorderRadius = 15;
+            this.CurrentModsComboBox.BorderThickness = 0;
+            this.CurrentModsComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CurrentModsComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CurrentModsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CurrentModsComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.CurrentModsComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.CurrentModsComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.CurrentModsComboBox.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentModsComboBox.ForeColor = System.Drawing.Color.White;
+            this.CurrentModsComboBox.ItemHeight = 30;
+            this.CurrentModsComboBox.Items.AddRange(new object[] {
+            "None",
+            "DoubleTime",
+            "Nightcore",
+            "HalfTime"});
+            this.CurrentModsComboBox.Location = new System.Drawing.Point(13, 148);
+            this.CurrentModsComboBox.Name = "CurrentModsComboBox";
+            this.CurrentModsComboBox.Size = new System.Drawing.Size(140, 36);
+            this.CurrentModsComboBox.TabIndex = 10;
+            this.CurrentModsComboBox.SelectedIndexChanged += new System.EventHandler(this.CurrentModsComboBox_SelectedIndexChanged);
+            // 
+            // CurrentModsLabel
+            // 
+            this.CurrentModsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CurrentModsLabel.Enabled = false;
+            this.CurrentModsLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.CurrentModsLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.CurrentModsLabel.Location = new System.Drawing.Point(159, 155);
+            this.CurrentModsLabel.Name = "CurrentModsLabel";
+            this.CurrentModsLabel.Size = new System.Drawing.Size(112, 26);
+            this.CurrentModsLabel.TabIndex = 9;
+            this.CurrentModsLabel.Text = "Current Mods";
+            // 
+            // PlaystyleComboBox
+            // 
+            this.PlaystyleComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.PlaystyleComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.PlaystyleComboBox.BorderRadius = 15;
+            this.PlaystyleComboBox.BorderThickness = 0;
+            this.PlaystyleComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PlaystyleComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.PlaystyleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PlaystyleComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.PlaystyleComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.PlaystyleComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.PlaystyleComboBox.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlaystyleComboBox.ForeColor = System.Drawing.Color.White;
+            this.PlaystyleComboBox.ItemHeight = 30;
+            this.PlaystyleComboBox.Items.AddRange(new object[] {
+            "Single Tap",
+            "Alternate",
+            "Mouse Only",
+            "TapX"});
+            this.PlaystyleComboBox.Location = new System.Drawing.Point(13, 106);
+            this.PlaystyleComboBox.Name = "PlaystyleComboBox";
+            this.PlaystyleComboBox.Size = new System.Drawing.Size(140, 36);
+            this.PlaystyleComboBox.TabIndex = 8;
+            this.PlaystyleComboBox.SelectedIndexChanged += new System.EventHandler(this.PlaystyleComboBox_SelectedIndexChanged);
+            // 
+            // PlaystyleComboBoxLabel
+            // 
+            this.PlaystyleComboBoxLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PlaystyleComboBoxLabel.Enabled = false;
+            this.PlaystyleComboBoxLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.PlaystyleComboBoxLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.PlaystyleComboBoxLabel.Location = new System.Drawing.Point(159, 113);
+            this.PlaystyleComboBoxLabel.Name = "PlaystyleComboBoxLabel";
+            this.PlaystyleComboBoxLabel.Size = new System.Drawing.Size(69, 26);
+            this.PlaystyleComboBoxLabel.TabIndex = 7;
+            this.PlaystyleComboBoxLabel.Text = "Playstyle";
+            // 
+            // RelaxPanelSwitchLabel
+            // 
+            this.RelaxPanelSwitchLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RelaxPanelSwitchLabel.Enabled = false;
+            this.RelaxPanelSwitchLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
+            this.RelaxPanelSwitchLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.RelaxPanelSwitchLabel.Location = new System.Drawing.Point(53, 51);
+            this.RelaxPanelSwitchLabel.Name = "RelaxPanelSwitchLabel";
+            this.RelaxPanelSwitchLabel.Size = new System.Drawing.Size(68, 26);
+            this.RelaxPanelSwitchLabel.TabIndex = 2;
+            this.RelaxPanelSwitchLabel.Text = "Enabled";
+            // 
+            // RelaxPanelSwitch
+            // 
+            this.RelaxPanelSwitch.Animated = true;
+            this.RelaxPanelSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.RelaxPanelSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.RelaxPanelSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.RelaxPanelSwitch.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.RelaxPanelSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RelaxPanelSwitch.Location = new System.Drawing.Point(12, 54);
+            this.RelaxPanelSwitch.Name = "RelaxPanelSwitch";
+            this.RelaxPanelSwitch.Size = new System.Drawing.Size(35, 20);
+            this.RelaxPanelSwitch.TabIndex = 1;
+            this.RelaxPanelSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.RelaxPanelSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.RelaxPanelSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.RelaxPanelSwitch.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.RelaxPanelSwitch.CheckedChanged += new System.EventHandler(this.RelaxPanelSwitch_CheckedChanged);
+            // 
+            // RelaxPanelHeader
+            // 
+            this.RelaxPanelHeader.Controls.Add(this.RelaxPanelLabel);
+            this.RelaxPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.RelaxPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
+            this.RelaxPanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.RelaxPanelHeader.Name = "RelaxPanelHeader";
+            this.RelaxPanelHeader.Size = new System.Drawing.Size(507, 47);
+            this.RelaxPanelHeader.TabIndex = 0;
+            // 
+            // RelaxPanelLabel
+            // 
+            this.RelaxPanelLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.RelaxPanelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.RelaxPanelLabel.Enabled = false;
+            this.RelaxPanelLabel.Font = new System.Drawing.Font("Comfortaa", 12F);
+            this.RelaxPanelLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
+            this.RelaxPanelLabel.Location = new System.Drawing.Point(229, 7);
+            this.RelaxPanelLabel.Name = "RelaxPanelLabel";
+            this.RelaxPanelLabel.Size = new System.Drawing.Size(52, 31);
+            this.RelaxPanelLabel.TabIndex = 5;
+            this.RelaxPanelLabel.Text = "Relax";
+            this.RelaxPanelLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ConfigPanel
             // 
@@ -722,6 +1794,7 @@ namespace Osussist.src.gui
             this.CreateConfigText.ForeColor = System.Drawing.Color.White;
             this.CreateConfigText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.CreateConfigText.Location = new System.Drawing.Point(284, 375);
+            this.CreateConfigText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CreateConfigText.MaxLength = 300;
             this.CreateConfigText.Name = "CreateConfigText";
             this.CreateConfigText.PasswordChar = '\0';
@@ -906,1067 +1979,10 @@ namespace Osussist.src.gui
             this.ConfigPanelHeaderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
             this.ConfigPanelHeaderLabel.Location = new System.Drawing.Point(224, 7);
             this.ConfigPanelHeaderLabel.Name = "ConfigPanelHeaderLabel";
-            this.ConfigPanelHeaderLabel.Size = new System.Drawing.Size(59, 28);
+            this.ConfigPanelHeaderLabel.Size = new System.Drawing.Size(65, 31);
             this.ConfigPanelHeaderLabel.TabIndex = 5;
             this.ConfigPanelHeaderLabel.Text = "Config";
             this.ConfigPanelHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // DetectionPanel
-            // 
-            this.DetectionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
-            this.DetectionPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DetectionPanel.Controls.Add(this.AudioOffsetNumericUpDownAA);
-            this.DetectionPanel.Controls.Add(this.AudioOffsetSliderAA);
-            this.DetectionPanel.Controls.Add(this.AudioOffsetLabelAA);
-            this.DetectionPanel.Controls.Add(this.MouseAlgorithmCombo);
-            this.DetectionPanel.Controls.Add(this.MouseMovementAlgoLabel);
-            this.DetectionPanel.Controls.Add(this.SimilarityNumeric);
-            this.DetectionPanel.Controls.Add(this.CursorColorPreview);
-            this.DetectionPanel.Controls.Add(this.SimilaritySlider);
-            this.DetectionPanel.Controls.Add(this.CursorColorLabel);
-            this.DetectionPanel.Controls.Add(this.SimilarityLabel);
-            this.DetectionPanel.Controls.Add(this.CursorColorButton);
-            this.DetectionPanel.Controls.Add(this.TargetColorPreview);
-            this.DetectionPanel.Controls.Add(this.TargetColorLabel);
-            this.DetectionPanel.Controls.Add(this.TargetColorButton);
-            this.DetectionPanel.Controls.Add(this.DetectionPanelHeader);
-            this.DetectionPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.DetectionPanel.Location = new System.Drawing.Point(35, 240);
-            this.DetectionPanel.Name = "DetectionPanel";
-            this.DetectionPanel.Size = new System.Drawing.Size(507, 228);
-            this.DetectionPanel.TabIndex = 1;
-            // 
-            // AudioOffsetNumericUpDownAA
-            // 
-            this.AudioOffsetNumericUpDownAA.BackColor = System.Drawing.Color.Transparent;
-            this.AudioOffsetNumericUpDownAA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetNumericUpDownAA.BorderRadius = 5;
-            this.AudioOffsetNumericUpDownAA.BorderThickness = 0;
-            this.AudioOffsetNumericUpDownAA.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AudioOffsetNumericUpDownAA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AudioOffsetNumericUpDownAA.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AudioOffsetNumericUpDownAA.ForeColor = System.Drawing.Color.White;
-            this.AudioOffsetNumericUpDownAA.Location = new System.Drawing.Point(210, 96);
-            this.AudioOffsetNumericUpDownAA.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.AudioOffsetNumericUpDownAA.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
-            this.AudioOffsetNumericUpDownAA.Name = "AudioOffsetNumericUpDownAA";
-            this.AudioOffsetNumericUpDownAA.Size = new System.Drawing.Size(73, 21);
-            this.AudioOffsetNumericUpDownAA.TabIndex = 27;
-            this.AudioOffsetNumericUpDownAA.TextOffset = new System.Drawing.Point(0, -3);
-            this.AudioOffsetNumericUpDownAA.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetNumericUpDownAA.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.AudioOffsetNumericUpDownAA.ValueChanged += new System.EventHandler(this.AudioOffsetNumericUpDownAA_ValueChanged);
-            // 
-            // AudioOffsetSliderAA
-            // 
-            this.AudioOffsetSliderAA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AudioOffsetSliderAA.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.AudioOffsetSliderAA.Location = new System.Drawing.Point(12, 95);
-            this.AudioOffsetSliderAA.Maximum = 300;
-            this.AudioOffsetSliderAA.Minimum = -300;
-            this.AudioOffsetSliderAA.Name = "AudioOffsetSliderAA";
-            this.AudioOffsetSliderAA.Size = new System.Drawing.Size(192, 23);
-            this.AudioOffsetSliderAA.TabIndex = 26;
-            this.AudioOffsetSliderAA.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetSliderAA.ValueChanged += new System.EventHandler(this.AudioOffsetSliderAA_ValueChanged);
-            // 
-            // AudioOffsetLabelAA
-            // 
-            this.AudioOffsetLabelAA.BackColor = System.Drawing.Color.Transparent;
-            this.AudioOffsetLabelAA.Enabled = false;
-            this.AudioOffsetLabelAA.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.AudioOffsetLabelAA.ForeColor = System.Drawing.SystemColors.Control;
-            this.AudioOffsetLabelAA.Location = new System.Drawing.Point(289, 95);
-            this.AudioOffsetLabelAA.Name = "AudioOffsetLabelAA";
-            this.AudioOffsetLabelAA.Size = new System.Drawing.Size(89, 23);
-            this.AudioOffsetLabelAA.TabIndex = 25;
-            this.AudioOffsetLabelAA.Text = "Audio Offset";
-            // 
-            // MouseAlgorithmCombo
-            // 
-            this.MouseAlgorithmCombo.BackColor = System.Drawing.Color.Transparent;
-            this.MouseAlgorithmCombo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MouseAlgorithmCombo.BorderRadius = 15;
-            this.MouseAlgorithmCombo.BorderThickness = 0;
-            this.MouseAlgorithmCombo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MouseAlgorithmCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.MouseAlgorithmCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MouseAlgorithmCombo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.MouseAlgorithmCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MouseAlgorithmCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MouseAlgorithmCombo.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MouseAlgorithmCombo.ForeColor = System.Drawing.Color.White;
-            this.MouseAlgorithmCombo.ItemHeight = 30;
-            this.MouseAlgorithmCombo.Items.AddRange(new object[] {
-            "Steps",
-            "Bezier",
-            "Linear",
-            "Flick"});
-            this.MouseAlgorithmCombo.Location = new System.Drawing.Point(12, 53);
-            this.MouseAlgorithmCombo.Name = "MouseAlgorithmCombo";
-            this.MouseAlgorithmCombo.Size = new System.Drawing.Size(140, 36);
-            this.MouseAlgorithmCombo.TabIndex = 24;
-            this.MouseAlgorithmCombo.SelectedIndexChanged += new System.EventHandler(this.MouseAlgorithmCombo_SelectedIndexChanged);
-            // 
-            // MouseMovementAlgoLabel
-            // 
-            this.MouseMovementAlgoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MouseMovementAlgoLabel.Enabled = false;
-            this.MouseMovementAlgoLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.MouseMovementAlgoLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.MouseMovementAlgoLabel.Location = new System.Drawing.Point(158, 60);
-            this.MouseMovementAlgoLabel.Name = "MouseMovementAlgoLabel";
-            this.MouseMovementAlgoLabel.Size = new System.Drawing.Size(120, 23);
-            this.MouseMovementAlgoLabel.TabIndex = 23;
-            this.MouseMovementAlgoLabel.Text = "Mouse Algorithm";
-            // 
-            // SimilarityNumeric
-            // 
-            this.SimilarityNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.SimilarityNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.SimilarityNumeric.BorderRadius = 5;
-            this.SimilarityNumeric.BorderThickness = 0;
-            this.SimilarityNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SimilarityNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.SimilarityNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SimilarityNumeric.ForeColor = System.Drawing.Color.White;
-            this.SimilarityNumeric.Location = new System.Drawing.Point(210, 125);
-            this.SimilarityNumeric.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.SimilarityNumeric.Name = "SimilarityNumeric";
-            this.SimilarityNumeric.Size = new System.Drawing.Size(73, 21);
-            this.SimilarityNumeric.TabIndex = 20;
-            this.SimilarityNumeric.TextOffset = new System.Drawing.Point(0, -3);
-            this.SimilarityNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.SimilarityNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.SimilarityNumeric.ValueChanged += new System.EventHandler(this.SimilarityNumeric_ValueChanged);
-            // 
-            // CursorColorPreview
-            // 
-            this.CursorColorPreview.BackColor = System.Drawing.Color.White;
-            this.CursorColorPreview.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CursorColorPreview.BorderThickness = 2;
-            this.CursorColorPreview.Location = new System.Drawing.Point(464, 146);
-            this.CursorColorPreview.Name = "CursorColorPreview";
-            this.CursorColorPreview.Size = new System.Drawing.Size(29, 23);
-            this.CursorColorPreview.TabIndex = 22;
-            // 
-            // SimilaritySlider
-            // 
-            this.SimilaritySlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SimilaritySlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.SimilaritySlider.Location = new System.Drawing.Point(12, 124);
-            this.SimilaritySlider.Maximum = 255;
-            this.SimilaritySlider.Name = "SimilaritySlider";
-            this.SimilaritySlider.Size = new System.Drawing.Size(192, 23);
-            this.SimilaritySlider.TabIndex = 19;
-            this.SimilaritySlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.SimilaritySlider.ValueChanged += new System.EventHandler(this.SimilaritySlider_ValueChanged);
-            // 
-            // CursorColorLabel
-            // 
-            this.CursorColorLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CursorColorLabel.Enabled = false;
-            this.CursorColorLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.CursorColorLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.CursorColorLabel.Location = new System.Drawing.Point(261, 156);
-            this.CursorColorLabel.Name = "CursorColorLabel";
-            this.CursorColorLabel.Size = new System.Drawing.Size(92, 23);
-            this.CursorColorLabel.TabIndex = 21;
-            this.CursorColorLabel.Text = "Cursor Color";
-            // 
-            // SimilarityLabel
-            // 
-            this.SimilarityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SimilarityLabel.Enabled = false;
-            this.SimilarityLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.SimilarityLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.SimilarityLabel.Location = new System.Drawing.Point(289, 124);
-            this.SimilarityLabel.Name = "SimilarityLabel";
-            this.SimilarityLabel.Size = new System.Drawing.Size(109, 23);
-            this.SimilarityLabel.TabIndex = 18;
-            this.SimilarityLabel.Text = "Color Similarity";
-            // 
-            // CursorColorButton
-            // 
-            this.CursorColorButton.BorderRadius = 13;
-            this.CursorColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CursorColorButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CursorColorButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CursorColorButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CursorColorButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CursorColorButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.CursorColorButton.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CursorColorButton.ForeColor = System.Drawing.Color.White;
-            this.CursorColorButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.CursorColorButton.Location = new System.Drawing.Point(261, 185);
-            this.CursorColorButton.Name = "CursorColorButton";
-            this.CursorColorButton.Size = new System.Drawing.Size(232, 29);
-            this.CursorColorButton.TabIndex = 20;
-            this.CursorColorButton.Text = "Change Color";
-            this.CursorColorButton.Click += new System.EventHandler(this.ChangeColorButton_Click);
-            // 
-            // TargetColorPreview
-            // 
-            this.TargetColorPreview.BackColor = System.Drawing.Color.White;
-            this.TargetColorPreview.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TargetColorPreview.BorderThickness = 2;
-            this.TargetColorPreview.Location = new System.Drawing.Point(216, 156);
-            this.TargetColorPreview.Name = "TargetColorPreview";
-            this.TargetColorPreview.Size = new System.Drawing.Size(29, 23);
-            this.TargetColorPreview.TabIndex = 19;
-            // 
-            // TargetColorLabel
-            // 
-            this.TargetColorLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TargetColorLabel.Enabled = false;
-            this.TargetColorLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.TargetColorLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.TargetColorLabel.Location = new System.Drawing.Point(13, 156);
-            this.TargetColorLabel.Name = "TargetColorLabel";
-            this.TargetColorLabel.Size = new System.Drawing.Size(91, 23);
-            this.TargetColorLabel.TabIndex = 18;
-            this.TargetColorLabel.Text = "Target Color";
-            // 
-            // TargetColorButton
-            // 
-            this.TargetColorButton.BorderRadius = 13;
-            this.TargetColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TargetColorButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.TargetColorButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.TargetColorButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.TargetColorButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.TargetColorButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.TargetColorButton.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TargetColorButton.ForeColor = System.Drawing.Color.White;
-            this.TargetColorButton.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.TargetColorButton.Location = new System.Drawing.Point(13, 185);
-            this.TargetColorButton.Name = "TargetColorButton";
-            this.TargetColorButton.Size = new System.Drawing.Size(232, 29);
-            this.TargetColorButton.TabIndex = 1;
-            this.TargetColorButton.Text = "Change Color";
-            this.TargetColorButton.Click += new System.EventHandler(this.ChangeColorButton_Click);
-            // 
-            // DetectionPanelHeader
-            // 
-            this.DetectionPanelHeader.Controls.Add(this.DetectionPanelTitle);
-            this.DetectionPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DetectionPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.DetectionPanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.DetectionPanelHeader.Name = "DetectionPanelHeader";
-            this.DetectionPanelHeader.Size = new System.Drawing.Size(507, 47);
-            this.DetectionPanelHeader.TabIndex = 0;
-            // 
-            // DetectionPanelTitle
-            // 
-            this.DetectionPanelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.DetectionPanelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.DetectionPanelTitle.Enabled = false;
-            this.DetectionPanelTitle.Font = new System.Drawing.Font("Comfortaa", 12F);
-            this.DetectionPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
-            this.DetectionPanelTitle.Location = new System.Drawing.Point(211, 7);
-            this.DetectionPanelTitle.Name = "DetectionPanelTitle";
-            this.DetectionPanelTitle.Size = new System.Drawing.Size(84, 28);
-            this.DetectionPanelTitle.TabIndex = 5;
-            this.DetectionPanelTitle.Text = "Detection";
-            this.DetectionPanelTitle.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // AimbotTabPanel
-            // 
-            this.AimbotTabPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
-            this.AimbotTabPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AimbotTabPanel.Controls.Add(this.HardrockEnabledLabelAA);
-            this.AimbotTabPanel.Controls.Add(this.PullawayNumeric);
-            this.AimbotTabPanel.Controls.Add(this.HardrockEnabledAA);
-            this.AimbotTabPanel.Controls.Add(this.AimbotKeybindLabel);
-            this.AimbotTabPanel.Controls.Add(this.PullawaySlider);
-            this.AimbotTabPanel.Controls.Add(this.PullawayLabel);
-            this.AimbotTabPanel.Controls.Add(this.AimbotKeybindSet);
-            this.AimbotTabPanel.Controls.Add(this.StrengthLabel);
-            this.AimbotTabPanel.Controls.Add(this.AimbotStrengthNumericUpDown);
-            this.AimbotTabPanel.Controls.Add(this.AimbotStrengthSlider);
-            this.AimbotTabPanel.Controls.Add(this.SmoothingLabel);
-            this.AimbotTabPanel.Controls.Add(this.AimbotSmoothingSliderNumericUpDown);
-            this.AimbotTabPanel.Controls.Add(this.AimbotSmoothingSlider);
-            this.AimbotTabPanel.Controls.Add(this.FovLabel);
-            this.AimbotTabPanel.Controls.Add(this.AimbotFovSliderNumericUpDown);
-            this.AimbotTabPanel.Controls.Add(this.AimbotFovSlider);
-            this.AimbotTabPanel.Controls.Add(this.AimbotTabPanelSwitchLabel);
-            this.AimbotTabPanel.Controls.Add(this.AimbotTabPanelSwitch);
-            this.AimbotTabPanel.Controls.Add(this.AimbotTabPanelHeader);
-            this.AimbotTabPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.AimbotTabPanel.Location = new System.Drawing.Point(35, 3);
-            this.AimbotTabPanel.Name = "AimbotTabPanel";
-            this.AimbotTabPanel.Size = new System.Drawing.Size(507, 228);
-            this.AimbotTabPanel.TabIndex = 0;
-            // 
-            // HardrockEnabledLabelAA
-            // 
-            this.HardrockEnabledLabelAA.BackColor = System.Drawing.Color.Transparent;
-            this.HardrockEnabledLabelAA.Enabled = false;
-            this.HardrockEnabledLabelAA.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.HardrockEnabledLabelAA.ForeColor = System.Drawing.SystemColors.Control;
-            this.HardrockEnabledLabelAA.Location = new System.Drawing.Point(289, 77);
-            this.HardrockEnabledLabelAA.Name = "HardrockEnabledLabelAA";
-            this.HardrockEnabledLabelAA.Size = new System.Drawing.Size(73, 23);
-            this.HardrockEnabledLabelAA.TabIndex = 24;
-            this.HardrockEnabledLabelAA.Text = "HR Aiming";
-            // 
-            // PullawayNumeric
-            // 
-            this.PullawayNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.PullawayNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.PullawayNumeric.BorderRadius = 5;
-            this.PullawayNumeric.BorderThickness = 0;
-            this.PullawayNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PullawayNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.PullawayNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PullawayNumeric.ForeColor = System.Drawing.Color.White;
-            this.PullawayNumeric.Location = new System.Drawing.Point(210, 194);
-            this.PullawayNumeric.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.PullawayNumeric.Name = "PullawayNumeric";
-            this.PullawayNumeric.Size = new System.Drawing.Size(73, 21);
-            this.PullawayNumeric.TabIndex = 25;
-            this.PullawayNumeric.TextOffset = new System.Drawing.Point(0, -3);
-            this.PullawayNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.PullawayNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.PullawayNumeric.ValueChanged += new System.EventHandler(this.PullawayNumeric_ValueChanged);
-            // 
-            // HardrockEnabledAA
-            // 
-            this.HardrockEnabledAA.Animated = true;
-            this.HardrockEnabledAA.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabledAA.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HardrockEnabledAA.Location = new System.Drawing.Point(248, 80);
-            this.HardrockEnabledAA.Name = "HardrockEnabledAA";
-            this.HardrockEnabledAA.Size = new System.Drawing.Size(35, 20);
-            this.HardrockEnabledAA.TabIndex = 23;
-            this.HardrockEnabledAA.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabledAA.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabledAA.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabledAA.CheckedChanged += new System.EventHandler(this.HardrockEnabledAA_CheckedChanged);
-            // 
-            // AimbotKeybindLabel
-            // 
-            this.AimbotKeybindLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AimbotKeybindLabel.Enabled = false;
-            this.AimbotKeybindLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.AimbotKeybindLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.AimbotKeybindLabel.Location = new System.Drawing.Point(112, 77);
-            this.AimbotKeybindLabel.Name = "AimbotKeybindLabel";
-            this.AimbotKeybindLabel.Size = new System.Drawing.Size(116, 23);
-            this.AimbotKeybindLabel.TabIndex = 18;
-            this.AimbotKeybindLabel.Text = "Change Keybind";
-            // 
-            // PullawaySlider
-            // 
-            this.PullawaySlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PullawaySlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.PullawaySlider.Location = new System.Drawing.Point(12, 193);
-            this.PullawaySlider.Maximum = 1000;
-            this.PullawaySlider.Name = "PullawaySlider";
-            this.PullawaySlider.Size = new System.Drawing.Size(192, 23);
-            this.PullawaySlider.TabIndex = 24;
-            this.PullawaySlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.PullawaySlider.ValueChanged += new System.EventHandler(this.PullawaySlider_ValueChanged);
-            // 
-            // PullawayLabel
-            // 
-            this.PullawayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PullawayLabel.Enabled = false;
-            this.PullawayLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.PullawayLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.PullawayLabel.Location = new System.Drawing.Point(289, 193);
-            this.PullawayLabel.Name = "PullawayLabel";
-            this.PullawayLabel.Size = new System.Drawing.Size(127, 23);
-            this.PullawayLabel.TabIndex = 23;
-            this.PullawayLabel.Text = "Pullaway Distance";
-            // 
-            // AimbotKeybindSet
-            // 
-            this.AimbotKeybindSet.BorderRadius = 7;
-            this.AimbotKeybindSet.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.AimbotKeybindSet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AimbotKeybindSet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AimbotKeybindSet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AimbotKeybindSet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-            this.AimbotKeybindSet.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.AimbotKeybindSet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotKeybindSet.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotKeybindSet.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AimbotKeybindSet.ForeColor = System.Drawing.Color.White;
-            this.AimbotKeybindSet.Location = new System.Drawing.Point(12, 80);
-            this.AimbotKeybindSet.Name = "AimbotKeybindSet";
-            this.AimbotKeybindSet.Size = new System.Drawing.Size(94, 20);
-            this.AimbotKeybindSet.TabIndex = 2;
-            this.AimbotKeybindSet.Text = "Ctrl";
-            this.AimbotKeybindSet.TextOffset = new System.Drawing.Point(0, -2);
-            this.AimbotKeybindSet.Click += new System.EventHandler(this.AimbotKeybindSet_Click);
-            // 
-            // StrengthLabel
-            // 
-            this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.StrengthLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.StrengthLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.StrengthLabel.Location = new System.Drawing.Point(289, 164);
-            this.StrengthLabel.Name = "StrengthLabel";
-            this.StrengthLabel.Size = new System.Drawing.Size(63, 23);
-            this.StrengthLabel.TabIndex = 12;
-            this.StrengthLabel.Text = "Strength";
-            // 
-            // AimbotStrengthNumericUpDown
-            // 
-            this.AimbotStrengthNumericUpDown.BackColor = System.Drawing.Color.Transparent;
-            this.AimbotStrengthNumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotStrengthNumericUpDown.BorderRadius = 5;
-            this.AimbotStrengthNumericUpDown.BorderThickness = 0;
-            this.AimbotStrengthNumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AimbotStrengthNumericUpDown.DecimalPlaces = 4;
-            this.AimbotStrengthNumericUpDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotStrengthNumericUpDown.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AimbotStrengthNumericUpDown.ForeColor = System.Drawing.Color.White;
-            this.AimbotStrengthNumericUpDown.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            262144});
-            this.AimbotStrengthNumericUpDown.Location = new System.Drawing.Point(210, 165);
-            this.AimbotStrengthNumericUpDown.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            65536});
-            this.AimbotStrengthNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            262144});
-            this.AimbotStrengthNumericUpDown.Name = "AimbotStrengthNumericUpDown";
-            this.AimbotStrengthNumericUpDown.Size = new System.Drawing.Size(73, 21);
-            this.AimbotStrengthNumericUpDown.TabIndex = 11;
-            this.AimbotStrengthNumericUpDown.TextOffset = new System.Drawing.Point(0, -3);
-            this.AimbotStrengthNumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotStrengthNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.AimbotStrengthNumericUpDown.ValueChanged += new System.EventHandler(this.AimbotStrengthNumericUpDown_ValueChanged);
-            // 
-            // AimbotStrengthSlider
-            // 
-            this.AimbotStrengthSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AimbotStrengthSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.AimbotStrengthSlider.Location = new System.Drawing.Point(12, 164);
-            this.AimbotStrengthSlider.Maximum = 10000;
-            this.AimbotStrengthSlider.Minimum = 1;
-            this.AimbotStrengthSlider.Name = "AimbotStrengthSlider";
-            this.AimbotStrengthSlider.Size = new System.Drawing.Size(192, 23);
-            this.AimbotStrengthSlider.TabIndex = 10;
-            this.AimbotStrengthSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotStrengthSlider.ValueChanged += new System.EventHandler(this.AimbotStrengthSlider_ValueChanged);
-            // 
-            // SmoothingLabel
-            // 
-            this.SmoothingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SmoothingLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.SmoothingLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.SmoothingLabel.Location = new System.Drawing.Point(289, 135);
-            this.SmoothingLabel.Name = "SmoothingLabel";
-            this.SmoothingLabel.Size = new System.Drawing.Size(78, 23);
-            this.SmoothingLabel.TabIndex = 9;
-            this.SmoothingLabel.Text = "Smoothing";
-            // 
-            // AimbotSmoothingSliderNumericUpDown
-            // 
-            this.AimbotSmoothingSliderNumericUpDown.BackColor = System.Drawing.Color.Transparent;
-            this.AimbotSmoothingSliderNumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotSmoothingSliderNumericUpDown.BorderRadius = 5;
-            this.AimbotSmoothingSliderNumericUpDown.BorderThickness = 0;
-            this.AimbotSmoothingSliderNumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AimbotSmoothingSliderNumericUpDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotSmoothingSliderNumericUpDown.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AimbotSmoothingSliderNumericUpDown.ForeColor = System.Drawing.Color.White;
-            this.AimbotSmoothingSliderNumericUpDown.Location = new System.Drawing.Point(210, 136);
-            this.AimbotSmoothingSliderNumericUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.AimbotSmoothingSliderNumericUpDown.Name = "AimbotSmoothingSliderNumericUpDown";
-            this.AimbotSmoothingSliderNumericUpDown.Size = new System.Drawing.Size(73, 21);
-            this.AimbotSmoothingSliderNumericUpDown.TabIndex = 8;
-            this.AimbotSmoothingSliderNumericUpDown.TextOffset = new System.Drawing.Point(0, -3);
-            this.AimbotSmoothingSliderNumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotSmoothingSliderNumericUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.AimbotSmoothingSliderNumericUpDown.ValueChanged += new System.EventHandler(this.AimbotSmoothingSliderNumericUpDown_ValueChanged);
-            // 
-            // AimbotSmoothingSlider
-            // 
-            this.AimbotSmoothingSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AimbotSmoothingSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.AimbotSmoothingSlider.Location = new System.Drawing.Point(12, 135);
-            this.AimbotSmoothingSlider.Minimum = 1;
-            this.AimbotSmoothingSlider.Name = "AimbotSmoothingSlider";
-            this.AimbotSmoothingSlider.Size = new System.Drawing.Size(192, 23);
-            this.AimbotSmoothingSlider.TabIndex = 7;
-            this.AimbotSmoothingSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotSmoothingSlider.ValueChanged += new System.EventHandler(this.AimbotSmoothingSlider_ValueChanged);
-            // 
-            // FovLabel
-            // 
-            this.FovLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FovLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.FovLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.FovLabel.Location = new System.Drawing.Point(289, 106);
-            this.FovLabel.Name = "FovLabel";
-            this.FovLabel.Size = new System.Drawing.Size(59, 23);
-            this.FovLabel.TabIndex = 6;
-            this.FovLabel.Text = "Fov SIze";
-            // 
-            // AimbotFovSliderNumericUpDown
-            // 
-            this.AimbotFovSliderNumericUpDown.BackColor = System.Drawing.Color.Transparent;
-            this.AimbotFovSliderNumericUpDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotFovSliderNumericUpDown.BorderRadius = 5;
-            this.AimbotFovSliderNumericUpDown.BorderThickness = 0;
-            this.AimbotFovSliderNumericUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AimbotFovSliderNumericUpDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotFovSliderNumericUpDown.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AimbotFovSliderNumericUpDown.ForeColor = System.Drawing.Color.White;
-            this.AimbotFovSliderNumericUpDown.Location = new System.Drawing.Point(210, 107);
-            this.AimbotFovSliderNumericUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.AimbotFovSliderNumericUpDown.Name = "AimbotFovSliderNumericUpDown";
-            this.AimbotFovSliderNumericUpDown.Size = new System.Drawing.Size(73, 21);
-            this.AimbotFovSliderNumericUpDown.TabIndex = 5;
-            this.AimbotFovSliderNumericUpDown.TextOffset = new System.Drawing.Point(0, -3);
-            this.AimbotFovSliderNumericUpDown.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotFovSliderNumericUpDown.ValueChanged += new System.EventHandler(this.AimbotFovSliderNumericUpDown_ValueChanged);
-            // 
-            // AimbotFovSlider
-            // 
-            this.AimbotFovSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AimbotFovSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.AimbotFovSlider.Location = new System.Drawing.Point(12, 106);
-            this.AimbotFovSlider.Maximum = 1000;
-            this.AimbotFovSlider.Name = "AimbotFovSlider";
-            this.AimbotFovSlider.Size = new System.Drawing.Size(192, 23);
-            this.AimbotFovSlider.TabIndex = 3;
-            this.AimbotFovSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotFovSlider.ValueChanged += new System.EventHandler(this.AimbotFovSlider_ValueChanged);
-            // 
-            // AimbotTabPanelSwitchLabel
-            // 
-            this.AimbotTabPanelSwitchLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AimbotTabPanelSwitchLabel.Enabled = false;
-            this.AimbotTabPanelSwitchLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.AimbotTabPanelSwitchLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.AimbotTabPanelSwitchLabel.Location = new System.Drawing.Point(53, 51);
-            this.AimbotTabPanelSwitchLabel.Name = "AimbotTabPanelSwitchLabel";
-            this.AimbotTabPanelSwitchLabel.Size = new System.Drawing.Size(60, 23);
-            this.AimbotTabPanelSwitchLabel.TabIndex = 2;
-            this.AimbotTabPanelSwitchLabel.Text = "Enabled";
-            // 
-            // AimbotTabPanelSwitch
-            // 
-            this.AimbotTabPanelSwitch.Animated = true;
-            this.AimbotTabPanelSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotTabPanelSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotTabPanelSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotTabPanelSwitch.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotTabPanelSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AimbotTabPanelSwitch.Location = new System.Drawing.Point(12, 54);
-            this.AimbotTabPanelSwitch.Name = "AimbotTabPanelSwitch";
-            this.AimbotTabPanelSwitch.Size = new System.Drawing.Size(35, 20);
-            this.AimbotTabPanelSwitch.TabIndex = 1;
-            this.AimbotTabPanelSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotTabPanelSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AimbotTabPanelSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotTabPanelSwitch.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AimbotTabPanelSwitch.CheckedChanged += new System.EventHandler(this.AimbotTabPanelSwitch_CheckedChanged);
-            // 
-            // AimbotTabPanelHeader
-            // 
-            this.AimbotTabPanelHeader.Controls.Add(this.AimbotTabPanelTitle);
-            this.AimbotTabPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AimbotTabPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.AimbotTabPanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.AimbotTabPanelHeader.Name = "AimbotTabPanelHeader";
-            this.AimbotTabPanelHeader.Size = new System.Drawing.Size(507, 47);
-            this.AimbotTabPanelHeader.TabIndex = 0;
-            // 
-            // AimbotTabPanelTitle
-            // 
-            this.AimbotTabPanelTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AimbotTabPanelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.AimbotTabPanelTitle.Enabled = false;
-            this.AimbotTabPanelTitle.Font = new System.Drawing.Font("Comfortaa", 12F);
-            this.AimbotTabPanelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
-            this.AimbotTabPanelTitle.Location = new System.Drawing.Point(209, 7);
-            this.AimbotTabPanelTitle.Name = "AimbotTabPanelTitle";
-            this.AimbotTabPanelTitle.Size = new System.Drawing.Size(88, 28);
-            this.AimbotTabPanelTitle.TabIndex = 5;
-            this.AimbotTabPanelTitle.Text = "Aim Assist";
-            this.AimbotTabPanelTitle.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // RelaxPanel
-            // 
-            this.RelaxPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
-            this.RelaxPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.RelaxPanel.Controls.Add(this.RelaxKeybindLabel);
-            this.RelaxPanel.Controls.Add(this.RelaxKeybindSet);
-            this.RelaxPanel.Controls.Add(this.CurrentModsComboBox);
-            this.RelaxPanel.Controls.Add(this.CurrentModsLabel);
-            this.RelaxPanel.Controls.Add(this.PlaystyleComboBox);
-            this.RelaxPanel.Controls.Add(this.PlaystyleComboBoxLabel);
-            this.RelaxPanel.Controls.Add(this.RelaxPanelSwitchLabel);
-            this.RelaxPanel.Controls.Add(this.RelaxPanelSwitch);
-            this.RelaxPanel.Controls.Add(this.RelaxPanelHeader);
-            this.RelaxPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.RelaxPanel.Location = new System.Drawing.Point(35, 3);
-            this.RelaxPanel.Name = "RelaxPanel";
-            this.RelaxPanel.Size = new System.Drawing.Size(507, 228);
-            this.RelaxPanel.TabIndex = 2;
-            // 
-            // RelaxKeybindLabel
-            // 
-            this.RelaxKeybindLabel.BackColor = System.Drawing.Color.Transparent;
-            this.RelaxKeybindLabel.Enabled = false;
-            this.RelaxKeybindLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.RelaxKeybindLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.RelaxKeybindLabel.Location = new System.Drawing.Point(112, 77);
-            this.RelaxKeybindLabel.Name = "RelaxKeybindLabel";
-            this.RelaxKeybindLabel.Size = new System.Drawing.Size(116, 23);
-            this.RelaxKeybindLabel.TabIndex = 20;
-            this.RelaxKeybindLabel.Text = "Change Keybind";
-            // 
-            // RelaxKeybindSet
-            // 
-            this.RelaxKeybindSet.BorderRadius = 7;
-            this.RelaxKeybindSet.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
-            this.RelaxKeybindSet.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RelaxKeybindSet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.RelaxKeybindSet.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.RelaxKeybindSet.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-            this.RelaxKeybindSet.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.RelaxKeybindSet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.RelaxKeybindSet.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.RelaxKeybindSet.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RelaxKeybindSet.ForeColor = System.Drawing.Color.White;
-            this.RelaxKeybindSet.Location = new System.Drawing.Point(12, 80);
-            this.RelaxKeybindSet.Name = "RelaxKeybindSet";
-            this.RelaxKeybindSet.Size = new System.Drawing.Size(94, 20);
-            this.RelaxKeybindSet.TabIndex = 19;
-            this.RelaxKeybindSet.Text = "Ctrl";
-            this.RelaxKeybindSet.TextOffset = new System.Drawing.Point(0, -2);
-            this.RelaxKeybindSet.Click += new System.EventHandler(this.RelaxKeybindSet_Click);
-            // 
-            // CurrentModsComboBox
-            // 
-            this.CurrentModsComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.CurrentModsComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.CurrentModsComboBox.BorderRadius = 15;
-            this.CurrentModsComboBox.BorderThickness = 0;
-            this.CurrentModsComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CurrentModsComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CurrentModsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CurrentModsComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.CurrentModsComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.CurrentModsComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.CurrentModsComboBox.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentModsComboBox.ForeColor = System.Drawing.Color.White;
-            this.CurrentModsComboBox.ItemHeight = 30;
-            this.CurrentModsComboBox.Items.AddRange(new object[] {
-            "None",
-            "DoubleTime",
-            "Nightcore",
-            "HalfTime"});
-            this.CurrentModsComboBox.Location = new System.Drawing.Point(13, 148);
-            this.CurrentModsComboBox.Name = "CurrentModsComboBox";
-            this.CurrentModsComboBox.Size = new System.Drawing.Size(140, 36);
-            this.CurrentModsComboBox.TabIndex = 10;
-            this.CurrentModsComboBox.SelectedIndexChanged += new System.EventHandler(this.CurrentModsComboBox_SelectedIndexChanged);
-            // 
-            // CurrentModsLabel
-            // 
-            this.CurrentModsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CurrentModsLabel.Enabled = false;
-            this.CurrentModsLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.CurrentModsLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.CurrentModsLabel.Location = new System.Drawing.Point(159, 155);
-            this.CurrentModsLabel.Name = "CurrentModsLabel";
-            this.CurrentModsLabel.Size = new System.Drawing.Size(98, 23);
-            this.CurrentModsLabel.TabIndex = 9;
-            this.CurrentModsLabel.Text = "Current Mods";
-            // 
-            // PlaystyleComboBox
-            // 
-            this.PlaystyleComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.PlaystyleComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.PlaystyleComboBox.BorderRadius = 15;
-            this.PlaystyleComboBox.BorderThickness = 0;
-            this.PlaystyleComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PlaystyleComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.PlaystyleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PlaystyleComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.PlaystyleComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.PlaystyleComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.PlaystyleComboBox.Font = new System.Drawing.Font("Comfortaa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlaystyleComboBox.ForeColor = System.Drawing.Color.White;
-            this.PlaystyleComboBox.ItemHeight = 30;
-            this.PlaystyleComboBox.Items.AddRange(new object[] {
-            "Single Tap",
-            "Alternate",
-            "Mouse Only",
-            "TapX"});
-            this.PlaystyleComboBox.Location = new System.Drawing.Point(13, 106);
-            this.PlaystyleComboBox.Name = "PlaystyleComboBox";
-            this.PlaystyleComboBox.Size = new System.Drawing.Size(140, 36);
-            this.PlaystyleComboBox.TabIndex = 8;
-            this.PlaystyleComboBox.SelectedIndexChanged += new System.EventHandler(this.PlaystyleComboBox_SelectedIndexChanged);
-            // 
-            // PlaystyleComboBoxLabel
-            // 
-            this.PlaystyleComboBoxLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PlaystyleComboBoxLabel.Enabled = false;
-            this.PlaystyleComboBoxLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.PlaystyleComboBoxLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.PlaystyleComboBoxLabel.Location = new System.Drawing.Point(159, 113);
-            this.PlaystyleComboBoxLabel.Name = "PlaystyleComboBoxLabel";
-            this.PlaystyleComboBoxLabel.Size = new System.Drawing.Size(62, 23);
-            this.PlaystyleComboBoxLabel.TabIndex = 7;
-            this.PlaystyleComboBoxLabel.Text = "Playstyle";
-            // 
-            // RelaxPanelSwitchLabel
-            // 
-            this.RelaxPanelSwitchLabel.BackColor = System.Drawing.Color.Transparent;
-            this.RelaxPanelSwitchLabel.Enabled = false;
-            this.RelaxPanelSwitchLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.RelaxPanelSwitchLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.RelaxPanelSwitchLabel.Location = new System.Drawing.Point(53, 51);
-            this.RelaxPanelSwitchLabel.Name = "RelaxPanelSwitchLabel";
-            this.RelaxPanelSwitchLabel.Size = new System.Drawing.Size(60, 23);
-            this.RelaxPanelSwitchLabel.TabIndex = 2;
-            this.RelaxPanelSwitchLabel.Text = "Enabled";
-            // 
-            // RelaxPanelSwitch
-            // 
-            this.RelaxPanelSwitch.Animated = true;
-            this.RelaxPanelSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.RelaxPanelSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.RelaxPanelSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.RelaxPanelSwitch.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.RelaxPanelSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RelaxPanelSwitch.Location = new System.Drawing.Point(12, 54);
-            this.RelaxPanelSwitch.Name = "RelaxPanelSwitch";
-            this.RelaxPanelSwitch.Size = new System.Drawing.Size(35, 20);
-            this.RelaxPanelSwitch.TabIndex = 1;
-            this.RelaxPanelSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.RelaxPanelSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.RelaxPanelSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.RelaxPanelSwitch.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.RelaxPanelSwitch.CheckedChanged += new System.EventHandler(this.RelaxPanelSwitch_CheckedChanged);
-            // 
-            // RelaxPanelHeader
-            // 
-            this.RelaxPanelHeader.Controls.Add(this.RelaxPanelLabel);
-            this.RelaxPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.RelaxPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.RelaxPanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.RelaxPanelHeader.Name = "RelaxPanelHeader";
-            this.RelaxPanelHeader.Size = new System.Drawing.Size(507, 47);
-            this.RelaxPanelHeader.TabIndex = 0;
-            // 
-            // RelaxPanelLabel
-            // 
-            this.RelaxPanelLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.RelaxPanelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.RelaxPanelLabel.Enabled = false;
-            this.RelaxPanelLabel.Font = new System.Drawing.Font("Comfortaa", 12F);
-            this.RelaxPanelLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
-            this.RelaxPanelLabel.Location = new System.Drawing.Point(229, 7);
-            this.RelaxPanelLabel.Name = "RelaxPanelLabel";
-            this.RelaxPanelLabel.Size = new System.Drawing.Size(48, 28);
-            this.RelaxPanelLabel.TabIndex = 5;
-            this.RelaxPanelLabel.Text = "Relax";
-            this.RelaxPanelLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // TimingPanel
-            // 
-            this.TimingPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(53)))));
-            this.TimingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.TimingPanel.Controls.Add(this.HardrockLabel);
-            this.TimingPanel.Controls.Add(this.HardrockEnabled);
-            this.TimingPanel.Controls.Add(this.MaxDistanceLabel);
-            this.TimingPanel.Controls.Add(this.MaxDistanceNumeric);
-            this.TimingPanel.Controls.Add(this.MaxDistanceSlider);
-            this.TimingPanel.Controls.Add(this.AudioOffsetSliderLabel);
-            this.TimingPanel.Controls.Add(this.TimingPanelHeader);
-            this.TimingPanel.Controls.Add(this.AudioOffsetSliderNumeric);
-            this.TimingPanel.Controls.Add(this.MaxBPMSlider);
-            this.TimingPanel.Controls.Add(this.AudioOffsetSlider);
-            this.TimingPanel.Controls.Add(this.MaxBPMNumeric);
-            this.TimingPanel.Controls.Add(this.MaxBPMLabel);
-            this.TimingPanel.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.TimingPanel.Location = new System.Drawing.Point(35, 240);
-            this.TimingPanel.Name = "TimingPanel";
-            this.TimingPanel.Size = new System.Drawing.Size(507, 228);
-            this.TimingPanel.TabIndex = 16;
-            // 
-            // HardrockLabel
-            // 
-            this.HardrockLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HardrockLabel.Enabled = false;
-            this.HardrockLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.HardrockLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.HardrockLabel.Location = new System.Drawing.Point(55, 52);
-            this.HardrockLabel.Name = "HardrockLabel";
-            this.HardrockLabel.Size = new System.Drawing.Size(84, 23);
-            this.HardrockLabel.TabIndex = 22;
-            this.HardrockLabel.Text = "HR Tapping";
-            // 
-            // HardrockEnabled
-            // 
-            this.HardrockEnabled.Animated = true;
-            this.HardrockEnabled.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabled.CheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.CheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HardrockEnabled.Location = new System.Drawing.Point(14, 55);
-            this.HardrockEnabled.Name = "HardrockEnabled";
-            this.HardrockEnabled.Size = new System.Drawing.Size(35, 20);
-            this.HardrockEnabled.TabIndex = 21;
-            this.HardrockEnabled.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabled.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.HardrockEnabled.UncheckedState.InnerBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.UncheckedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.HardrockEnabled.CheckedChanged += new System.EventHandler(this.HardrockEnabled_CheckedChanged);
-            // 
-            // MaxDistanceLabel
-            // 
-            this.MaxDistanceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MaxDistanceLabel.Enabled = false;
-            this.MaxDistanceLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.MaxDistanceLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.MaxDistanceLabel.Location = new System.Drawing.Point(289, 139);
-            this.MaxDistanceLabel.Name = "MaxDistanceLabel";
-            this.MaxDistanceLabel.Size = new System.Drawing.Size(96, 23);
-            this.MaxDistanceLabel.TabIndex = 18;
-            this.MaxDistanceLabel.Text = "Max Distance";
-            // 
-            // MaxDistanceNumeric
-            // 
-            this.MaxDistanceNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.MaxDistanceNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxDistanceNumeric.BorderRadius = 5;
-            this.MaxDistanceNumeric.BorderThickness = 0;
-            this.MaxDistanceNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.MaxDistanceNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.MaxDistanceNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxDistanceNumeric.ForeColor = System.Drawing.Color.White;
-            this.MaxDistanceNumeric.Location = new System.Drawing.Point(210, 140);
-            this.MaxDistanceNumeric.Name = "MaxDistanceNumeric";
-            this.MaxDistanceNumeric.Size = new System.Drawing.Size(73, 21);
-            this.MaxDistanceNumeric.TabIndex = 17;
-            this.MaxDistanceNumeric.TextOffset = new System.Drawing.Point(0, -3);
-            this.MaxDistanceNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxDistanceNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MaxDistanceNumeric.ValueChanged += new System.EventHandler(this.MaxDistanceNumeric_ValueChanged);
-            // 
-            // MaxDistanceSlider
-            // 
-            this.MaxDistanceSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MaxDistanceSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.MaxDistanceSlider.Location = new System.Drawing.Point(12, 139);
-            this.MaxDistanceSlider.Name = "MaxDistanceSlider";
-            this.MaxDistanceSlider.Size = new System.Drawing.Size(192, 23);
-            this.MaxDistanceSlider.TabIndex = 16;
-            this.MaxDistanceSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxDistanceSlider.ValueChanged += new System.EventHandler(this.MaxDistanceSlider_ValueChanged);
-            // 
-            // AudioOffsetSliderLabel
-            // 
-            this.AudioOffsetSliderLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AudioOffsetSliderLabel.Enabled = false;
-            this.AudioOffsetSliderLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.AudioOffsetSliderLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.AudioOffsetSliderLabel.Location = new System.Drawing.Point(289, 110);
-            this.AudioOffsetSliderLabel.Name = "AudioOffsetSliderLabel";
-            this.AudioOffsetSliderLabel.Size = new System.Drawing.Size(89, 23);
-            this.AudioOffsetSliderLabel.TabIndex = 15;
-            this.AudioOffsetSliderLabel.Text = "Audio Offset";
-            // 
-            // TimingPanelHeader
-            // 
-            this.TimingPanelHeader.Controls.Add(this.TimingPanelLabel);
-            this.TimingPanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TimingPanelHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(39)))), ((int)(((byte)(41)))));
-            this.TimingPanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.TimingPanelHeader.Name = "TimingPanelHeader";
-            this.TimingPanelHeader.Size = new System.Drawing.Size(507, 47);
-            this.TimingPanelHeader.TabIndex = 0;
-            // 
-            // TimingPanelLabel
-            // 
-            this.TimingPanelLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TimingPanelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TimingPanelLabel.Enabled = false;
-            this.TimingPanelLabel.Font = new System.Drawing.Font("Comfortaa", 12F);
-            this.TimingPanelLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
-            this.TimingPanelLabel.Location = new System.Drawing.Point(179, 7);
-            this.TimingPanelLabel.Name = "TimingPanelLabel";
-            this.TimingPanelLabel.Size = new System.Drawing.Size(148, 28);
-            this.TimingPanelLabel.TabIndex = 5;
-            this.TimingPanelLabel.Text = "Timing & Hitscan";
-            this.TimingPanelLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // AudioOffsetSliderNumeric
-            // 
-            this.AudioOffsetSliderNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.AudioOffsetSliderNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetSliderNumeric.BorderRadius = 5;
-            this.AudioOffsetSliderNumeric.BorderThickness = 0;
-            this.AudioOffsetSliderNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.AudioOffsetSliderNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.AudioOffsetSliderNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AudioOffsetSliderNumeric.ForeColor = System.Drawing.Color.White;
-            this.AudioOffsetSliderNumeric.Location = new System.Drawing.Point(210, 111);
-            this.AudioOffsetSliderNumeric.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.AudioOffsetSliderNumeric.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
-            this.AudioOffsetSliderNumeric.Name = "AudioOffsetSliderNumeric";
-            this.AudioOffsetSliderNumeric.Size = new System.Drawing.Size(73, 21);
-            this.AudioOffsetSliderNumeric.TabIndex = 14;
-            this.AudioOffsetSliderNumeric.TextOffset = new System.Drawing.Point(0, -3);
-            this.AudioOffsetSliderNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetSliderNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.AudioOffsetSliderNumeric.ValueChanged += new System.EventHandler(this.AudioOffsetNumeric_ValueChange);
-            // 
-            // MaxBPMSlider
-            // 
-            this.MaxBPMSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MaxBPMSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.MaxBPMSlider.Location = new System.Drawing.Point(12, 81);
-            this.MaxBPMSlider.Maximum = 500;
-            this.MaxBPMSlider.Minimum = 1;
-            this.MaxBPMSlider.Name = "MaxBPMSlider";
-            this.MaxBPMSlider.Size = new System.Drawing.Size(192, 23);
-            this.MaxBPMSlider.TabIndex = 10;
-            this.MaxBPMSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxBPMSlider.ValueChanged += new System.EventHandler(this.MaxBPMSlider_ValueChange);
-            // 
-            // AudioOffsetSlider
-            // 
-            this.AudioOffsetSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AudioOffsetSlider.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(62)))), ((int)(((byte)(64)))));
-            this.AudioOffsetSlider.Location = new System.Drawing.Point(12, 110);
-            this.AudioOffsetSlider.Maximum = 300;
-            this.AudioOffsetSlider.Minimum = -300;
-            this.AudioOffsetSlider.Name = "AudioOffsetSlider";
-            this.AudioOffsetSlider.Size = new System.Drawing.Size(192, 23);
-            this.AudioOffsetSlider.TabIndex = 13;
-            this.AudioOffsetSlider.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.AudioOffsetSlider.ValueChanged += new System.EventHandler(this.AudioOffsetSlider_ValueChanged);
-            // 
-            // MaxBPMNumeric
-            // 
-            this.MaxBPMNumeric.BackColor = System.Drawing.Color.Transparent;
-            this.MaxBPMNumeric.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxBPMNumeric.BorderRadius = 5;
-            this.MaxBPMNumeric.BorderThickness = 0;
-            this.MaxBPMNumeric.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.MaxBPMNumeric.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.MaxBPMNumeric.Font = new System.Drawing.Font("Comfortaa", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxBPMNumeric.ForeColor = System.Drawing.Color.White;
-            this.MaxBPMNumeric.Location = new System.Drawing.Point(210, 82);
-            this.MaxBPMNumeric.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.MaxBPMNumeric.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MaxBPMNumeric.Name = "MaxBPMNumeric";
-            this.MaxBPMNumeric.Size = new System.Drawing.Size(73, 21);
-            this.MaxBPMNumeric.TabIndex = 11;
-            this.MaxBPMNumeric.TextOffset = new System.Drawing.Point(0, -3);
-            this.MaxBPMNumeric.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.MaxBPMNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.MaxBPMNumeric.ValueChanged += new System.EventHandler(this.MaxBPMNumeric_ValueChange);
-            // 
-            // MaxBPMLabel
-            // 
-            this.MaxBPMLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MaxBPMLabel.Enabled = false;
-            this.MaxBPMLabel.Font = new System.Drawing.Font("Comfortaa", 10F);
-            this.MaxBPMLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.MaxBPMLabel.Location = new System.Drawing.Point(289, 81);
-            this.MaxBPMLabel.Name = "MaxBPMLabel";
-            this.MaxBPMLabel.Size = new System.Drawing.Size(66, 23);
-            this.MaxBPMLabel.TabIndex = 12;
-            this.MaxBPMLabel.Text = "Max BPM";
             // 
             // SpooferPanel
             // 
@@ -2049,6 +2065,7 @@ namespace Osussist.src.gui
             this.MACSerial.ForeColor = System.Drawing.Color.White;
             this.MACSerial.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.MACSerial.Location = new System.Drawing.Point(262, 145);
+            this.MACSerial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MACSerial.MaxLength = 300;
             this.MACSerial.Name = "MACSerial";
             this.MACSerial.PasswordChar = '\0';
@@ -2067,7 +2084,7 @@ namespace Osussist.src.gui
             this.MacLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.MacLabel.Location = new System.Drawing.Point(262, 116);
             this.MacLabel.Name = "MacLabel";
-            this.MacLabel.Size = new System.Drawing.Size(97, 23);
+            this.MacLabel.Size = new System.Drawing.Size(113, 26);
             this.MacLabel.TabIndex = 36;
             this.MacLabel.Text = "MAC Address:";
             this.MacLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -2088,6 +2105,7 @@ namespace Osussist.src.gui
             this.DiskSerial.ForeColor = System.Drawing.Color.White;
             this.DiskSerial.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.DiskSerial.Location = new System.Drawing.Point(21, 145);
+            this.DiskSerial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DiskSerial.MaxLength = 300;
             this.DiskSerial.Name = "DiskSerial";
             this.DiskSerial.PasswordChar = '\0';
@@ -2106,7 +2124,7 @@ namespace Osussist.src.gui
             this.DiskLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.DiskLabel.Location = new System.Drawing.Point(21, 116);
             this.DiskLabel.Name = "DiskLabel";
-            this.DiskLabel.Size = new System.Drawing.Size(78, 23);
+            this.DiskLabel.Size = new System.Drawing.Size(87, 26);
             this.DiskLabel.TabIndex = 34;
             this.DiskLabel.Text = "Disk Serial:";
             this.DiskLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -2135,6 +2153,7 @@ namespace Osussist.src.gui
             this.BaseBoardSerial.ForeColor = System.Drawing.Color.White;
             this.BaseBoardSerial.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.BaseBoardSerial.Location = new System.Drawing.Point(262, 50);
+            this.BaseBoardSerial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BaseBoardSerial.MaxLength = 300;
             this.BaseBoardSerial.Name = "BaseBoardSerial";
             this.BaseBoardSerial.PasswordChar = '\0';
@@ -2153,7 +2172,7 @@ namespace Osussist.src.gui
             this.BaseBoardLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.BaseBoardLabel.Location = new System.Drawing.Point(262, 21);
             this.BaseBoardLabel.Name = "BaseBoardLabel";
-            this.BaseBoardLabel.Size = new System.Drawing.Size(125, 23);
+            this.BaseBoardLabel.Size = new System.Drawing.Size(139, 26);
             this.BaseBoardLabel.TabIndex = 31;
             this.BaseBoardLabel.Text = "BaseBoard Serial:";
             this.BaseBoardLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -2174,6 +2193,7 @@ namespace Osussist.src.gui
             this.CpuSerial.ForeColor = System.Drawing.Color.White;
             this.CpuSerial.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.CpuSerial.Location = new System.Drawing.Point(20, 50);
+            this.CpuSerial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CpuSerial.MaxLength = 300;
             this.CpuSerial.Name = "CpuSerial";
             this.CpuSerial.PasswordChar = '\0';
@@ -2192,7 +2212,7 @@ namespace Osussist.src.gui
             this.CpuLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.CpuLabel.Location = new System.Drawing.Point(20, 21);
             this.CpuLabel.Name = "CpuLabel";
-            this.CpuLabel.Size = new System.Drawing.Size(78, 23);
+            this.CpuLabel.Size = new System.Drawing.Size(87, 26);
             this.CpuLabel.TabIndex = 21;
             this.CpuLabel.Text = "Cpu Serial:";
             this.CpuLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -2216,7 +2236,7 @@ namespace Osussist.src.gui
             this.SpooferHeaderLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(194)))));
             this.SpooferHeaderLabel.Location = new System.Drawing.Point(218, 7);
             this.SpooferHeaderLabel.Name = "SpooferHeaderLabel";
-            this.SpooferHeaderLabel.Size = new System.Drawing.Size(70, 28);
+            this.SpooferHeaderLabel.Size = new System.Drawing.Size(78, 31);
             this.SpooferHeaderLabel.TabIndex = 5;
             this.SpooferHeaderLabel.Text = "Spoofer";
             this.SpooferHeaderLabel.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -2309,16 +2329,19 @@ namespace Osussist.src.gui
             this.SidepanelButtons.ResumeLayout(false);
             this.MainContent.ResumeLayout(false);
             this.Content.ResumeLayout(false);
-            this.ConfigPanel.ResumeLayout(false);
-            this.ConfigTableHeader.ResumeLayout(false);
-            this.ConfigPanelHeader.ResumeLayout(false);
-            this.ConfigPanelHeader.PerformLayout();
             this.DetectionPanel.ResumeLayout(false);
             this.DetectionPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetNumericUpDownAA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SensitivityNumeric)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SimilarityNumeric)).EndInit();
             this.DetectionPanelHeader.ResumeLayout(false);
             this.DetectionPanelHeader.PerformLayout();
+            this.TimingPanel.ResumeLayout(false);
+            this.TimingPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxDistanceNumeric)).EndInit();
+            this.TimingPanelHeader.ResumeLayout(false);
+            this.TimingPanelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetSliderNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxBPMNumeric)).EndInit();
             this.AimbotTabPanel.ResumeLayout(false);
             this.AimbotTabPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PullawayNumeric)).EndInit();
@@ -2331,13 +2354,10 @@ namespace Osussist.src.gui
             this.RelaxPanel.PerformLayout();
             this.RelaxPanelHeader.ResumeLayout(false);
             this.RelaxPanelHeader.PerformLayout();
-            this.TimingPanel.ResumeLayout(false);
-            this.TimingPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxDistanceNumeric)).EndInit();
-            this.TimingPanelHeader.ResumeLayout(false);
-            this.TimingPanelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AudioOffsetSliderNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxBPMNumeric)).EndInit();
+            this.ConfigPanel.ResumeLayout(false);
+            this.ConfigTableHeader.ResumeLayout(false);
+            this.ConfigPanelHeader.ResumeLayout(false);
+            this.ConfigPanelHeader.PerformLayout();
             this.SpooferPanel.ResumeLayout(false);
             this.SerialsPanel.ResumeLayout(false);
             this.SerialsPanel.PerformLayout();
@@ -2416,9 +2436,10 @@ namespace Osussist.src.gui
             //Mouse Algotrithm
             this.MouseAlgorithmCombo.SelectedIndex = (int)Config.config.aimbotsettings.algorithm;
 
-            // Audio Offset
-            this.AudioOffsetSliderAA.Value = Config.config.osusettings.audiooffset;
-            this.AudioOffsetNumericUpDownAA.Value = Config.config.osusettings.audiooffset;
+            // Sensitivity
+            int sensitivitySliderValue = Math.Max(this.SensitivitySlider.Minimum, Math.Min(this.SensitivitySlider.Maximum, (int)(Config.config.osusettings.sensitivity * 10)));
+            this.SensitivitySlider.Value = sensitivitySliderValue;
+            this.SensitivityNumeric.Value = (decimal)Math.Min(6f, (Config.config.osusettings.sensitivity + (float)AimbotStrengthNumericUpDown.Increment));
 
             // Similarity
             int similarity = Math.Max(this.SimilaritySlider.Minimum, Math.Min(this.SimilaritySlider.Maximum, Config.config.aimbotsettings.similarity));
@@ -2536,7 +2557,7 @@ namespace Osussist.src.gui
             if (sliderValue != this.AimbotStrengthSlider.Value)
             {
                 this.AimbotStrengthSlider.Value = Math.Max(this.AimbotStrengthSlider.Minimum,
-                                                   Math.Min(this.AimbotStrengthSlider.Maximum, sliderValue));
+                    Math.Min(this.AimbotStrengthSlider.Maximum, sliderValue));
             }
         }
 
@@ -2548,26 +2569,40 @@ namespace Osussist.src.gui
             decimal numericValue = (decimal)strength;
             if (numericValue != this.AimbotStrengthNumericUpDown.Value)
             {
-                this.AimbotStrengthNumericUpDown.Value = Math.Max(this.AimbotStrengthNumericUpDown.Minimum,
-                                                                Math.Min(this.AimbotStrengthNumericUpDown.Maximum, numericValue));
+                this.AimbotStrengthNumericUpDown.Value = Math.Max(this.AimbotStrengthNumericUpDown.Minimum, 
+                    Math.Min(this.AimbotStrengthNumericUpDown.Maximum, numericValue));
             }
-        }
-
-        private void AudioOffsetSliderAA_ValueChanged(object sender, EventArgs e)
-        {
-            Config.config.osusettings.audiooffset = this.AudioOffsetSliderAA.Value;
-            this.AudioOffsetNumericUpDownAA.Value = this.AudioOffsetSliderAA.Value;
-        }
-
-        private void AudioOffsetNumericUpDownAA_ValueChanged(object sender, EventArgs e)
-        {
-            Config.config.osusettings.audiooffset = (int)this.AudioOffsetNumericUpDownAA.Value;
-            this.AudioOffsetSliderAA.Value = (int)this.AudioOffsetNumericUpDownAA.Value;
         }
 
         private void HardrockEnabledAA_CheckedChanged(object sender, EventArgs e)
         {
             Config.config.aimbotsettings.hardrockenabled = this.HardrockEnabledAA.Checked;
+        }
+
+        private void SensitivitySlider_ValueChanged(object sender, EventArgs e)
+        {
+            float sensitivity = Math.Max(0f, Math.Min(6f, (float)this.SensitivitySlider.Value / 10f));
+            Config.config.osusettings.sensitivity = (float)sensitivity;
+
+            decimal numericValue = (decimal)sensitivity;
+            if (numericValue != this.SensitivityNumeric.Value)
+            {
+                this.SensitivityNumeric.Value = Math.Max(this.SensitivityNumeric.Minimum,
+                    Math.Min(this.SensitivityNumeric.Maximum, numericValue));
+            }
+        }
+
+        private void SensitivityNumeric_ValueChanged(object sender, EventArgs e)
+        {
+            decimal sensitivity = Math.Max(0m, Math.Min(6m, this.SensitivityNumeric.Value));
+            Config.config.osusettings.sensitivity = (float)sensitivity;
+
+            int sliderValue = (int)(sensitivity * 10);
+            if (sliderValue != this.SensitivitySlider.Value)
+            {
+                this.SensitivitySlider.Value = Math.Max(this.SensitivitySlider.Minimum,
+                    Math.Min(this.SensitivitySlider.Maximum, sliderValue));
+            }
         }
 
         private void RelaxButton_Click(object sender, EventArgs e)

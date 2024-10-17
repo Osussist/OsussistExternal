@@ -175,6 +175,7 @@ namespace Osussist.src.config
     public class OsuSettings
     {
         public int audiooffset { get; set; } = 0;
+        public float sensitivity { get; set; } = 1f;
     }
 
     public class Keybindings

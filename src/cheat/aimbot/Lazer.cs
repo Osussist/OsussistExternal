@@ -41,16 +41,16 @@ namespace Osussist.src.cheat.aimbot
                         continue;
                     }
                     ColorRanges = new Dictionary<string, Tuple<RgbColor, RgbColor>>
-                {
-                    { "target", Tuple.Create(
-                        Config.config.aimbotsettings.targetcolor - Config.config.aimbotsettings.similarity,
-                        Config.config.aimbotsettings.targetcolor + Config.config.aimbotsettings.similarity)
-                    },
-                    { "cursor", Tuple.Create(
-                        Config.config.aimbotsettings.cursorcolor - Config.config.aimbotsettings.similarity,
-                        Config.config.aimbotsettings.cursorcolor + Config.config.aimbotsettings.similarity)
-                    }
-                };
+                    {
+                        { "target", Tuple.Create(
+                            Config.config.aimbotsettings.targetcolor - Config.config.aimbotsettings.similarity,
+                            Config.config.aimbotsettings.targetcolor + Config.config.aimbotsettings.similarity)
+                        },
+                        { "cursor", Tuple.Create(
+                            Config.config.aimbotsettings.cursorcolor - Config.config.aimbotsettings.similarity,
+                            Config.config.aimbotsettings.cursorcolor + Config.config.aimbotsettings.similarity)
+                        }
+                    };
 
                     List<Tuple<Vector2, RgbColor>> hitObjects = GetHitObjects(frame);
                     Tuple<Vector2, RgbColor> cursorObject = GetCursorPosition(frame);
@@ -87,6 +87,16 @@ namespace Osussist.src.cheat.aimbot
 
         private void PerformMove(Vector2 hitObject)
         {
+            Vector2 currentPosition = SDK.GetRealMousePosition();
+            Vector2 movementVector = hitObject - currentPosition;
+
+            float sensitivityFactor = 1f / System.Math.Max(Config.config.osusettings.sensitivity, 0.4f);
+            Vector2 adjustedMovement = new Vector2(
+                movementVector.X * sensitivityFactor,
+                movementVector.Y * sensitivityFactor
+            );
+
+            hitObject = currentPosition + adjustedMovement;
             if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Steps)
                 Mouse.MoveAlgorithmSteps(hitObject);
             else if (Config.config.aimbotsettings.algorithm is MouseAlgorithms.Bezier)
