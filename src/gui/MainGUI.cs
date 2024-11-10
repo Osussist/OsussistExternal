@@ -2996,12 +2996,12 @@ namespace Osussist.src.gui
 
         private void DiscordButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("I cant link external stuff on unknowncheats, google exists", "Discord", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("I cant link external stuff on unknowncheats, its easy to find tho", "Discord", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void WebsiteButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("I cant link external stuff on unknowncheats, google exists", "Website", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("I cant link external stuff on unknowncheats, its easy to find tho", "Website", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
