@@ -33,7 +33,7 @@ A: It was my first project on C#, ill recode it later if I feel like it
 - What about donators? <br>
 A: Donators will get access to account gen and a private build of a remade osussist with better features
 
-## Support me
+## Donations
 You can donate if you like this project, you will get an special role in our [discord](https://discord.gg/PdeTUZ3M62) that will get you the following perks:
 You'll get the following perks:
 
@@ -60,3 +60,17 @@ LTC
 ```
 
 Minimum donation amount to get the role & perks: `$10 dollars`
+
+## Contributing
+We welcome contributions to enhance Osussist! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+Make sure the program compiles correctly and runs correctly on all plataforms!
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
