@@ -21,16 +21,16 @@ After you have all the binaries and files needed you will need to get NET Runtim
 
 ## FAQ
 
-Why is the spoofer not working
+- Why is the spoofer not working? <br>
 A: You need to make your own / skid you own and put it in the same folder as the main binaries
 
-Will you update this any further
+- Will you update this any further? <br>
 A: Maybe, if I feel like it
 
-Why is the code so messed up?
+- Why is the code so messed up? <br>
 A: It was my first project on C#, ill recode it later if I feel like it
 
-What about donators?
+- What about donators? <br>
 A: Donators will get access to account gen and a private build of a remade osussist with better features
 
 ## Support me
