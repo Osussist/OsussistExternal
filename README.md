@@ -58,6 +58,10 @@ LTC
 ```
 02cc0a21f7ab995b38d3d07ea28a834a29d3e18a6fad167e6596e34ccb10273723
 ```
+USDT
+```
+0xb0f006115f0678aa786f203e9fd9987befbaaa48
+```
 
 Minimum donation amount to get the role & perks: `$10 dollars`
 
