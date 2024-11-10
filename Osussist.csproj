@@ -13,6 +13,15 @@
 	  <Content Include="src\gui\assets\osussist.ico" />
 	</ItemGroup>
 	<ItemGroup>
+	  <PackageReference Include="Costura.Fody" Version="5.7.0">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="Fody" Version="6.8.2">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="FodyHelpers" Version="6.8.2" />
 	  <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
 	  <PackageReference Include="InputSimulator" Version="1.0.4" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
