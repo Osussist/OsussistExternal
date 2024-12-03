@@ -62,8 +62,7 @@ USDT
 ```
 0xb0f006115f0678aa786f203e9fd9987befbaaa48
 ```
-
-Minimum donation amount to get the role & perks: `$10 dollars`
+(it would truly help me a lot in this development journey so if you have a lil bit of cash, and you value my work it would mean the world to me if you donated even a lil bit)
 
 ## Contributing
 We welcome contributions to enhance Osussist! To contribute:
