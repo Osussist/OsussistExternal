@@ -1,6 +1,9 @@
 # Osussist
 The best (and only) free tool that provides real-time aim assistance, tap assistance, and ban bypassing for the rhythm game osu. It is fully undetectable by the osu anti-cheat and open-source, so you can see how it works and even make it better if you want.
 
+## NOTICE
+This cheat is patched (unless the osu!parsers nuget package gets updated), it was a fun while it lasted, you could attempt to make your own cheat using either [this](https://github.com/Osussist/OsussistExternal) or [OsuHook](https://github.com/Osussist/OsuHook) as base.
+
 ## Our features
 - Aim Assist
 - Semi-Legit Relax
@@ -62,8 +65,7 @@ USDT
 ```
 0xb0f006115f0678aa786f203e9fd9987befbaaa48
 ```
-
-Minimum donation amount to get the role & perks: `$10 dollars`
+(it would truly help me a lot in this development journey so if you have a lil bit of cash, and you value my work it would mean the world to me if you donated even a lil bit)
 
 ## Contributing
 We welcome contributions to enhance Osussist! To contribute:
@@ -74,7 +76,7 @@ We welcome contributions to enhance Osussist! To contribute:
 4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a Pull Request.
 
-Make sure the program compiles correctly and runs correctly on all plataforms!
+Make sure the program compiles correctly and runs correctly!
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
