@@ -1,9 +1,6 @@
 # Osussist
 The best (and only) free tool that provides real-time aim assistance, tap assistance, and ban bypassing for the rhythm game osu. It is fully undetectable by the osu anti-cheat and open-source, so you can see how it works and even make it better if you want.
 
-## NOTICE
-This cheat is patched (unless the osu!parsers nuget package gets updated), it was a fun while it lasted, you could attempt to make your own cheat using either [this](https://github.com/Osussist/OsussistExternal) or [OsuHook](https://github.com/Osussist/OsuHook) as base.
-
 ## Our features
 - Aim Assist
 - Semi-Legit Relax
