@@ -337,7 +337,7 @@ namespace Osussist.src.cheat
 
         private ValueTuple<int, int> RandomizeHitObjectTimings(int index)
         {
-            float timingAdjustmentFactor = random.NextFloat(1.1f, 1.8f);
+            float timingAdjustmentFactor = random.NextFloat(1.0f, 1.2f);
             int timingOffset;
             if (Logic.isHitKeyPressed)
             {
@@ -356,7 +356,7 @@ namespace Osussist.src.cheat
             int additionalTiming = (CurrentBeatmap.HitObjects[index] is HitCircle)
                 ? timingValue
                 : random.Next(-HitWin300 / 2, HitWin300 * 2 + 1);
-            additionalTiming += random.Next(-HitWin300 / 4, HitWin300 / 4 + 1);
+            additionalTiming += random.Next(-HitWin300 / 3, HitWin300 / 3 + 1);
             return (timingOffset, additionalTiming);
         }
     }
